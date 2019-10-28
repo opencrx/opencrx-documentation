@@ -504,7 +504,7 @@ ways. A _Depot_ allows to store any type of items. Depots can be bank depots, wa
 application servers, libraries, etc. Samples for items are securities, electronic 
 devices, deployed software components, books in a library.
 
-![](http://www.opencrx.org/opencrx/4.2/uml/opencrx-core/depot1/999_Depot.png)
+![](http://www.opencrx.org/opencrx/4.2/uml/opencrx-core/depot1/040_Depot.png)
 
 A depot is structured by depot positions. Depot positions are the target of a
 booking. As a consequence one always has to specify the depot position when adding 
@@ -533,13 +533,13 @@ marks the time when the item is effective for the balance calculation. Bookings 
 only accepted if the booking date and the value date are within an existing and 
 active booking period.
 
-![](http://www.opencrx.org/opencrx/4.2/uml/opencrx-core/depot1/999_Booking.png)
+![](http://www.opencrx.org/opencrx/4.2/uml/opencrx-core/depot1/010_Booking.png)
 
 A depot is held by the _DepotHolder_. In most cases a depot holder is a person. 
 In this case a _DepotContract_ is used to manage to relationship to the accounts. 
 A depot holder can also be a _Warehouse_ or a _Site_.
 
-![](http://www.opencrx.org/opencrx/4.2/uml/opencrx-core/depot1/999_DepotHolder.png)
+![](http://www.opencrx.org/opencrx/4.2/uml/opencrx-core/depot1/060_DepotHolder.png)
 
 Another option to structure depots are _DepotGroup_s. The depot group structure 
 is the abstraction of a chart of accounts. 
@@ -551,7 +551,7 @@ Past booking periods typically remain open for a few days or weeks and are close
 all bookings are complete and controlling is done. As soon as a booking period is 
 closed, no more bookings are accepted in the corresponding time periods.
 
-![](http://www.opencrx.org/opencrx/4.2/uml/opencrx-core/depot1/999_DepotEntity.png)
+![](http://www.opencrx.org/opencrx/4.2/uml/opencrx-core/depot1/050_DepotEntity.png)
  
 Below you find some typical use-cases where _depot1_ can be used. 
 
