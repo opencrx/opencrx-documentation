@@ -63,7 +63,7 @@ ant all
 ## Verify project structure ##
 After successfully building the project the directory structure looks as shown below.
 
-![img](Sdk/files/CustomProject/pic150.png | width=320)
+![img](files/CustomProject/pic150.png | width=320)
 
 * _jre-1.8/sample/deployment-units_: custom-specific deployment units (e.g. _EAR_, _WAR_)
 * _jre-1.8/sample/lib_: custom-specific _JARs_
@@ -133,7 +133,7 @@ The _Store_ application comes with some sample data which you can load with the 
   
 You then get the start screen as shown below:
 
-![img](Sdk/files/CustomProject/pic140.png)
+![img](files/CustomProject/pic140.png)
 
 If you want to build your own web application and use _openCRX_ as backend it should be straight-forward 
 to use the _Store_ application as template and adapt it to your use-cases and _GUI_ frameworks.
@@ -154,7 +154,7 @@ The _sample_ project comes with a simple model extension. In _Eclipse_ open the 
 _openCRX 4 Custom ~ Sample (Papyrus)/models.di_. Then select the diagram named _org.opencrx.sample.account1-Main_. It 
 should look as shown below:
 
-![img](Sdk/files/CustomProject/pic160.png)
+![img](files/CustomProject/pic160.png)
 
 The _sample_ project extends the _openCRX Core_ model by the following elements:
 
