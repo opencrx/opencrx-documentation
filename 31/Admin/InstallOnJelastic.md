@@ -7,14 +7,14 @@ how to setup openCRX on Jelastic.
 ## Prerequisites ##
 This guide assumes that you are familiar with the basic features of Jelastic.
 
-__IMPORTANT:__ This guide assumes that _openCRX 3.1 Server_ is successfully setup as described in [openCRX 3.1.0 Server Installation Guide](31/Admin/InstallerServer/README.md).
+__IMPORTANT:__ This guide assumes that _openCRX 3.1 Server_ is successfully setup as described in [openCRX 3.1.0 Server Installation Guide](31/Admin/InstallerServer.md).
 
 ## Create and configure environment ##
 Launch the Jelastic administration console and create a new _JAVA_ environment with the following topology:
 
 * _Apache 2.2_ as frontend (we did not test _nginx_ but it should work as well)
 * _TomEE 1.7_ as application server
-* _PostgreSQL_ as database (you can migrate to another supported database later on at any time. For more information see [here](31/Admin/DatabaseMigration/README.md)) 
+* _PostgreSQL_ as database (you can migrate to another supported database later on at any time. For more information see [here](31/Admin/DatabaseMigration.md)) 
 
 Select _Apache 2.2_ as frontend:
 
@@ -41,7 +41,7 @@ The following fields are mandatory and must be set as follows:
 * __Name:__ CRX (default database name of _openCRX_)
 * __Template:__ template0 (this template allows to set the collation to C)
 * __Encoding:__ UTF-8 (_openCRX_ supports UTF-8 encoding only)
-* __Collation: C__ (allows ordering as required by _openCRX_. For more information see [here](31/Admin/DatabaseMigration/README.md))
+* __Collation: C__ (allows ordering as required by _openCRX_. For more information see [here](31/Admin/DatabaseMigration.md))
 
 After the database is created we have to create the bootstrap database schema. This schema contains only a minimal set of tables required to start start _openCRX_ and login as Root administrator. Select the database _CRX_ and click on the _SQL_ button to launch the SQL script window. Get the create schema script from [here](./attachment/createdb-schema-postgresql.sql) and upload it to the SQL script window by clicking on the _Choose File_ button:
 
@@ -152,7 +152,7 @@ This connects the _TomEE_ with the root URL. Append _opencrx-core-CRX_ to the UR
 
 ![img](31/Admin/files/InstallOnJelastic/pic180.png | width=960]]
 
-Now you have a running (empty) _openCRX_ instance. Follow the instructions of the [upgrade guide](31/Admin/HowToUpgrade/README.md) in order to complete the installation of _openCRX_:
+Now you have a running (empty) _openCRX_ instance. Follow the instructions of the [upgrade guide](31/Admin/HowToUpgrade.md) in order to complete the installation of _openCRX_:
 
 * Launch and run the database schema wizard
 * Load the code tables

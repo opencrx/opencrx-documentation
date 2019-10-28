@@ -8,9 +8,9 @@ __IMPORTANT:__ This guide assumes that _openCRX 3.1 Server_ is successfully setu
 Also, the _openCRX SDK_ must be installed as described in [openCRX SDK for Ant Step-by-Step Guide](../Sdk31.StepByStepAnt).
 
 For non-_Java_ programming languages, _openCRX_ offers a _REST_ service which allows remote clients to
-access the full API of _openCRX_ (for more information see [How to use the REST Servlet](31/Sdk/Rest/README.md)).
+access the full API of _openCRX_ (for more information see [How to use the REST Servlet](31/Sdk/Rest.md)).
 In addition, _openCRX_ offers a _Java_ client library which allows to access _openCRX_ using the standard
-_openCRX_ Java API (for more information see [How to write a remote _openCRX_ Java client](31/Sdk/RemoteJavaClient/README.md)).
+_openCRX_ Java API (for more information see [How to write a remote _openCRX_ Java client](31/Sdk/RemoteJavaClient.md)).
 Basically, this allows any type of 3rd party application to be integrated with _openCRX_. However, 
 for some situations, a custom-specific _API_ is often desirable. Some scenarios are:
 

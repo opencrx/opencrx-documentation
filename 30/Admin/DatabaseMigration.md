@@ -2,7 +2,7 @@
 
 This guide explains how to setup and migrate from an existing openCRX database to another database.
 
-__IMPORTANT:__ This guide assumes that _openCRX 3.0 Server_ is successfully setup as described in [openCRX 3.0.0 Server Installation Guide](30/Admin/InstallerServer/README.md).
+__IMPORTANT:__ This guide assumes that _openCRX 3.0 Server_ is successfully setup as described in [openCRX 3.0.0 Server Installation Guide](30/Admin/InstallerServer.md).
 
 openCRX provides the following tools to migrate from an existing database to an other database
 

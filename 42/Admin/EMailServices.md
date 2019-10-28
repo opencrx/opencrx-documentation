@@ -457,7 +457,7 @@ The whole setup is quite straightforward; in a first step you configure the Mail
 
 This process works for messages in any of your mail client's folders, e.g. Inbox, Outbox, Sent, Trash, etc.
 
-See [Configuring Automated Workflows](Admin/AutomatedWorkflows/README.md) for details on activating / configuring the MailImporterServlet the MailImporterServlet. With the following steps you can configure the MailImporterServlet:
+See [Configuring Automated Workflows](Admin/AutomatedWorkflows.md) for details on activating / configuring the MailImporterServlet the MailImporterServlet. With the following steps you can configure the MailImporterServlet:
 
 * log in as openCRX Root administrator (admin-Root)
 * start the wizard openCRX Workflow Controller:

@@ -13,7 +13,7 @@ This guide explains how to create a custom project for _openCRX_. A custom proje
 
 A custom project allows to separate the directory structure of the _openCRX_ distribution and the custom-specific files.
 
-This guide assumes that the _openCRX SDK_ is installed (also see [here](41/Sdk/StepByStepEclipse/README.md)).
+This guide assumes that the _openCRX SDK_ is installed (also see [here](41/Sdk/StepByStepEclipse.md)).
 
 ## Checkout and build the sample custom project ##
 
@@ -21,7 +21,7 @@ _openCRX SDK_ comes with a sample custom project. Follow the steps below to inst
 
 ### Build for Linux ###
 
-In a first step open a shell and cd to a directory where you have installed _openCRX SDK_ (see  [here](41/Sdk/StepByStepEclipse/README.md) for more information).
+In a first step open a shell and cd to a directory where you have installed _openCRX SDK_ (see  [here](41/Sdk/StepByStepEclipse.md) for more information).
 
 ```
 cd /tmp/dev
@@ -41,7 +41,7 @@ ant all
 ```
 
 ### Build for Windows ###
-In a first step open a shell and cd to a directory where you have installed _openCRX SDK_ (see  [here](41/Sdk/StepByStepEclipse/README.md) for more information).
+In a first step open a shell and cd to a directory where you have installed _openCRX SDK_ (see  [here](41/Sdk/StepByStepEclipse.md) for more information).
 
 ```
 cd \temp\dev

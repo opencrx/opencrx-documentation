@@ -7,7 +7,7 @@ _openCRX_. The standard implementation can be extended for custom projects very 
 
 ## Create a custom project ##
 First create a custom project. 
-See [How to create custom projects](Sdk/CustomProject/README.md) for more info.
+See [How to create custom projects](Sdk/CustomProject.md) for more info.
 
 ## Create a custom PortalExtension class ##
 Within this custom project create a portal extension class. The class must extend

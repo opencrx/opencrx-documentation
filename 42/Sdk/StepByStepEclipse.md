@@ -7,8 +7,8 @@ This guide explains how to setup _openCRX SDK_ for _Eclipse_.
 This guide assumes that you have installed
 
 * _openMDX SDK for Eclipse_ as described in [openMDX SDK for Eclipse](https://sourceforge.net/p/openmdx/wiki/Sdk42.StepByStepEclipse/).
-* _openCRX SDK for Ant_ as described in [openCRX SDK for Ant Step-by-Step](Sdk/StepByStepAnt/README.md).
-* _openCRX Server_ as described in [openCRX 4.2.0 Server Installation Guide](Admin/InstallerServer/README.md).
+* _openCRX SDK for Ant_ as described in [openCRX SDK for Ant Step-by-Step](Sdk/StepByStepAnt.md).
+* _openCRX Server_ as described in [openCRX 4.2.0 Server Installation Guide](Admin/InstallerServer.md).
 
 The workspace in _Eclipse_ then looks as shown below.
 

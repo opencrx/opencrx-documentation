@@ -2,7 +2,7 @@
 
 This guide explains how to rename a provider and/or segment in an existing openCRX database.
 
-__IMPORTANT:__ This guide assumes that the _openCRX SDK_ is installed (also see [here](31/Sdk/StepByStepEclipse/README.md)).
+__IMPORTANT:__ This guide assumes that the _openCRX SDK_ is installed (also see [here](31/Sdk/StepByStepEclipse.md)).
 
 openCRX provides the generic _org.opencrx.kernel.tools.DbSearchReplace_ tool which allows to search / replace 
 any string patterns in an existing openCRX database. This tool can also be used to rename provider
