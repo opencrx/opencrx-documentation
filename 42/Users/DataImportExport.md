@@ -25,19 +25,19 @@ Some of the configuration information and data provided with openCRX are also pr
 
 An XML import from a third party system might typically involve the following steps:
 
-![img](42/Users/files/DataImportExport/pic010.png)
+![img](Users/files/DataImportExport/pic010.png)
 
 You can import schema-compliant XML files with the following methods:
 
 * Interactive / on-demand. Navigate to your user home and execute the operation _File > Import_:
 
-![img](42/Users/files/DataImportExport/pic020.png)
+![img](Users/files/DataImportExport/pic020.png)
 
 Click on the button and navigate to XML file to be imported. Next you click [OK] to to start the import. Please note that this method is very suitable for small XML files and on-the-fly imports. If you are dealing with larger XML files, however, you should consider the bulk import described below.
 
 * Bulk Import. Use the bulk import for large XML files or if you need to import multiple XML files in an automated fashion. Put your XML file(s) into the following directory (you might have to expand the EAR file to do so): _opencrx-core-CRX/opencrx-core-CRX/WEB-INF/config/data/<SegmentName>_ where <SegmentName> can be Root, Standard, or whatever your Segment is named. Next you login as openCRX Root administrator (admin-Root) and execute the operation View > Reload. Click Yes to start the operation.
 
-![img](42/Users/files/DataImportExport/pic030.png)
+![img](Users/files/DataImportExport/pic030.png)
 
 __NOTE:__ Once the import is started you can close the browser, i.e. there is no need to keep the session alive until the import is completed. Some information regarding the progress of the import is written to the console.
 
@@ -46,7 +46,7 @@ __NOTE:__ In case you have data dependencies between/among your XML files (e.g. 
 ### Importing Excel Files (openCRX Accounts) ###
 You can directly import Excel Sheets that contain field names in the first row and then data in the rows 2, 3, .... An example sheet is shown below:
 
-![img](42/Users/files/DataImportExport/pic040.png)
+![img](Users/files/DataImportExport/pic040.png)
 
 The following field attributes are supported by the importer wizard:
 
@@ -308,11 +308,11 @@ Example: StringProperty:DOCSYS!FileNumber
 
 Field names supported by MS Outlook match the names produced if you export Contacts from MS Outlook to an Excel Sheet:
 
-![img](42/Users/files/DataImportExport/pic050.png)
+![img](Users/files/DataImportExport/pic050.png)
 
 The Importer produces a detailed on-screen report with clickable links and a summary report stating the total number of created/updated accounts:
 
-![img](42/Users/files/DataImportExport/pic060.png)
+![img](Users/files/DataImportExport/pic060.png)
 
 __NOTE:__  Before you launch an import of thousands of accounts, verify the structure of your Excel sheet with a few lines/accounts only.
 
@@ -324,7 +324,7 @@ These are the steps to import a vCard file:
 * click on the provider Accounts and navigate to an existing Contact (or create a new one)
 * select the operation File > Import vCard to unhide the import dialog:
 
-![img](42/Users/files/DataImportExport/pic070.png)
+![img](Users/files/DataImportExport/pic070.png)
 
 * select the appropriate language
 * click the Browse button and navigate to the vCard file you want to import
@@ -343,13 +343,13 @@ This allows you to export contacts and meetings/sales visits or any other object
 ### Exporting XML Files ###
 Navigate to the object to be exported as XML file and execute the operation File > Export Advanced as shown below:
 
-![img](42/Users/files/DataImportExport/pic080.png)
+![img](Users/files/DataImportExport/pic080.png)
 
 In order to better control which additional objects (composites, referenced objects, ...) the XLM exporter should export together with the object loaded in the Inspector, you can (optionally) provide a reference filter (optionally with a navigation level). By default, only the current object will be exported. If you provide – for example when export­ing a sales order – customer;address as a reference filter, the customer and all referenced addresses will be exported together with the main object. If you export a contact and provide the reference filter member[1] you will get direct members of this contact.
 
 If the export is successful the exporter will terminate with status OK and you will be provided with a link to the file Export.zip containing the raw data:
 
-![img](42/Users/files/DataImportExport/pic090.png)
+![img](Users/files/DataImportExport/pic090.png)
 
 The openCRX ICS Adapter can also export iCalendars in XML format:
 
@@ -370,13 +370,13 @@ You can also export the data contained in an openCRX grid to an XML file by exec
 ### Exporting Data to MS Excel / Open Office Calc Files ###
 Navigate to the object to be exported as spreadsheet file and execute the operation File > Export Advanced as shown below:
 
-![img](42/Users/files/DataImportExport/pic100.png)
+![img](Users/files/DataImportExport/pic100.png)
 
 In order to better control which additional objects (composites, referenced objects, ...) the XLM exporter should export together with the object loaded in the Inspector, you can (optionally) provide a reference filter. By default, only the current object will be exported. If you provide – for example – :*/:* as a reference filter, all composites up to 2 levels deep will be exported together with the main object (this should be sufficient for most use cases). You can also provide a reference filter to dereference and export referenced objects like the customer or the salesRep of a sales order.
 
 If the export is successful the exporter will terminate with status OK and you will be provided with a link to the file Export.xls containing the raw data:
 
-![img](42/Users/files/DataImportExport/pic110.png)
+![img](Users/files/DataImportExport/pic110.png)
 
 Based on such spreadsheet files end-users can easily create reports or do some ad-hoc data analysis without the need to know anything about Java or writing JSPs. The standard distribution of openCRX includes various example reports based on this technology.
 
@@ -389,7 +389,7 @@ These are the steps to manually export group of contacts to an Excel file:
 * start the wizard _Wizards > Manage Members_
 * click the button _Export_
 
-![img](42/Users/files/DataImportExport/pic120.png)
+![img](Users/files/DataImportExport/pic120.png)
 
 * click on the spreadsheet icon to download the Excel file containing the exported accounts
 
@@ -403,17 +403,17 @@ These are the steps to manually export a contact to a vCard file:
 * select the contents of the field vCard and copy it to an empty text file
 * save the text file with any name and extension “vcf”, e.g. contact.vcf:
 
-![img](42/Users/files/DataImportExport/pic130.png)
+![img](Users/files/DataImportExport/pic130.png)
 
 There is also a wizard vCard.jsp available which allows you to export individual accounts or batches of accounts as vCards.
 
 Navigate to an Account and select _File > Save as vCard_ to start the export:
 
-![img](42/Users/files/DataImportExport/pic140.png)
+![img](Users/files/DataImportExport/pic140.png)
 
 In order to export multiple accounts as vCards, create a Saved Search that selects the desired accounts and then navigate to this Saved Search. Select _File > Save Filtered Accounts as vCard_:
 
-![img](42/Users/files/DataImportExport/pic150.png)
+![img](Users/files/DataImportExport/pic150.png)
 
 ### Exporting openCRX Meetings (iCalendar Files) ###
 These are the steps to export an individual activity (e.g. a meeting or a sales visit) to an iCalendar file:
@@ -423,20 +423,20 @@ These are the steps to export an individual activity (e.g. a meeting or a sales 
 * select the contents of the field iCal and copy it to an empty text file
 * save the text file with any name and extension “ics”, e.g. meeting.ics:
 
-![img](42/Users/files/DataImportExport/pic160.png)
+![img](Users/files/DataImportExport/pic160.png)
 
 There is also a wizard iCal.jsp available which allows you to export individual activities or batches of activities as iCals.
 
 Navigate to an Activity and select File > Save as iCal to start the export:
 
-![img](42/Users/files/DataImportExport/pic170.png)
+![img](Users/files/DataImportExport/pic170.png)
 
 In order to export multiple activities as iCals, navigate to an Activity Group (Activity Tracker, Category, Milestone), to a Saved Search (or to any other object that features a list of assigned activities like Userhome) and then select _File > Save Filtered Activities as iCal_ (Save Assigned Activities as iCal).
 
 ### Exporting openCRX Grids ###
 Any openCRX Grid can be exported to an XML or an XLS file. The exporters are accessible through _Actions > Export → xxx_:
 
-![img](42/Users/files/DataImportExport/pic180.png)
+![img](Users/files/DataImportExport/pic180.png)
 
 Export Target  | Description
 ---------------|------------
