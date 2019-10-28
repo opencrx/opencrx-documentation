@@ -1,9 +1,5 @@
 # Introduction to the openCRX UML model - Part II #
 
-
-[TOC]
-
-
 ### Package _org.opencrx.kernel.document1_ ###
 _document1_ allows to capture documents. The class _Document_ is the holder for 
 the non-content related attributes of a document, i.e. the document name, status, 

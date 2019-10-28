@@ -12,49 +12,49 @@ This guide assumes that you have installed
 
 The workspace in _Eclipse_ then looks as shown below.
 
-![img](files/StepByStepEclipse/pic010.png | width=320)
+![img](files/StepByStepEclipse/pic010.png)
 
 And the directory structure looks like this.
 
-![img](files/StepByStepEclipse/pic020.png | width=320)
+![img](files/StepByStepEclipse/pic020.png)
 
 ## Add openCRX to Workspace ##
 
 Next we will import the _openCRX SDK_ projects. Select _File > Import_.
 
-![img](files/StepByStepEclipse/pic060.png | width=320)
+![img](files/StepByStepEclipse/pic060.png)
 
 Select _Existing Projects into Workspace_.
 
-![img](files/StepByStepEclipse/pic070.png | width=320)
+![img](files/StepByStepEclipse/pic070.png)
 
 Navigate to _/tmp/dev/opencrx3/core_ and import the project _openCRX 2 ~ Core_.
 
-![img](files/StepByStepEclipse/pic090.png | width=640)
+![img](files/StepByStepEclipse/pic090.png)
 
 Navigate to _/tmp/dev/opencrx3/test-core_ and import the project _openCRX 2 ~ Test Core_.
 
-![img](files/StepByStepEclipse/pic091.png | width=640)
+![img](files/StepByStepEclipse/pic091.png)
 
 Then navigate all the thirdparty projects as shown below.
 
-![img](files/StepByStepEclipse/pic092.png | width=640)
+![img](files/StepByStepEclipse/pic092.png)
 
-![img](files/StepByStepEclipse/pic093.png | width=640)
+![img](files/StepByStepEclipse/pic093.png)
 
-![img](files/StepByStepEclipse/pic094.png | width=640)
+![img](files/StepByStepEclipse/pic094.png)
 
-![img](files/StepByStepEclipse/pic095.png | width=640)
+![img](files/StepByStepEclipse/pic095.png)
 
-![img](files/StepByStepEclipse/pic096.png | width=640)
+![img](files/StepByStepEclipse/pic096.png)
 
-![img](files/StepByStepEclipse/pic097.png | width=640)
+![img](files/StepByStepEclipse/pic097.png)
 
-![img](files/StepByStepEclipse/pic098.png | width=640)
+![img](files/StepByStepEclipse/pic098.png)
 
 The package explorer view now lists the projects shown below:
 
-![img](files/StepByStepEclipse/pic100.png | width=320)
+![img](files/StepByStepEclipse/pic100.png)
 
 Depending on the Eclipse version, the autoscan may not have found the projects containing the UML (EMF) models. In this case we have to add them manually. The models are located in the following directories:
 
@@ -62,21 +62,21 @@ Depending on the Eclipse version, the autoscan may not have found the projects c
 
 Import the openCRX/core model:
 
-![img](files/StepByStepEclipse/pic110.png | width=640)
+![img](files/StepByStepEclipse/pic110.png)
 
 The package explorer view listing all projects:
 
-![img](files/StepByStepEclipse/pic140.png | width=320)
+![img](files/StepByStepEclipse/pic140.png)
 
 ## Launch openCRX under Eclipse ##
 
 If we want to launch _openCRX_ under _Eclipse_ we first have to create a launch file. Open the run configurations with _Run > Run Configurations_ as shown below:
 
-![img](files/StepByStepEclipse/pic220.png | width=320)
+![img](files/StepByStepEclipse/pic220.png)
 
 Then select _Java Application_ and _New_ to create a new launch file:
 
-![img](files/StepByStepEclipse/pic230.png | width=640)
+![img](files/StepByStepEclipse/pic230.png)
 
 Fill the fields of the tab _Main_ as follows:
 
@@ -84,7 +84,7 @@ Fill the fields of the tab _Main_ as follows:
 * Set the project to empty
 * Set to the main class to _org.apache.catalina.startup.Bootstrap_
 
-![img](files/StepByStepEclipse/pic240.png | width=640)
+![img](files/StepByStepEclipse/pic240.png)
 
 In the tab _Arguments_ set the fields as follows:
 
@@ -107,23 +107,23 @@ __IMPORTANT:__ adapt the values to your environment.
 
 * Set working directory to _/tmp/dev/opencrxServer-3.0.0/apache-tomee-webprofile-1.7.1/_
 
-![img](files/StepByStepEclipse/pic250.png | width=640)
+![img](files/StepByStepEclipse/pic250.png)
 
 Before we can launch _TomEE_ we have to complete the classpath. Click on _Add External JARs_ and navigate to the _openCRX Server_ installation directory, e.g. _/tmp/dev/opencrxServer-3.0.0/apache-tomee-webprofile-1.7.1/bin/_. Select all JARs in this directory as shown below: 
 
-![img](files/StepByStepEclipse/pic290.png | width=640)
+![img](files/StepByStepEclipse/pic290.png)
 
 The selected JARs are added to the _User Entries_.
 
 Then click on _Add External JARs_ and navigate to the _openCRX Server_ installation directory, e.g. _/tmp/dev/opencrxServer-3.0.0/apache-tomee-webprofile-1.7.1/lib/_. Select all JARs in this directory as shown below: 
 
-![img](files/StepByStepEclipse/pic291.png | width=640)
+![img](files/StepByStepEclipse/pic291.png)
 
 The selected JARs are added to the _User Entries_. 
 
 As last step we add the workspace projects. Navigate to _User Entries_ and click _Add projects_. Select all projects as shown below:
 
-![img](files/StepByStepEclipse/pic260.png | width=640)
+![img](files/StepByStepEclipse/pic260.png)
 
 Finally you can start _TomEE_. Open the _Run_ dialog with _Run > Open Run Dialog_. Select _openCRX TomEE_ and click _Run_. The console output should look as shown below.
 
