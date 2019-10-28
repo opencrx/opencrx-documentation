@@ -5,14 +5,14 @@ openCRX offers a [Swagger 2.0](http://swagger.io/)-enabled RESTful API. The [Swa
 ## Explore the API ##
 The easiest way to launch the _Swagger UI_ is through the _Wizard > Explore API_ wizard from the _Standard GUI_:
 
-![img](41/Sdk/files/Rest/pic010.png | width=640]]
+![img](Sdk/files/Rest/pic010.png | width=640]]
 
 The wizard launches the _Swagger UI_ for the _current object_, i.e. the API of the object currently displayed in the _Standard GUI_. In our example this is the _Home_ of the user _guest_:
 
 * __Title__: Guest, (guest) - Home.
 * __XRI__: The XRI is displayed in the tab _System_ which is _xri://@openmdx*org.opencrx.kernel.home1/provider/CRX/segment/Standard/userHome/guest_.
 
-![img](41/Sdk/files/Rest/pic020.png | width=640]]
+![img](Sdk/files/Rest/pic020.png | width=640]]
 
 The _Swagger UI_ displays all features of the object type _org:opencrx:kernel:home1:UserHome_. The API corresponds 1:1 to the [UML class](http://www.opencrx.org/opencrx/3.0/uml/opencrx-core/home1/tn/010_Main.png.html) and the [Java class](http://www.opencrx.org/opencrx/3.0/java/org/opencrx/kernel/home1/jmi1/UserHome.html).
 

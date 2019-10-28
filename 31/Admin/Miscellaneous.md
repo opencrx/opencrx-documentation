@@ -119,7 +119,7 @@ You can migrate from “BLOBs in the DB” to “BLOBs on the file system” wit
 * start _Wizards > Database schema wizard_
 * note the new buttons: _Validate Media_, _Migrate Media to FS_ and _Migrate Media to DB_
 
-![img](31/Admin/files/Miscellaneous/pic010.png)
+![img](Admin/files/Miscellaneous/pic010.png)
 
 * click the button _Migrate Media to FS_ and wait for the process to finish (note that the time required to complete the migration can be quite long; it depends on various factors, including the number and size of the media attachments).
 
@@ -130,7 +130,7 @@ After migrating media BLOBs from the DB to the file system you should validate t
 * start _Wizards > Database schema wizard_
 * click the button _Validate Media_ and wait for the process to finish (note that the time required to complete the validation can be quite long; it depends on various factors, including the number and size of the media attachments)
 
-![img](31/Admin/files/Miscellaneous/pic020.png)
+![img](Admin/files/Miscellaneous/pic020.png)
 
 You can also validate the media manually. On Linux, for example, you can generate a list of objects with
 

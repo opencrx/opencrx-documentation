@@ -7,27 +7,27 @@ The Segment administrator can create new users with the following steps:
 * Create a contact for the new user
 * Click on the element “User Homepages” of the breadcrum:
 
-![img](40/Admin/files/ManagingUsers/pic010.png)
+![img](Admin/files/ManagingUsers/pic010.png)
 
 * Next you select the operation Actions > Create User... which allows you to create and initialize a new user:
 
-![img](40/Admin/files/ManagingUsers/pic020.png)
+![img](Admin/files/ManagingUsers/pic020.png)
 
 * Type the new user's principal name (e.g. guest) into the field Principal name, use the Lookup Inspector or the auto-completer to fetch values for Contact and Primary user group (unless you have a good reason to provide a user group, leave Primary User Group empty and openCRX will automatically create a user group with name <principal name>.Group), and then type a password (e.g. opencrx) into the fields Initial password and Password again:
 
-![img](40/Admin/files/ManagingUsers/pic030.png)
+![img](Admin/files/ManagingUsers/pic030.png)
 
 * Status 0 indicates that the user guest was created without errors:
 
-![img](40/Admin/files/ManagingUsers/pic040.png)
+![img](Admin/files/ManagingUsers/pic040.png)
 
 * Please note that we are still logged in as admin-Standard (as shown in the header of the application), but we are looking at the homepage of the user guest. Execute the operation _Edit > User Settings_:
 
-![img](40/Admin/files/ManagingUsers/pic050.png)
+![img](Admin/files/ManagingUsers/pic050.png)
 
 * This will start the wizard User Settings. You can configure various settings with this wizard. At a minimum you should probably set the timezone and enter the new user's e-mail address. Once you're done you can click the button _Save_. The wizard will then create a bunch of objects and finalize the initialization of the user guest:
 
-![img](40/Admin/files/ManagingUsers/pic060.png)
+![img](Admin/files/ManagingUsers/pic060.png)
 
 * Click _Close_ to leave the wizard.
 
@@ -49,7 +49,7 @@ Phase 3 | once at least one “ CreateUserConfirmationRequest” has been accept
 ### Import Subjects and Application Login Principals ###
 Creating large numbers of subjects/principals by hand can be quite a tedious job. If you prepare a text file containing the appropriate information in the file format as outlined below, the Root administrator (admin-Root) can use the operation Actions > Import Login Principals to create Subjects and Application Login Principals automatically.
 
-![img](40/Admin/files/ManagingUsers/pic070.png)
+![img](Admin/files/ManagingUsers/pic070.png)
 
 __File Format Subjects and Application Login Principals:__
 
@@ -73,7 +73,7 @@ __Example File Subjects and Application Login Principals:__
 ## Import Users ##
 Similarly to importing Subjects and Application Login Principals from a file you can also import Users from a file. If you prepare a text file containing the appropriate information in the file format as outlined below, the Segment administrator (admin-<SegmentName>) can use the operation Actions > Import Users to create Users automatically.
 
-![img](40/Admin/files/ManagingUsers/pic080.png)
+![img](Admin/files/ManagingUsers/pic080.png)
 
 __File Format Users:__
 
@@ -113,6 +113,6 @@ Depending on the configuration of your application server you can disable users 
 ### Disable Users at the level openCRX ###
 The segment administrator (e.g. admin-Standard) can prevent a user from accessing a particular openCRX segment by either disabling the respective Segment Login Principal or by deleting it altogether. Disabling is the preferred option to prevent access temporarily. If a user has multiple Segment Login Principals you must disable all of them to prevent access to the openCRX application.
 
-![img](40/Admin/files/ManagingUsers/pic090.png)
+![img](Admin/files/ManagingUsers/pic090.png)
 
 __IMPORTANT:__ You should not delete a particular Subject as long as it is referenced by any Principal. Otherwise you'll end up with “dangling” Subject references.

@@ -21,7 +21,7 @@ The default settings should work for virtually all users; the probability of get
 
 The following figure shows the situation after the initial setup of openCRX:
 
-![img](41/Admin/files/ManagingSecurity/pic010.png)
+![img](Admin/files/ManagingSecurity/pic010.png)
 
 Summarizing the above:
 
@@ -31,26 +31,26 @@ Summarizing the above:
 
 The segment administrator (e.g. admin-Standard) creates principals and User home pages with the operation createUser:
 
-![img](41/Admin/files/ManagingSecurity/pic020.png)
+![img](Admin/files/ManagingSecurity/pic020.png)
 
 Each segment login principal has a home page in the respective segment (qualifier of principal and home page must match!).
 
 Each segment login principal is correlated with a contact. This correlation is for example required to find all activities and contracts assigned to the logged in principal.
 
-![img](41/Admin/files/ManagingSecurity/pic030.png)
+![img](Admin/files/ManagingSecurity/pic030.png)
 
 While each “real user” (typically) has 1 application login principal only, “real users” may have multiple segment login principals (e.g. because a “real user” is allowed to access multiple segments or because a “real user” is allowed to access a particular segment in different roles like Head of Sales or CFO).
 
 Available segment login principals are listed in the so-called Role Drop Down:
 
-![img](41/Admin/files/ManagingSecurity/pic040.png)
+![img](Admin/files/ManagingSecurity/pic040.png)
 
 ### Permissions / Access Control ###
 The openCRX security framework makes a clear distinction between Ownership Permissions (permissions granted on a particular object) and Model Permissions (permissions granted on a particular model element). As the latter are not implemented (yet) we only talk about Ownership Permissions in this guide. In addition to wwnership permissions there are also GUI Permissions (see the guide openCRX GUI – Getting Started).
 
 Ownership permissions are used to control browse/update/delete access to openCRX objects by Users and UserGroups (i.e. Ownership access control). Every openCRX object is a SecureObject. The following figure shows an extract from the UML model (if you are interested in all the details and the formally correct and complete specifications you should refer to the latest openCRX UML models):
 
-![img](41/Admin/files/ManagingSecurity/pic050.png)
+![img](Admin/files/ManagingSecurity/pic050.png)
 
 __NOTE:__ If you see N/P in a reference field instead of a more meaningful value you probably do not have browse access to the respective object (N/P stands for No Permission)
 
@@ -65,7 +65,7 @@ The most important security attributes of an object X are discussed below:
 * __Update Access Level:__ this setting determines which users/user groups are granted update access to object X (i.e. who can change object X; this includes adding composite objects to object X).
 * __Delete Access Level:__ this setting determines which users/user groups are granted delete access to object X and all its composite objects (recursively!) (i.e. who can delete object X and all its composite objects (recursively!)).
 
-![img](41/Admin/files/ManagingSecurity/pic060.png)
+![img](Admin/files/ManagingSecurity/pic060.png)
 
 The following access levels are available to control which users/user groups are granted permission to browse/delete/update a particular object X:
 
@@ -96,7 +96,7 @@ The figure on the right shows the openCRX default principal groups and their mem
 * Users
 * Unspecified
 
-![img](41/Admin/files/ManagingSecurity/pic070.png)
+![img](Admin/files/ManagingSecurity/pic070.png)
 
 ### The SQL approach to understanding security ###
 If you are familiar with SQL, the following approach to understanding security might be helpful. Let's put ourselves into the role of the AccessControl Plugin; accessing an object (read mode) results in a SELECT statement as follows:
@@ -132,7 +132,7 @@ Default access level settings for non-Root segments (e.g. segment Standard) afte
 * Update Access Level: 3 - deep
 * Delete Access Level: 1 - private
 
-![img](41/Admin/files/ManagingSecurity/pic080.png)
+![img](Admin/files/ManagingSecurity/pic080.png)
 
 Due to the setting access_level_browse = 4 (global) any user with access to a particular segment is allowed to browse top level objects (i.e. any user can browse all accounts, all activities, all documents, etc.).
 
@@ -140,7 +140,7 @@ These default settings are suitable for test environments and deployments in sma
 
 After this change, the table OOCKE1_SEGMENT will look as follows:
 
-![img](41/Admin/files/ManagingSecurity/pic090.png)
+![img](Admin/files/ManagingSecurity/pic090.png)
 
 __IMPORTANT:__ Segment security settings are loaded during the initialization of the openCRX servlet. Hence, if you change settings you must redeploy openCRX for the new settings to become active.
 
@@ -167,7 +167,7 @@ __NOTE:__ In the context of activity management there are various operations tha
 ## Checking Permissions ##
 You can check security permissions on any SecureObject with the operation Security > Check Permissions. Provide the principal name as a parameter. The following figure shows the result of the operation on a user's homepage:
 
-![img](41/Admin/files/ManagingSecurity/pic100.png)
+![img](Admin/files/ManagingSecurity/pic100.png)
 
 The meaning of the above result is as follows:
 
@@ -194,11 +194,11 @@ With the following steps you can add new user roles:
 * in the grid _Roles_, select _New > Role_
 * set both the name and the qualifier to _Admin_ and enter _Admin Role_ as description as shown below - then click the button _Save_:
 
-![img](41/Admin/files/ManagingSecurity/pic160.png)
+![img](Admin/files/ManagingSecurity/pic160.png)
 
 * in the grid _Roles_, select _New > Role_ again set both the name and the qualifier to _Public_ and enter _Public Role_ as description as shown below - then click the button _Save_:
 
-![img](41/Admin/files/ManagingSecurity/pic170.png)
+![img](Admin/files/ManagingSecurity/pic170.png)
 
 * your default Security Policy Standard should now contain the two roles _Admin_ and _Public_.
 
@@ -214,13 +214,13 @@ With the following steps you can grant a role to a user:
 * the grid _Granted Roles_ contains the (ordered) list of roles currently granted to the respective principal
 * start typing the name of the role to be granted into the input box just below the menu Edit (as show below) and then select the desired role, e.g. _Public_:
 
-![img](41/Admin/files/ManagingSecurity/pic180.png)
+![img](Admin/files/ManagingSecurity/pic180.png)
 
 * select the menu _Edit > Add object_ to grant the role:
 
-![img](41/Admin/files/ManagingSecurity/pic190.png)
+![img](Admin/files/ManagingSecurity/pic190.png)
 
-![img](41/Admin/files/ManagingSecurity/pic200.png)
+![img](Admin/files/ManagingSecurity/pic200.png)
 
 __NOTE:__ If permissions granted to roles contradict each other, the last role in the list of granted roles “wins”, i.e. the order in which roles are granted to a principal matters!. You can use _Edit > Move up_ object and _Edit > Move down_ object to change the order of roles in the grid _Granted Roles_.
 
@@ -234,11 +234,11 @@ With the following steps you can revoke a role previously granted to an openCRX 
 * click on the tab _Principals_ and locate and then navigate to the principal whom you want to grant a new role.
 * the grid _Granted Roles_ contains the (ordered) list of roles currently granted to the respective principal:
 
-![img](41/Admin/files/ManagingSecurity/pic210.png)
+![img](Admin/files/ManagingSecurity/pic210.png)
 
 * click on the line of the role to be revoked to select it (the selected line turns grey) and then select the menu _Edit > Remove_ object to revoke the role:
 
-![img](41/Admin/files/ManagingSecurity/pic220.png)
+![img](Admin/files/ManagingSecurity/pic220.png)
 
 #### Enabling / Disabling GUI elements ####
 With the following steps you can disable a GUI element:
@@ -247,7 +247,7 @@ With the following steps you can disable a GUI element:
 * navigate to the screen that contains the GUI element you want to disable
 * start the wizard _Wizards > Manage GUI Permissions_:
 
-![img](41/Admin/files/ManagingSecurity/pic230.png)
+![img](Admin/files/ManagingSecurity/pic230.png)
 
 * select the role you want to manage permissions for (e.g. Public)
 * select the type of GUI element you want to enable/disable (e.g. Operations, Fields, Grids)

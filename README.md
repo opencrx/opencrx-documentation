@@ -10,7 +10,7 @@ For more information go to the [openCRX web site](http://www.opencrx.org/).
 ## Online Manuals ##
 
 * [4.2](42/README.md)
-* [4.1](41/README.md)
+* [4.1](README.md)
 * [4.0](40/README.md)
 * [3.1](31/README.md)
 * [3.0](30/README.md)

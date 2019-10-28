@@ -57,7 +57,7 @@ The following steps are required to configure Thunderbird 31 for LDAP:
 * select Composition and select the tab Addressing
 * check Directory Server and click on the button _Edit Directories_
 
-![img](40/Admin/files/GroupwareServices/pic010.png)
+![img](Admin/files/GroupwareServices/pic010.png)
 
 * in the dialog window LDAP Directory Servers click on the button _Add_
 * populate the Directory Server Properties dialog as follows (the example entries are assuming the openCRX Server is at localhost, the provider is CRX and the Segment is Standard, connecting with Username guest):
@@ -87,7 +87,7 @@ The following steps are required to configure MS Outlook 2007 for LDAP:
 * select the tab Search
 * in the field group Search Base click on Custom and populate as follows: _ou=filter/All Accounts,ou=Persons_
 
-![img](40/Admin/files/GroupwareServices/pic020.png)
+![img](Admin/files/GroupwareServices/pic020.png)
 
 * click OK, Next, Finish, and Close to conclude the configuration
 
@@ -99,7 +99,7 @@ openCRX can map sets of accounts to a VCARD file (a sequence of VCARDs). The res
 
 Use the openCRX Wizard _Connection Helper_ to generate valid VCF Selectors. You can start the wizard from a user's homepage:
 
-![img](40/Admin/files/GroupwareServices/pic030.png)
+![img](Admin/files/GroupwareServices/pic030.png)
 
 ### Connecting MS Outlook ###
 Detailed instructions on how to connect MS Outlook are available from [here](http://www.opencrx.org/opencrx/2.4/Outlook_ICS_VCF_adapter.htm).
@@ -109,7 +109,7 @@ __IMPORTANT:__ Please note that this connector is no longer supported / maintain
 ### Connecting Thunderbird ###
 An add-on (supporting TB3 and newer) is available that enables you to connect Thunderbird. For more instructions see [here](http://www.opencrx.org/opencrx/2.10/Thunderbird_Contacts_Add-on.htm).
 
-![img](40/Admin/files/GroupwareServices/pic040.png)
+![img](Admin/files/GroupwareServices/pic040.png)
 
 __IMPORTANT:__ Please note that this add-on is no longer supported / maintained. We recommend to use the CardDAV SOGo Connector.
 
@@ -124,21 +124,21 @@ openCRX can map any account group to a CardDAV collection. Such a mapping is def
 * expand the grid tab row _Alerts Times >>_ and then click on the tab _Sync Profiles_
 * click on _New_ and select the entry Card Profile:
 
-![img](40/Admin/files/GroupwareServices/pic050.png)
+![img](Admin/files/GroupwareServices/pic050.png)
 
 * enter a name (e.g. MyCardProfile) and click _New_
 * in the grid _Sync Feeds_, select _New > Contacts Feed_
 * check the box _Active_, enter a name for your new feed and select the account group that should be mapped to a CardDAV collection:
 
-![img](40/Admin/files/GroupwareServices/pic060.png)
+![img](Admin/files/GroupwareServices/pic060.png)
 
 * with the wizard Connection Helper you can verify that your new feed is available:
 
-![img](40/Admin/files/GroupwareServices/pic070.png)
+![img](Admin/files/GroupwareServices/pic070.png)
 
 Use the openCRX Wizard _Connection Helper_ to generate valid Contact Feed Selectors. You can start the wizard from any Card Profile or from your homepage:
 
-![img](40/Admin/files/GroupwareServices/pic080.png)
+![img](Admin/files/GroupwareServices/pic080.png)
 
 ### Connecting Thunderbird ###
 Thunderbird itself does not support CardDAV, but you can use the Inverse SOGo Connector . It is available directly from Inverse's web site [here](http://www.sogo.nu/downloads/frontends.html). Once this add-on is installed, you can configure the connector as follows:
@@ -148,27 +148,27 @@ Thunderbird itself does not support CardDAV, but you can use the Inverse SOGo Co
 * start the Connection Helper Wizard (from the menu Wizards)
 * Choose the resource role _Profile_ and the selector type _Card Profile_ and then select the desired card profile, e.g. _Contacts_:
 
-![img](40/Admin/files/GroupwareServices/pic090.png)
+![img](Admin/files/GroupwareServices/pic090.png)
 
 * start Thunderbird
 * open Address Book and create a new Remote Address Book
 
-![img](40/Admin/files/GroupwareServices/pic100.png)
+![img](Admin/files/GroupwareServices/pic100.png)
 
 * enter a name of your choice and then copy the CardDAV Collection URL from openCRX into the field URL (note that the Connection Helper Wizard shows the name of the card feed as a tooltip):
 
-![img](40/Admin/files/GroupwareServices/pic110.png)
+![img](Admin/files/GroupwareServices/pic110.png)
 
 * click _OK_
 * back in the list of address books, select any other address book than the new one just created
 * next, select the newly created address book
 * right-click the newly created address book and select _Synchronize_ from the context menu:
 
-![img](40/Admin/files/GroupwareServices/pic120.png)
+![img](Admin/files/GroupwareServices/pic120.png)
 
 * the first time you connect a pop-up window requests authentication credentials; enter your openCRX username and password:
 
-![img](40/Admin/files/GroupwareServices/pic130.png)
+![img](Admin/files/GroupwareServices/pic130.png)
 
 That's it. From now on your address book will be synchronized automatically every time you start Thunderbird.
 
@@ -199,7 +199,7 @@ openCRX supports a wide range of types of activities, including E-Mails, Tasks, 
 
 To fully understand the power of this approach, consider a large project X (e.g. building a power plant) with millions and millions of activities. With openCRX, a project is typically mapped to an activity tracker (e.g. all activities of project X are assigned to the activity tracker Project X). As a large project is often times structured, i.e. broken down into subprojects, milestones, etc., let us assume that the respective subset of activities related to a milestone of Project X is assigned to an activity group Milestone 2. With openCRX, it's a single click and you can browse all the activities assigned to Milestone 2, or you can view all these activities in a calendar application like Sunbird or MS Outlook:
 
-![img](40/Admin/files/GroupwareServices/pic140.png)
+![img](Admin/files/GroupwareServices/pic140.png)
 
 It goes without saying that different users have different needs. It is also quite natural that the needs change over time. With openCRX, it is easy to deliver as there are virtually unlimited possibilities to slice and dice the universe of activities. For example, instead of pulling a set of activities based on their assignment to activity groups, there are many use cases where one would like to define a filter to define a subset of activities. On the one hand, openCRX features lots of default filters, on the other hand, there are powerful tools to define custom filters virtually any way you like. For example: an auditor might be interested in all activities involving a particular subcontractor, another user could be interested in browsing through all the meetings related to Project X. Hence, in the context of calendaring it helps if you think of a calendar as a set of activities, nothing more and nothing less.
 
@@ -223,15 +223,15 @@ Dates of Death       | RU   | _datesofdeath?id=<provider>/<segment>/filter/<acco
 
 Use the openCRX Wizard _Connection Helper_ from your Homepage to generate valid Calendar Selectors:
 
-![img](40/Admin/files/GroupwareServices/pic150.png)
+![img](Admin/files/GroupwareServices/pic150.png)
 
 Choose the option _Events / Tasks_ and then make your selections:
 
-![img](40/Admin/files/GroupwareServices/pic160.png)
+![img](Admin/files/GroupwareServices/pic160.png)
 
 By default, at most 500 activities (VEVENT or VTODO) are returned per request by the ical servlet. You can increase that limit by creating component configurations with name and qualifier ICalServlet (as admin-Root) and then adding a String property named maxActivities with the desired value, e.g. 5000 as shown below:
 
-![img](40/Admin/files/GroupwareServices/pic170.png)
+![img](Admin/files/GroupwareServices/pic170.png)
 
 The CalDAV-Servlet does not have any such restriction.
 
@@ -260,7 +260,7 @@ One of the consequences is that if you work with CalDAV you need to define 2 cal
 
 Use the openCRX Wizard “Connection Helper” from your Homepage to generate valid Calendar Selectors:
 
-![img](40/Admin/files/GroupwareServices/pic180.png)
+![img](Admin/files/GroupwareServices/pic180.png)
 
 The wizard can also build URLs for CalDAV Event / Task collections that you can use to easily connect CalDAV clients capable of dealing with collections (e.g. iOS-devices, Android, etc.).
 
@@ -295,16 +295,16 @@ The openCRX AirSync Adapter uses a different mapping (see chapter 10.2 Mapping o
 
 Hence, all openCRX activities correspond to either calendar events (VEVENT) or tasks (VTODO). An openCRX activitiy's iCal representation is stored in the iCal attribute:
 
-![img](40/Admin/files/GroupwareServices/pic190.png)
+![img](Admin/files/GroupwareServices/pic190.png)
 
 In the openCRX standard GUI the same activity is presented as follows:
 
-![img](40/Admin/files/GroupwareServices/pic200.png)
+![img](Admin/files/GroupwareServices/pic200.png)
 
 #### Conversions between VEVENT and VTODO ####
 Many calendar applications differentiate between events (entries in a calendar with well-defined start and end date) and tasks or to-dos (entries in a task list with a well-defined due date). openCRX also supports this distinction and can even convert activities from VEVENT to VTODO and vice versa without loss of information. To convert an openCRX activity from one type to the other, edit the activity and change the value of the iCal type dropdown:
 
-![img](40/Admin/files/GroupwareServices/pic210.png)
+![img](Admin/files/GroupwareServices/pic210.png)
 
 ### Calendaring / Free Busy ###
 Free Busy is part of the iCalendar standard (RFC 2445) for calendar data exchange (see also Wikipedia). Many calendar clients rely on this information for group scheduling. openCRX can derive free busy information on-the-fly from the respective activities; as most clients do not support authentication the default configuration of the openCRX ical servlet does not require authentication to retrieve Free Busy information. However, the principal guest must exist (but you can disable the login):
@@ -344,11 +344,11 @@ For detailed information on how to configure Thunderbird's Free / Busy add-on, p
 * e-mail address pattern: _*@opencrx.org_
 * URL pattern: _http://demo.opencrx.org/opencrx-ical-CRX/freebusy?id=CRX/Standard/userhome/*_
 
-![img](40/Admin/files/GroupwareServices/pic220.png)
+![img](Admin/files/GroupwareServices/pic220.png)
 
 Once the Free/Busy add-on is configured, it will retrieve free busy information directly from your openCRX server whenever you invite attendees:
 
-![img](40/Admin/files/GroupwareServices/pic230.png)
+![img](Admin/files/GroupwareServices/pic230.png)
 
 #### Connecting MS Outlook ####
 See [here](http://support.microsoft.com/kb/291621). Please note that Outlook does not support SSL with free busy.
@@ -423,7 +423,7 @@ The user guest would connect to this openCRX homepage with the URL
 * give your calendar a name and pick a color of your choice
 * That's it. You are connected to openCRX.
 
-![img](40/Admin/files/GroupwareServices/pic240.png)
+![img](Admin/files/GroupwareServices/pic240.png)
 
 Thunderbird / Lightning and Sunbird require a life connection to openCRX (i.e. no support for offline viewing/editing) unless you enable the experimental Cache of Ligthning / Sunbird.
 
@@ -435,7 +435,7 @@ Out of the box MS Outlook does not offer you much choice with ICS calendars. You
 
 Not to leave you out in the rain, we put together a bunch of VBA scripts that teach your Outlook a few new tricks. The scripts and detailed instructions for both MS Outlook 2003 and MS Outlook 2007 are available from [here](http://www.opencrx.org/opencrx/2.4/Outlook_ICS_VCF_adapter.htm).
 
-![img](40/Admin/files/GroupwareServices/pic250.png)
+![img](Admin/files/GroupwareServices/pic250.png)
 
 #### Connecting iPhone ####
 on your iPhone home screen, tap the icon Settings
@@ -457,7 +457,7 @@ If you get a message _Cannot Connect Using SSL_ tap _No_ to move on to the next 
 	* Use SSL: if you use SSL, set to _ON_, otherwise _OFF_
 	* Remove Alarms: as you prefer
 
-![img](40/Admin/files/GroupwareServices/pic260.png)
+![img](Admin/files/GroupwareServices/pic260.png)
 
 * tap _Next_
 * if you use SSL in combination with a self-signed certificate, you will get a message Unable to Verify Certificate --> tap Accept
@@ -465,7 +465,7 @@ If you get a message _Cannot Connect Using SSL_ tap _No_ to move on to the next 
 
 This ICS calendar feature is particularly useful to connect your iPhone to a birthday calendar generated by openCRX (use the wizard “Connection Helper” to calculate the URL (server name respectively) for any desired Account Filter:
 
-![img](40/Admin/files/GroupwareServices/pic270.png)
+![img](Admin/files/GroupwareServices/pic270.png)
 
 ####  Deleting Events ####
 The openCRX ICS Adapter does not support deleting events (because deleting objects is typically not an acceptable operation in an enterprise environment). openCRX does support disabling of objects, however. If there is a need to disable events directly from your ICS Client, here is how to do it:
@@ -535,17 +535,17 @@ Some CalDAV clients (e.g. Apple's iPhone, CalDAV-Sync for Android) support CalDA
 * navigate to a user's homepage
 * click on the tab _Sync Profiles_ and select _New > Calendar_ Profile:
 
-![img](40/Admin/files/GroupwareServices/pic280.png)
+![img](Admin/files/GroupwareServices/pic280.png)
 
 * enter at least a name for your new collection, e.g. MyCals, and then click _New_
 * navigate to this new calendar profile and then add the desired feed(s), e.g. an Activity Tracker or an Activity Filter, as follows:
 * select New > Activity Group Calendar Feed as shown below:
 
-![img](40/Admin/files/GroupwareServices/pic290.png)
+![img](Admin/files/GroupwareServices/pic290.png)
 
 select an activity group and enter at least a name for this feed and mark it as active (some CalDAV clients support coloring, i.e. you can optionally also enter color information):
 
-![img](40/Admin/files/GroupwareServices/pic300.png)
+![img](Admin/files/GroupwareServices/pic300.png)
 
 * click _New_
 * optionally, add more feeds (you can also add additional feeds later)
@@ -583,7 +583,7 @@ Connect to any openCRX calendar collection as follows with your iPhone:
 * start the wizard Connection Helper: AirSync / Calendar / vCard from your openCRX homepage
 * select _Profiles_ and _Calendar Profiles_ and then your CalDAV collection, e.g. _Calendars_ - the wizard automatically _calculates_ the CalDAV URL required to connect:    
 
-![img](40/Admin/files/GroupwareServices/pic310.png)
+![img](Admin/files/GroupwareServices/pic310.png)
 
 * copy the above URL (you'll need to paste it later)
 * on your iPhone home screen, tap the icon Settings
@@ -594,7 +594,7 @@ Connect to any openCRX calendar collection as follows with your iPhone:
 * and then enter or paste the CalDAV URL into the field Server and populate the fields User Name and Password as shown below:
 * tap _Next_ to verify the account information
 
-![img](40/Admin/files/GroupwareServices/pic320.png)
+![img](Admin/files/GroupwareServices/pic320.png)
 
 If you get a message _Cannot Connect Using SSL_ tap _No_ to get to the next screen and then enter the connection details.
 
@@ -607,9 +607,9 @@ If you get a message _Cannot Connect Using SSL_ tap _No_ to get to the next scre
 	* Port: port number (Tomcat)
 	* Account URL: the CalDAV URL
 
-![img](40/Admin/files/GroupwareServices/pic330.png)
+![img](Admin/files/GroupwareServices/pic330.png)
 
-![img](40/Admin/files/GroupwareServices/pic340.png)
+![img](Admin/files/GroupwareServices/pic340.png)
 	
 * if you use SSL in combination with a self-signed certificate, you will get a message Unable to Verify Certificate --> tap Accept
 * if everything works out, you can tap Save to store the settings and your calendar will be available in the Calendar App from the iPhone's home screen
@@ -718,7 +718,7 @@ The following information is required to configure an IMAP account:
 * __Port:__ 1143
 * __Incoming User Name:__ <login principal name>@<Segment>. Example: guest@Standard
 
-![img](40/Admin/files/GroupwareServices/pic350.png)
+![img](Admin/files/GroupwareServices/pic350.png)
 
 If you move an e-mail message from a non-openCRX IMAP folder to an openCRX IMAP folder and the target folder does not have a valid E-Mail Activity Creator defined, openCRX will not be able to create an EMailActivitiy in that folder. Due to the move operation the message is deleted from the source folder in your IMAP client and your e-mail message will be lost. Hence, it is good practice to copy (and not move) e-mails to openCRX IMAP folders. Only after verifying that the EMailActivitiy was actually created by openCRX in the target folder is it save to delete the message from the source folder.
 
@@ -735,4 +735,4 @@ The following steps are required to configure MS Outlook 2007 for IMAP:
 * __Incoming Port:__ 1143
 * __Incoming User Name:__ <login principal name>@<Segment>. Example: guest@Standard
 
-![img](40/Admin/files/GroupwareServices/pic360.png)
+![img](Admin/files/GroupwareServices/pic360.png)

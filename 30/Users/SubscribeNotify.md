@@ -2,7 +2,7 @@
 
 openCRX features a powerful event subscription and notification service:
 
-![img](30/Users/files/SubscribeNotify/pic010.png)
+![img](Users/files/SubscribeNotify/pic010.png)
 
 Once a topic is created, openCRX users can subscribe to it. Users manage their subscriptions individually on their UserHomes (with the Wizard UserSettings or by editing their subscriptions manually). If a topic has subscribed users and a monitored event occurs then the predefined actions are performed. If the action is set to – for example – creating an alert for subscribed users, then each subscribed user will receive an alert on the UserHome.
 
@@ -18,7 +18,7 @@ The openCRX distribution includes quite a few default topics (see Figure 35: Sta
 
 __IMPORTANT:__ Please note that newly created Segments do neither contain Workflow Processes nor Topics (i.e. the respective grids are empty). Both Workflow Processes and Topics can be created by the segment administrator with the wizard Segment Setup.
 
-![img](30/Users/files/SubscribeNotify/pic020.png)
+![img](Users/files/SubscribeNotify/pic020.png)
 
 Users can easily custom-tailor their subscriptions with filters and by selecting event types like Object Creation, Object Replacement, and Object Removal.
 
@@ -27,7 +27,7 @@ In this example we will create a subscription to the standard Topic Account Modi
 
 * Login as guest, and execute the operation Edit > User Settings to start the respective wizard. Check both “Is Active” and “Creation” as shown below:
 
-![img](30/Users/files/SubscribeNotify/pic030.png)
+![img](Users/files/SubscribeNotify/pic030.png)
 
 * Click the button _Save_ to store your settings.
 
@@ -55,7 +55,7 @@ In combination with openCRX security the subscription filter feature enables you
 * assign PrincipalGroup DivisionA.ProjectY to ActivityTracker DivisionA:ProjectY; like this new activities assigned to this Tracker will also be assigned the PrincipalGroup DivisionA.ProjectY
 * an Activity Modification subscription of a user wanting notifications related to ProjectX and ProjectY would look as follows:
 
-![img](30/Users/files/SubscribeNotify/pic040.png)
+![img](Users/files/SubscribeNotify/pic040.png)
 
 Enter the name of the attribute (owner in our example) into the name field and then enter the value(s) to match into the value field (in our case Standard:DivisionA.ProjectX and Standard:DivisionA.ProjectY)
 

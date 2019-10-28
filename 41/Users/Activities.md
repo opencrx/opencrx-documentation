@@ -49,28 +49,28 @@ The easiest way to find an activity is by selecting an activity group (such as a
 ### Step 1: Navigate to the activity management ###
 The figure below shows how the activity management is selected.
 
-![img](41/Users/files/Activities/pic010.png)
+![img](Users/files/Activities/pic010.png)
 
 The main screen of the activity management shows the activity creators, activity trackers and resources.
 
-![img](41/Users/files/Activities/pic020.png)
+![img](Users/files/Activities/pic020.png)
 
 Before you can search for activities you must select either an activity group (one of the tabs Activity Trackers, Categories, Milestones) or select the tab Activities which shows all activities. In the following example we want to search for activities assigned to the activity tracker openCRX:QuickStart. The figure below shows how to select the tracker openCRX:QuickStart.
 
-![img](41/Users/files/Activities/pic030.png)
+![img](Users/files/Activities/pic030.png)
 
 The next figure shows the detail screen of the activity tracker openCRX:QuickStart. It shows all activities assigned to this activity tracker.
 
-![img](41/Users/files/Activities/pic040.png)
+![img](Users/files/Activities/pic040.png)
 
 ### Step 2: Searching for activities ###
 The activities assigned to the selected tracker are shown in the grid Activities. The activities can be sorted by clicking on the sort icon (,,)  of the corresponding column. If you want to search for activities by a specific keyword (e.g. publish) you enter the keyword in the search field and then click on the title of the column Name as shown in the figure below.
 
-![img](41/Users/files/Activities/pic050.png)
+![img](Users/files/Activities/pic050.png)
 
 If you know the activity number you can enter the activity number in the search field and click on the title of the column # as shown below.
 
-![img](41/Users/files/Activities/pic060.png)
+![img](Users/files/Activities/pic060.png)
 
 openCRX offers standard filters which allow to select and sort activities with a single click. The next figure shows the predefined filters.
 
@@ -86,22 +86,22 @@ openCRX offers standard filters which allow to select and sort activities with a
 
 A default filter is selected as shown below.
 
-![img](41/Users/files/Activities/pic070.png)
+![img](Users/files/Activities/pic070.png)
 
 ### Step 3: Define a default filter ###
 openCRX allows to set default filters for every tab. Every time you re-enter a detail screen, the sort and filter criteria defined by the default filter are restored. The following example shows how to define a default filter which selects all open activities and sorts them by their scheduled start in reverse chronological order. 
 
 The simplest way is to select in a first step the predefined filter __Select Open \[Scheduled Start / Due\]__ as shown below. This filter shows all open activities sorted by their scheduled start in chronological order. The activities can now be ordered by their scheduled start in reverse chronological order by clicking two times on the order icon of the column __Sched. Start__ as shown below. 
 
-![img](41/Users/files/Activities/pic080.png)
+![img](Users/files/Activities/pic080.png)
 
 The filter settings can now be saved by clicking on the __Set as Default filter__ icon as shown below.
 
-![img](41/Users/files/Activities/pic090.png)
+![img](Users/files/Activities/pic090.png)
 
 If the default filter should be restored the next time you log in to openCRX you must make sure to save the user settings as shown below.
 
-![img](41/Users/files/Activities/pic100.png)
+![img](Users/files/Activities/pic100.png)
 
 ## How to create a new activity ##
 This section describes how you can report and create new activities. Creating an activity requires the following steps:
@@ -113,25 +113,25 @@ This section describes how you can report and create new activities. Creating an
 ### Step 1: Navigate to the activity management ###
 In a first step navigate to the activity management by selecting the item Activities in the root menu.
 
-![img](41/Users/files/Activities/pic110.png)
+![img](Users/files/Activities/pic110.png)
 
 ### Step 2: Select an activity creator ###
 Unlike other items in openCRX, activities are not created with the New-operation New-->Activity. They are created by activity creators. Activity creators serve as templates and allow easy creation of new activities. Activity creators are typically created by an administrator or project manager. They allow easy creation of new activities. The figure below shows the tab Activity Creators. Activity creators should have names and descriptions which allow the user to easily select the desired creator. In the example, the creator openCRX:QuickStart creates openCRX:QuickStart-guide activities.
 
-![img](41/Users/files/Activities/pic120.png)
+![img](Users/files/Activities/pic120.png)
 
 In order to create an activity, select and open the creator as shown below.
 
-![img](41/Users/files/Activities/pic130.png)
+![img](Users/files/Activities/pic130.png)
 
 The figure below shows the details of the activity creator. As already mentioned, an activity creator serves as template for newly created activities. A user creating new activities should NOT modify activity creators. Creators are typically managed by administrators or project managers.
 
-![img](41/Users/files/Activities/pic140.png)
+![img](Users/files/Activities/pic140.png)
 
 ### Step 3: Create the activity ###
 After having selected the activity creator, a new activity is created by selecting Actions-->New Activity as shown below.
 
-![img](41/Users/files/Activities/pic150.png)
+![img](Users/files/Activities/pic150.png)
 
 Next you have to fill out the New Activity input form. As shown in the next figure the input form requests the following fields:
 
@@ -144,15 +144,15 @@ Next you have to fill out the New Activity input form. As shown in the next figu
 * __Due by:__ The due by date of the activity. The field is optional. It is set to a date vary far in the future if not specified (openCRX takes care of this automatically to ensure that sorting based on due dates yields the expected results).
 * __Reporting contact:__ Select a contact who should appear as reporter of the new activity. If left empty the reporting contact is set to the logged on user.
 
-![img](41/Users/files/Activities/pic160.png)
+![img](Users/files/Activities/pic160.png)
 
 After clicking OK the activity is created and a link to the created activity is displayed as shown below.
 
-![img](41/Users/files/Activities/pic170.png)
+![img](Users/files/Activities/pic170.png)
 
 A click on the link displays the activity details as shown below. The fields of the activity are initialized as specified by the activity creator and by the values provided in the New Activity input form. The fields Name, Description, Detailed description, Scheduled start / end, Due by, Reporting contact and Priority contain the values provided in the New Activity input form. The field Activity type and the tabs Assigned Groups and Assigned Resources contain the values defined by the activity creator. Activity state is set to the initial state defined by the activity process.
 
-![img](41/Users/files/Activities/pic180.png)
+![img](Users/files/Activities/pic180.png)
 
 ## How to manage activities ##
 The most common tasks when managing activities are:
@@ -164,11 +164,11 @@ The most common tasks when managing activities are:
 ### Edit activity details ###
 An existing activity can be modified by putting it into edit mode. Select Edit-->Edit as shown below.
 
-![img](41/Users/files/Activities/pic190.png)
+![img](Users/files/Activities/pic190.png)
 
 The edit mode allows to modify all non read-only properties of an activity as shown below.
 
-![img](41/Users/files/Activities/pic200.png)
+![img](Users/files/Activities/pic200.png)
 
 The changes are made persistent by clicking the Save button. Clicking Cancel ignores the modifications.
 
@@ -177,15 +177,15 @@ Properties such as Assigned to, % complete, Actual start, Actual end are set aut
 ### Perform a follow up ###
 An activity is always in a process state. An newly created activity is in the state New. Performing transitions on an activity allows to bring an activity into a new state. This can be done with the operation Actions-->Follow Up. The figure below shows the input form of the Follow Up operation. The drop-down field Transition shows all available transitions. The list of of available transitions is derived from the current state of the activity and the activity process (defined implicitly by the activity type).
 
-![img](41/Users/files/Activities/pic210.png)
+![img](Users/files/Activities/pic210.png)
 
 It is a good idea to describe the transition by supplying a title and a descriptive text. After clicking OK, the selected transition (Assign) is applied. The activity is set to the new state (In Progress) and the follow up information is added to the Follow Up grid of the activity as shown below.
 
-![img](41/Users/files/Activities/pic220.png)
+![img](Users/files/Activities/pic220.png)
  
 Because the activity is now in state In Progress, a next follow up shows the transitions Add Note and Complete in the drop-downs as shown below.
 
-![img](41/Users/files/Activities/pic230.png)
+![img](Users/files/Activities/pic230.png)
 
 The next tables show the states and the transitions of the Bug and feature tracking process available with the standard distribution of openCRX.
 
@@ -221,4 +221,4 @@ The next tables show the states and the transitions of the Bug and feature track
 
 The figure below shows the process as defined in openCRX.
 
-![img](41/Users/files/Activities/pic240.png)
+![img](Users/files/Activities/pic240.png)

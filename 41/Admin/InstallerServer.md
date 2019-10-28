@@ -62,52 +62,52 @@ java -jar opencrxServer-4.1.0-installer.jre-1.8.jar
 
 * Click _Next_ on the following screen:
 
-![img](41/Admin/files/InstallerServer/pic010.png)
+![img](Admin/files/InstallerServer/pic010.png)
 
 * Accept the BSD License Agreement and click _Next_ again:
 
-![img](41/Admin/files/InstallerServer/pic020.png)
+![img](Admin/files/InstallerServer/pic020.png)
 
 * Select the home directory of your JDK 1.8 installation (automatically selected if the environment 
   variable _JAVA\_HOME_ is set) - for example /usr/lib/jvm/java-8-openjdk-amd64 - and then click 
   _Next_ to continue:
   
-![img](41/Admin/files/InstallerServer/pic030.png)
+![img](Admin/files/InstallerServer/pic030.png)
 
 * Select the home directory of your Ant installation (automatically selected if  the environment 
   variable _ANT\_HOME_ is set correctly) - for example /opt/apache-ant-1.9.4 - and then click _Next_ 
   to continue:
   
-![img](41/Admin/files/InstallerServer/pic040.png)
+![img](Admin/files/InstallerServer/pic040.png)
 
 * Select the installation directory - for example /home/crx/opencrxServer-4.1.0 - and then click 
   _Next_ to continue. Note that if you choose to create a new directory you will have to confirm 
   your choice by clicking _OK_ in the respective pop-up.
   
-![img](41/Admin/files/InstallerServer/pic050.png)
+![img](Admin/files/InstallerServer/pic050.png)
 
 * Verify the configuration data and then click _Next_ to continue:
 
-![img](41/Admin/files/InstallerServer/pic060.png)
+![img](Admin/files/InstallerServer/pic060.png)
 
 * openCRX Server is now being installed. Once the installation process has completed, 
   click _Next_ to continue:
 
-![img](41/Admin/files/InstallerServer/pic070.png)
+![img](Admin/files/InstallerServer/pic070.png)
 
 * If you want the installer to create shortcuts, select options as shown below and then 
   click _Next_ to continue:
 
-![img](41/Admin/files/InstallerServer/pic080.png)
+![img](Admin/files/InstallerServer/pic080.png)
 
 * Carefully read the README, in particular information about  valid URLs, 
   preconfigured users and passwords. Click _Next_ to continue:
   
-![img](41/Admin/files/InstallerServer/pic090.png)
+![img](Admin/files/InstallerServer/pic090.png)
 
 * Finally, click _Done_ to finish:
 
-![img](41/Admin/files/InstallerServer/pic100.png)
+![img](Admin/files/InstallerServer/pic100.png)
 
 That's it for the installation.
 

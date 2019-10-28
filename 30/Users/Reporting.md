@@ -11,7 +11,7 @@ You can test this feature on our demo server (or on your own installation if you
 * navigate to any contact and execute the operation _Tools > Mail Merge --> RTF Document_
 * the wizard will provide a list of suitable templates and then generate the RTF document on the fly:
 
-![img](30/Users/files/Reporting/pic010.png)
+![img](Users/files/Reporting/pic010.png)
 
 If you installed the openCRX SDK you will find the templates and the JSP wizard in the following locations:
 
@@ -36,7 +36,7 @@ In terms of how to generate your reports, there are also various options availab
 ### JSP-Based Reporting ###
 This approach is typically recommended if you need on-demand reporting and the generation of the report does not put an undue burden on the server. The following screen shot shows an example HTML-report:
 
-![img](30/Users/files/Reporting/pic020.png)
+![img](Users/files/Reporting/pic020.png)
 
 ### Java Program ###
 Large-scale batch reporting can be done with a Java Program (basically an openCRX client programmed in Java that prepares the desired reports).

@@ -32,7 +32,7 @@ Three different types of integration are discussed:
   These three integration scenarios are discussed in the next sections taking as
   sample a simplified sales order process as shown below.
 
-![img](31/Sdk/files/WFE/pic010.png)
+![img](Sdk/files/WFE/pic010.png)
 
 The process is executed by the WFE:
 
@@ -74,7 +74,7 @@ When the WFE arrives at the Quote request process it performs the following acti
 1. The WFE executes the process Send quote. This process is not performed
    by openCRX.
 
-![img](31/Sdk/files/WFE/pic020.png)
+![img](Sdk/files/WFE/pic020.png)
 
 ## Sales Order Request ##
 The customer receives the quote and either cancels it or confirms the sales
@@ -96,7 +96,7 @@ order. After confirmation the following steps are performed:
    shipment and invoicing. After the payment is received the WFE proceeds
    to the next step.
 
-![img](31/Sdk/files/WFE/pic030.png)
+![img](Sdk/files/WFE/pic030.png)
 
 ## Complete Sales Order ##
 The complete sales order process completes all open order and
@@ -108,7 +108,7 @@ activity items. The following actions are performed on openCRX:
 1. __Via openCRX API__: Optionally apply delivered material bookings.
 1. __Via openCRX API__: Optionally createInvoice() and attach invoice information.
 
-![img](31/Sdk/files/WFE/pic040.png)
+![img](Sdk/files/WFE/pic040.png)
 
 ## Cancel Request ##
 The quote request can be canceled as shown in the figure below. The following actions
@@ -117,7 +117,7 @@ are performed on openCRX:
 1. __Via openCRX API__: Perform transition Cancel order on activity Order
    #123. Optionally attach additional cancellation information.
 
-![img](31/Sdk/files/WFE/pic050.png)
+![img](Sdk/files/WFE/pic050.png)
 
 ## GUI Integration ##
 Most WFEs come with a standard GUI which allows users to
@@ -128,7 +128,7 @@ Most WFEs come with a standard GUI which allows users to
 However, typically the user works with a custom-tailored GUI. The GUI has
 access to all systems, e.g. WFE and openCRX.
 
-![img](31/Sdk/files/WFE/pic060.png)
+![img](Sdk/files/WFE/pic060.png)
 
 * In the Item List pane the user sees all active work items assigned to him.
   Open work items are typically collected from all systems which are involved

@@ -11,11 +11,11 @@ follows:
 * login as admin-Root
 * Launch the wizard in menu _Wizards > Workflow Controller_
 
-![img](31/Admin/files/AutomatedWorkflows/pic010.png)
+![img](Admin/files/AutomatedWorkflows/pic010.png)
 
 The following figure shows the Workflow Controller:
 
-![img](31/Admin/files/AutomatedWorkflows/pic020.png)
+![img](Admin/files/AutomatedWorkflows/pic020.png)
 
 __NOTE:__ Please note that access is granted to the openCRX Root administrator 
 (admin-Root) only. Hence, if you see the openCRX login screen instead of the Workflow 
@@ -25,7 +25,7 @@ is properly initialized before you connect to the Workflow Controller.
 The first time the Workflow Controller is started it will create a default 
 configuration:
 
-![img](31/Admin/files/AutomatedWorkflows/pic030.png)
+![img](Admin/files/AutomatedWorkflows/pic030.png)
 
 If you ever need to recreate this default configuration, you can do so with the 
 following steps:
@@ -49,7 +49,7 @@ Controller. The configuration of the Workflow Controller is available to the ope
 Root administrator (admin-Root) by navigating to the tab __Administration__ and then 
 clicking on the icon of the WorkflowController:
 
-![img](31/Admin/files/AutomatedWorkflows/pic040.png)
+![img](Admin/files/AutomatedWorkflows/pic040.png)
 
 In case you create the WorkflowController configuration manually, please note that 
 both name and qualifier are equal to the string WorkflowController.
@@ -79,7 +79,7 @@ servlets in case there is more than one servlet configured in web.xml.
 
 Adapt the value of serverURL to your environment:
 
-![img](31/Admin/files/AutomatedWorkflows/pic050.png)
+![img](Admin/files/AutomatedWorkflows/pic050.png)
 
 ### Handler pingrate and autostart ###
 
@@ -87,7 +87,7 @@ Use pingrate to define the interval (in minutes) between successive calls of the
 respective handler and autostart (true/false) to indicate, whether the respective 
 servlet / handler should be on/off after (re)starting openCRX:
 
-![img](31/Admin/files/AutomatedWorkflows/pic060.png)
+![img](Admin/files/AutomatedWorkflows/pic060.png)
 
 ## Indexer ##
 
@@ -187,7 +187,7 @@ __NOTE:__ Please note that the WorkflowHandler is required for outbound E-Mail S
 
 The first time the WorkflowHandler is started it will create a default configuration:
 
-![img](31/Admin/files/AutomatedWorkflows/pic070.png)
+![img](Admin/files/AutomatedWorkflows/pic070.png)
 
 If you ever need to recreate these default Workflow Processes, you can do so with the 
 following steps:

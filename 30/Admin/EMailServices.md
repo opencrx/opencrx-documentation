@@ -6,7 +6,7 @@ __IMPORTANT:__ Installation of JavaMail is required if you want to make use of E
 
 The following figure shows the possible flows of mail messages between openCRX, mail server, and mail client as it is supported with openCRX 
 
-![img](30/Admin/files/EMailServices/pic010.png)
+![img](Admin/files/EMailServices/pic010.png)
 
 In this chapter we will first guide you through the required installation and configuration steps before we discuss various important use cases.
 
@@ -256,11 +256,11 @@ openCRX users can configure e-mail accounts on their homepage indicating where t
 * Click on Home and select the grid Tab Service Accounts (you might have to click on _>>_ to expand the hidden grid tabs).
 * Next you click on the creator menu New > E-Mail Account to create a new E-mail Account:
 
-![img](30/Admin/files/EMailServices/pic020.png)
+![img](Admin/files/EMailServices/pic020.png)
 
 * Now you can configure your E-Mail Account for outbound e-mail service:
 
-![img](30/Admin/files/EMailServices/pic030.png)
+![img](Admin/files/EMailServices/pic030.png)
 
 The various fields have the following meanings:
 
@@ -274,11 +274,11 @@ If a user does not define the name of the mail service in his E-Mail Account set
 
 Click the button _New_ to commit the new E-Mail Account. The grid Service Accounts contains an entry for the new E-Mail Account:
 
-![img](30/Admin/files/EMailServices/pic040.png)
+![img](Admin/files/EMailServices/pic040.png)
 
 On your Homepage you can provide additional information related to E‑Mail Notifications:
 
-![img](30/Admin/files/EMailServices/pic050.png)
+![img](Admin/files/EMailServices/pic050.png)
 
 The meaning of the two fields is as follows:
 
@@ -314,11 +314,11 @@ Please refer to [Groupware Services IMAP](https://sourceforge.net/p/opencrx/wiki
 ### Send E-mails directly from openCRX ###
 Any openCRX E-Mail Activity can be sent as e-mail directly from openCRX:
 
-![img](30/Admin/files/EMailServices/pic060.png)
+![img](Admin/files/EMailServices/pic060.png)
 
 The idea behind this functionality is less that you will use openCRX as a mail client (MUA), rather the SendMailWorkflow is an important element of the openCRX campaign management functionality. E-Mail Activities of type “E‑Mails” are controlled by the Activity Process E-mail Process. Send E-Mail Activities to all recipients by executing the operation _Actions > Follow Up_ and then selecting the Transition Send as mail as shown below:
 
-![img](30/Admin/files/EMailServices/pic070.png)
+![img](Admin/files/EMailServices/pic070.png)
 
 Please note that the transition _Send as mail_ is only available after the Transition _Assign_ has been executed. 
 
@@ -327,11 +327,11 @@ Media attached to E-Mail Activities are sent as e-mail attachments.
 ### Send E-mails as Attachments to your Mail Client ###
 Any openCRX E-Mail Activity can be sent as an attachment to an e-mail. The idea behind this functionality is that you might want to put some finishing touches on an e-mail before you actually send it from your mail client (MUA):
 
-![img](30/Admin/files/EMailServices/pic080.png)
+![img](Admin/files/EMailServices/pic080.png)
 
 E-Mail Activities of type _E-Mails_ are managed by the standard Activity Process E‑mail Process, i.e. they can be exported to the user's default mail account by executing the operation _Actions > Follow Up_ and then selecting the Transition Export as mail attachment:
 
-![img](30/Admin/files/EMailServices/pic090.png)
+![img](Admin/files/EMailServices/pic090.png)
 
 Please note that the transition “Export as mail attachment” is only available after the Transition “Assign” has been executed.
 
@@ -377,21 +377,21 @@ If you move an e-mail message from a non-openCRX IMAP folder to an openCRX IMAP 
 The IMAP adapter features some advanced import functionality that helps you import mail messages and automatically link them with new or already existing activities including creation of follow ups. This functionality is quite powerful in the context of e-mail based support and incident management. Let's look at a simple example:
 * you receive an e-mail asking for help with one of the gadgets you sell:
 
-![img](30/Admin/files/EMailServices/pic100.png)
+![img](Admin/files/EMailServices/pic100.png)
 
 * create a new incident in your openCRX support system:
 
-![img](30/Admin/files/EMailServices/pic110.png)
+![img](Admin/files/EMailServices/pic110.png)
 
 * reply to the support e-mail and add #<activity number> to the subject line (where <activity number> is the activity number of the newly created incident, e.g. 10009555 in our example):
 
-![img](30/Admin/files/EMailServices/pic120.png)
+![img](Admin/files/EMailServices/pic120.png)
 
 * once you've sent your reply message you can import it (with drag/drop) into the appropriate openCRX IMAP folder; the IMAP adapter will do the following:
 	* create a new EMailActivity corresponding to your reply message complete with attachments and links to sender/recipient
 	* link the existing incident #10009555 with the newly imported reply message (i.e. EMailActivity) and then add the message body of the reply message as a follow up to the incident #10009555:
 	
-![img](30/Admin/files/EMailServices/pic130.png)
+![img](Admin/files/EMailServices/pic130.png)
 
 If you import all the e-mails related to this support case you will have the complete history of your exchange with the client available as follow ups in your incident #10009555.
 
@@ -422,7 +422,7 @@ If you only want to import the occasional e-mail message you can save such messa
 * navigate to any ActivityCreator that supports creation of E-mail Activities (i.e. Activities of type E-Mail), e.g. _Activities > Activity Creators_ and then select the creator E-Mails
 * start the wizard Upload E-Mail
 
-![img](30/Admin/files/EMailServices/pic140.png)
+![img](Admin/files/EMailServices/pic140.png)
 
 * choose the eml/msg file containing the e-mail to be imported and then click the button _Save_
 * if the import of the e-mail is successful you will be taken to the imported e-mail automatically
@@ -431,12 +431,12 @@ The wizard also supports imports with a wrapper message with the same functional
 
 MSG-Files (produced by MS Outlook) sometimes do not contain SMTP-addresses, but rather they contain X.500-addresses. If the respective X.500-address is assigned to an account in openCRX that also has an SMTP-address, then the wizard automatically converts the address to the SMTP-address. In all other cases the wizard asks you to enter the SMTP-address that should be used as a mapping target:
 
-![img](30/Admin/files/EMailServices/pic150.png)
+![img](Admin/files/EMailServices/pic150.png)
 
 ### Inbound E-mail with Wizard FetchEMail.jsp ###
 The wizard FetchEMail.jsp can retrieve e-mails from a mail store interactively; supported are the standard protocols pop3, pop3s, imap and imaps. You can call the wizard from the Activity Segment or any Activity Creator.
 
-![img](30/Admin/files/EMailServices/pic160.png)
+![img](Admin/files/EMailServices/pic160.png)
 
 The following parameters can be set:
 
@@ -451,33 +451,33 @@ The following parameters can be set:
 ### Inbound E-mail with MailImporterServlet ###
 The following figure shows an overview of how you can import e-mails from your mail client (MUA) into openCRX:
 
-![img](30/Admin/files/EMailServices/pic170.png)
+![img](Admin/files/EMailServices/pic170.png)
 
 The whole setup is quite straightforward; in a first step you configure the MailImporterServlet so that it fetches e-mails from a mailbox, e.g. named “import”. Optionally, you can create a custom-tailored Activity Creator to handle imported E-mails exactly the way you like, but in most cases the provided Default E-mail Creator is sufficient. To import an e‑mail message from your mail client into openCRX, you create a new message to be sent to your importer mailbox, e.g. by entering import@company.com into the TO field of the new message. Optionally you can specify the name of the Activity Creator in the Subject of the new message. Next you attach the message(s) to be imported to that new message (yes, you can attach multiple e-mail messages and if those messages contain attachments themselves they will also be imported) and send it off. Once delivered to the appropriate mailbox (called “import” in our example) the MailImporterServlet will fetch it from there and then import the messages attached to that envelope message.
 
 This process works for messages in any of your mail client's folders, e.g. Inbox, Outbox, Sent, Trash, etc.
 
-See [Configuring Automated Workflows](30/Admin/AutomatedWorkflows.md) for details on activating / configuring the MailImporterServlet the MailImporterServlet. With the following steps you can configure the MailImporterServlet:
+See [Configuring Automated Workflows](Admin/AutomatedWorkflows.md) for details on activating / configuring the MailImporterServlet the MailImporterServlet. With the following steps you can configure the MailImporterServlet:
 
 * log in as openCRX Root administrator (admin-Root)
 * start the wizard openCRX Workflow Controller:
 
-![img](30/Admin/files/EMailServices/pic180.png)
+![img](Admin/files/EMailServices/pic180.png)
 
 * start the MailImporterServlet (click on the respective _Turn on_)
 * with the first invocation the MailImporterServlet will automatically create a new Component Configuration name MailImporterServlet (login as admin-Root and navigate to _Administration > Configurations_)
 
-![img](30/Admin/files/EMailServices/pic190.png)
+![img](Admin/files/EMailServices/pic190.png)
 
 * navigate to this automatically created Component Configuration and create a new String Property with the name _<provider>.<segment>.mailServiceName_ and the value _mail/<provider>_segment_. For example, create a new String property (as shown below) with name _CRX.Standard.mailServiceName_ and value _mail/CRX_Standard_:
 
-![img](30/Admin/files/EMailServices/pic200.png)
+![img](Admin/files/EMailServices/pic200.png)
 
 __NOTE:__ There is no need to delete default entries (e.g. CRX.Standard.mailServiceName.Default) as they are ignored as soon there exists an entry with the same name without the suffix ".Default" (e.g. CRX.Standard.mailServiceName).
 
 Test your settings by sending an e-mail to the account specified in the steps above (import@company.com). Attach the message to be imported to this “envelope” e-mail (please note that only the attached e-mail is imported by the MailImporterServlet, i.e. the wrapper message is not imported):
 
-![img](30/Admin/files/EMailServices/pic210.png)
+![img](Admin/files/EMailServices/pic210.png)
 
 Please note that neither Subject nor message body should be empty. Use the subject to pass the name of the Activity Tracker you want the imported e-mail to be assigned to (by default imported e-mails are assigned to the Activity Tracker E-Mails).
 
@@ -501,7 +501,7 @@ Once the Workflow Controller triggers the MailImporterServlet you will see the d
 
 * If the MailImporterServlet successfully imported your test mail it will be attached to the Activity Tracker E-Mails. Navigate to Activities > Activity Trackers and then click on the icon of E-Mails:
 
-![img](30/Admin/files/EMailServices/pic220.png)
+![img](Admin/files/EMailServices/pic220.png)
 
 * By default, all imported e-mails are attached to the Activity Tracker E‑Mails – you should also see the successfully imported test mail in the grid Activities
 * Navigate to the newly imported e-mail to load it into the Inspector.
@@ -513,7 +513,7 @@ Once the Workflow Controller triggers the MailImporterServlet you will see the d
     
 openCRX includes an Activity Creator E-Mails and an Activity Tracker E-Mails. The latter is referenced in the grid Activity Groups of the former:
 
-![img](30/Admin/files/EMailServices/pic230.png)
+![img](Admin/files/EMailServices/pic230.png)
 
 By default, the MailImporterServlet applies this Activity Creator to newly imported e-mails (which is the reason why they are shown in the grid Activities of the Activity Tracker E-Mails).
 
@@ -526,7 +526,7 @@ openCRX can easily keep track of all your in-/outbound e-mail traffic.
 
 The following figure shows a configuration where the mail server puts a copy of each received message (inbound traffic) and all sent messages (outbound traffic) into the mailbox audit; configuring such audit accounts can easily be done with most Mail Transport Agents (MTAs) like qmail, postfix, etc. With the appropriate configuration (see Inbound E-mail), the MailImporterServlet can import all messages from that audit mailbox and attach it to an Activity Tracker of your choice:
 
-![img](30/Admin/files/EMailServices/pic240.png)
+![img](Admin/files/EMailServices/pic240.png)
 
 ## Trouble Shooting E-mail Services ##
 
