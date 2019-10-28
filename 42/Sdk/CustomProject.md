@@ -63,7 +63,7 @@ ant all
 ## Verify project structure ##
 After successfully building the project the directory structure looks as shown below.
 
-![img](Sdk/files/CustomProject/pic150.png | width=320]]
+![img](Sdk/files/CustomProject/pic150.png | width=320)
 
 * _jre-1.8/sample/deployment-units_: custom-specific deployment units (e.g. _EAR_, _WAR_)
 * _jre-1.8/sample/lib_: custom-specific _JARs_
