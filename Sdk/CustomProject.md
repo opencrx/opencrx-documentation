@@ -147,7 +147,7 @@ must be extended in case new attributes or operations are to be added to the _AP
 to get a basic understanding of the _MDSD_ approach it is a good idea to read the following documents:
 
 * [_Introduction to Modeling with openMDX_](http://sourceforge.net/p/openmdx/wiki/IntroductionToModeling/) 
-* [_openMDX Workshop_ project](http://sourceforge.net/p/openmdx/wiki/Sdk30.Workshop/)
+* [_openMDX Workshop_ project](http://sourceforge.net/p/openmdx/wiki/Sdk31.Workshop/)
 * The source files of the _openCRX Sample_ project
 
 The _sample_ project comes with a simple model extension. In _Eclipse_ open the _Papyrus_ model by opening

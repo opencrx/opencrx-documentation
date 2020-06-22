@@ -1,4 +1,4 @@
-# openCRX 3.0 Administrator's Guides #
+# openCRX 3.1 Administrator's Guides #
 
 1. [openCRX Server Installation](InstallerServer.md)
 1. [Install on Docker](InstallOnDocker.md)

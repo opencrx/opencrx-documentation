@@ -3,9 +3,9 @@
 This guide explains how to integrate 3rd party applications with _openCRX_ using the _BPI adapter_ 
 (_BPI_ stands for business process integration).
 
-__IMPORTANT:__ This guide assumes that _openCRX 3.0 Server_ is successfully setup as described in 
-[openCRX 3.0.0 Server Installation Guide](http://www.opencrx.org/opencrx/3.0/installerServer/installer_openCRX_server.html). 
-Also, the _openCRX SDK_ must be installed as described in [openCRX SDK for Ant Step-by-Step Guide](../Sdk30.StepByStepAnt).
+__IMPORTANT:__ This guide assumes that _openCRX 3.1 Server_ is successfully setup as described in 
+[openCRX 3.1.0 Server Installation Guide](http://www.opencrx.org/opencrx/3.1/installerServer/installer_openCRX_server.html). 
+Also, the _openCRX SDK_ must be installed as described in [openCRX SDK for Ant Step-by-Step Guide](../Sdk31.StepByStepAnt).
 
 For non-_Java_ programming languages, _openCRX_ offers a _REST_ service which allows remote clients to
 access the full API of _openCRX_ (for more information see [How to use the REST Servlet](Sdk/Rest.md)).

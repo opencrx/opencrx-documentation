@@ -309,7 +309,7 @@ If mail is sent as an openCRX user, the FROM value of outgoing e-mails is determ
 Please note that many mail servers reject incoming mails if the hostname contained in an e-mail's FROM value cannot be resolved. (and FROM: noreply@localhost is very likely to cause delivery issues). Hence, ensure that at least the value in tomee.xml makes sense.
 
 ### Export E-mails ###
-Please refer to [Groupware Services IMAP](https://sourceforge.net/p/opencrx/wiki/Admin30.GroupwareServices/).
+Please refer to [Groupware Services IMAP](https://sourceforge.net/p/opencrx/wiki/Admin31.GroupwareServices/).
 
 ### Send E-mails directly from openCRX ###
 Any openCRX E-Mail Activity can be sent as e-mail directly from openCRX:

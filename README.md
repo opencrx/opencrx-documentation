@@ -9,7 +9,7 @@ For more information go to the [openCRX web site](http://www.opencrx.org/).
 
 I. [Installation and Administration](Admin/README.md)
 
-1. [Release Notes](http://www.opencrx.org./opencrx/3.1/RELEASE-NOTES-3.0.txt)
+1. [Release Notes](http://www.opencrx.org./opencrx/3.1/RELEASE-NOTES-3.1.txt)
 1. [openCRX Server Installation](Admin/InstallerServer.md)
 1. [Install on Docker](Admin/InstallOnDocker.md)
 1. [Install on Jelastic](Admin/InstallOnJelastic.md)
@@ -47,7 +47,7 @@ III. [User](Users/README.md)
 1. [How to use the Twitter Services](Users/Twitter.md)
 1. [Reporting](Users/Reporting.md)
 
-IV. [Customizing](./Customizing30.WebHome)
+IV. [Customizing](Customizing/README.md)
 
 1. [Basic UI Customization](http://www.opencrx.org/opencrx/1.7/BasicCustomization/htmlsingle/openCRX_BasicCustomization.html)
 1. [Customizing Guide](http://www.opencrx.org/opencrx/2.13/customizing/openCRX_customizing.html)
@@ -55,7 +55,7 @@ IV. [Customizing](./Customizing30.WebHome)
 
 V. Reference
 
-1. [openCRX/Core JavaDoc](http://www.opencrx.org/opencrx/3.0/java/index.html)
-1. [openCRX/Core UML Class Diagrams](http://www.opencrx.org/opencrx/3.0/uml/opencrx-core/index.html)
-1. [openMDX/Core UML Class Diagrams](http://www.opencrx.org/opencrx/3.0/uml/openmdx-core/index.html)
-1. [openMDX/Portal UML Class Diagrams](http://www.opencrx.org/opencrx/3.0/uml/openmdx-portal/index.html)
+1. [openCRX/Core JavaDoc](http://www.opencrx.org/opencrx/3.1/java/index.html)
+1. [openCRX/Core UML Class Diagrams](http://www.opencrx.org/opencrx/3.1/uml/opencrx-core/index.html)
+1. [openMDX/Core UML Class Diagrams](http://www.opencrx.org/opencrx/3.1/uml/openmdx-core/index.html)
+1. [openMDX/Portal UML Class Diagrams](http://www.opencrx.org/opencrx/3.1/uml/openmdx-portal/index.html)

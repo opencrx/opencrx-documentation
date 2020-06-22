@@ -46,7 +46,7 @@ automated workflows of the segment _Standard_.
 In addition to configuring the Startup option of the Workflow Controller you can 
 also configure various options related to the servlets managed by the Workflow 
 Controller. The configuration of the Workflow Controller is available to the openCRX 
-Root administrator (admin-Root) by navigating to the tab [Administration] and then 
+Root administrator (admin-Root) by navigating to the tab __Administration__ and then 
 clicking on the icon of the WorkflowController:
 
 ![img](files/AutomatedWorkflows/pic040.png)

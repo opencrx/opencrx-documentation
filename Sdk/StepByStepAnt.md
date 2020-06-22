@@ -1,6 +1,6 @@
 # openCRX SDK for Ant Step-by-Step Guide #
 
-This guide explains how to build _openCRX 3.0_ from the sources.
+This guide explains how to build _openCRX 3.1_ from the sources.
 
 ## Prerequisites ##
 
@@ -31,7 +31,7 @@ Then prepare the _opt_ directory:
 
 ```
 cd opencrx3
-git checkout OPENCRX_3_0_0
+git checkout OPENCRX_3_1_0
 cd opt
 ant install-opt
 cd ..
@@ -62,7 +62,7 @@ Then prepare the _opt_ directory:
 
 ```
 cd opencrx3
-git checkout OPENCRX_3_0_0
+git checkout OPENCRX_3_1_0
 cd opt
 ant install-opt
 cd ..
