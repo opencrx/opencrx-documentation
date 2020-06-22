@@ -24,14 +24,14 @@ cd /tmp/dev
 Get the openCRX sources from the GIT repository:
 
 ```
-git clone https://github.com/opencrx/opencrx.git opencrx4
+git clone https://github.com/opencrx/opencrx.git opencrx
 ```
 
 Then prepare the _opt_ directory:
 
 ```
-cd opencrx4
-git checkout OPENCRX_4_2_0
+cd opencrx
+git checkout opencrx-4.2.0
 cd opt
 ant install-opt
 cd ..
@@ -55,14 +55,14 @@ setenv.bat
 Get the openCRX sources from the GIT repository:
 
 ```
-git clone https://github.com/opencrx/opencrx.git opencrx4
+git clone https://github.com/opencrx/opencrx.git opencrx
 ```
 
 Then prepare the _opt_ directory:
 
 ```
-cd opencrx4
-git checkout OPENCRX_4_2_0
+cd opencrx
+git checkout opencrx-4.2.0
 cd opt
 ant install-opt
 cd ..
