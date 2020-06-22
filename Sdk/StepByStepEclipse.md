@@ -6,9 +6,9 @@ This guide explains how to setup _openCRX SDK_ for _Eclipse_.
 
 This guide assumes that you have installed
 
-* _openMDX SDK for Eclipse_ as described in [openMDX SDK for Eclipse](https://sourceforge.net/p/openmdx/wiki/Sdk41.StepByStepEclipse/).
+* _openMDX SDK for Eclipse_ as described in [openMDX SDK for Eclipse](https://sourceforge.net/p/openmdx/wiki/Sdk42.StepByStepEclipse/).
 * _openCRX SDK for Ant_ as described in [openCRX SDK for Ant Step-by-Step](Sdk/StepByStepAnt.md).
-* _openCRX Server_ as described in [openCRX 4.1.0 Server Installation Guide](Admin/InstallerServer.md).
+* _openCRX Server_ as described in [openCRX 4.2.0 Server Installation Guide](Admin/InstallerServer.md).
 
 The workspace in _Eclipse_ then looks as shown below.
 
@@ -94,25 +94,25 @@ __IMPORTANT:__ adapt the values to your environment.
 ```
 	-XX:MaxPermSize=128M  
 	-Xmx800M 
-	-Dcatalina.home="/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/" 
-	-Djava.endorsed.dirs="/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/endorsed" 
-	-Dcatalina.base="/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/" 
-	-Djava.io.tmpdir="/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/temp" 
+	-Dcatalina.home="/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/" 
+	-Djava.endorsed.dirs="/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/endorsed" 
+	-Dcatalina.base="/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/" 
+	-Djava.io.tmpdir="/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/temp" 
 	-Dorg.openmdx.persistence.jdbc.useLikeForOidMatching=false
-	-Dorg.opencrx.maildir="/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/maildir"
+	-Dorg.opencrx.maildir="/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/maildir"
 ```
 
-* Set working directory to _/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/_
+* Set working directory to _/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/_
 
 ![img](files/StepByStepEclipse/pic250.png)
 
-Before we can launch _TomEE_ we have to complete the classpath. Click on _Add External JARs_ and navigate to the _openCRX Server_ installation directory, e.g. _/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/bin/_. Select all JARs in this directory as shown below: 
+Before we can launch _TomEE_ we have to complete the classpath. Click on _Add External JARs_ and navigate to the _openCRX Server_ installation directory, e.g. _/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/bin/_. Select all JARs in this directory as shown below: 
 
 ![img](files/StepByStepEclipse/pic290.png)
 
 The selected JARs are added to the _User Entries_.
 
-Then click on _Add External JARs_ and navigate to the _openCRX Server_ installation directory, e.g. _/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/lib/_. Select all JARs in this directory as shown below: 
+Then click on _Add External JARs_ and navigate to the _openCRX Server_ installation directory, e.g. _/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/lib/_. Select all JARs in this directory as shown below: 
 
 ![img](files/StepByStepEclipse/pic291.png)
 
@@ -153,27 +153,27 @@ Finally you can start _TomEE_. Open the _Run_ dialog with _Run > Open Run Dialog
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
 	INFO: Matched: file:/tmp/dev/opencrx4/test-core/build/jre-1.8/eclipse/
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
-	INFO: Matched: file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/APP-INF/lib/FontBox.jar
+	INFO: Matched: file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/APP-INF/lib/FontBox.jar
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
-	INFO: Matched: file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/APP-INF/lib/opencrx-application.jar
+	INFO: Matched: file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/APP-INF/lib/opencrx-application.jar
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
-	INFO: Matched: file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/APP-INF/lib/opencrx-extension.jar
+	INFO: Matched: file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/APP-INF/lib/opencrx-extension.jar
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
-	INFO: Matched: file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/APP-INF/lib/opencrx-kernel.jar
+	INFO: Matched: file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/APP-INF/lib/opencrx-kernel.jar
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
-	INFO: Matched: file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/APP-INF/lib/opencrx-mail.jar
+	INFO: Matched: file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/APP-INF/lib/opencrx-mail.jar
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
-	INFO: Matched: file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/APP-INF/lib/opencrx-resources.jar
+	INFO: Matched: file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/APP-INF/lib/opencrx-resources.jar
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
-	INFO: Matched: file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/APP-INF/lib/opencrx-security.jar
+	INFO: Matched: file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/APP-INF/lib/opencrx-security.jar
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
-	INFO: Matched: file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/APP-INF/lib/zxing-core.jar
+	INFO: Matched: file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/APP-INF/lib/zxing-core.jar
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
-	INFO: Matched: file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/gateway.jar
+	INFO: Matched: file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/gateway.jar
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
-	INFO: Matched: file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/lib/
+	INFO: Matched: file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/lib/
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
-	INFO: Matched: file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/lib/tomcat7-websocket.jar
+	INFO: Matched: file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/lib/tomcat7-websocket.jar
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
 	INFO: Matched: file:/tmp/dev/openmdx2-example/helloworld/build/jre-1.8/eclipse/
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
@@ -237,7 +237,7 @@ Finally you can start _TomEE_. Open the _Run_ dialog with _Run > Open Run Dialog
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.DeploymentsResolver loadFromClasspath
 	INFO: Matched: file:/tmp/dev/openmdx2/tomcat/build/tomcat-7/eclipse/
 	Feb 02, 2015 4:29:03 PM org.apache.openejb.config.ConfigurationFactory configureApplication
-	INFO: Configuring enterprise application: /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX
+	INFO: Configuring enterprise application: /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.config.InitEjbDeployments deploy
 	INFO: Auto-deploying ejb opencrx_core_CRX_EntityManagerFactoryAccessor: EjbDeployment(deployment-id=opencrx_core_CRX_EntityManagerFactoryAccessor)
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.config.AutoConfig processResourceRef
@@ -251,7 +251,7 @@ Finally you can start _TomEE_. Open the _Run_ dialog with _Run > Open Run Dialog
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.config.ReportValidationResults logResults
 	WARNING: 1 warning for EjbModule(path=opencrx_core_CRX_EntityManagerFactoryAndGateway)
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.config.AppInfoBuilder build
-	INFO: Enterprise application "/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX" loaded.
+	INFO: Enterprise application "/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX" loaded.
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.util.OptionsLog info
 	INFO: Using 'openejb.system.apps=true'
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.config.ConfigurationFactory configureApplication
@@ -281,15 +281,15 @@ Finally you can start _TomEE_. Open the _Run_ dialog with _Run > Open Run Dialog
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.assembler.classic.Assembler createRecipe
 	INFO: Creating Container(id=My Stateful Container)
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.core.stateful.SimplePassivater init
-	INFO: Using directory /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/temp for stateful session passivation
+	INFO: Using directory /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/temp for stateful session passivation
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.assembler.classic.Assembler logUnusedProperties
 	WARNING: Property "PoolSize" not supported by "My Stateful Container"
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.assembler.classic.Assembler createRecipe
 	INFO: Creating Container(id=Default Managed Container)
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.core.managed.SimplePassivater init
-	INFO: Using directory /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/temp for stateful session passivation
+	INFO: Using directory /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/temp for stateful session passivation
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.assembler.classic.Assembler createApplication
-	INFO: Assembling app: /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX
+	INFO: Assembling app: /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.assembler.classic.JndiBuilder bind
 	INFO: Jndi(name=org.opencrx.core.CRX.EntityManagerFactoryAccessor) --> Ejb(deployment-id=opencrx_core_CRX_EntityManagerFactoryAccessor)
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.assembler.classic.JndiBuilder bind
@@ -313,63 +313,63 @@ Finally you can start _TomEE_. Open the _Run_ dialog with _Run > Open Run Dialog
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.assembler.classic.Assembler startEjbs
 	INFO: Started Ejb(deployment-id=opencrx_core_CRX_EntityManagerFactoryAccessor, ejb-name=opencrx_core_CRX_EntityManagerFactoryAccessor, container=My Stateful Container)
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/opencrx-core-CRX/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/opencrx-core-CRX/META-INF/context.xml
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
 	INFO: using default host: localhost
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/opencrx-ical-CRX/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/opencrx-ical-CRX/META-INF/context.xml
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
 	INFO: using default host: localhost
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/opencrx-caldav-CRX/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/opencrx-caldav-CRX/META-INF/context.xml
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
 	INFO: using default host: localhost
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/opencrx-carddav-CRX/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/opencrx-carddav-CRX/META-INF/context.xml
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
 	INFO: using default host: localhost
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/opencrx-webdav-CRX/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/opencrx-webdav-CRX/META-INF/context.xml
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
 	INFO: using default host: localhost
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/opencrx-imap-CRX/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/opencrx-imap-CRX/META-INF/context.xml
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
 	INFO: using default host: localhost
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/opencrx-vcard-CRX/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/opencrx-vcard-CRX/META-INF/context.xml
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
 	INFO: using default host: localhost
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/opencrx-spaces-CRX/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/opencrx-spaces-CRX/META-INF/context.xml
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
 	INFO: using default host: localhost
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/opencrx-rest-CRX/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/opencrx-rest-CRX/META-INF/context.xml
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
 	INFO: using default host: localhost
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/opencrx-ldap-CRX/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/opencrx-ldap-CRX/META-INF/context.xml
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
 	INFO: using default host: localhost
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/opencrx-airsync-CRX/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/opencrx-airsync-CRX/META-INF/context.xml
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
 	INFO: using default host: localhost
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/opencrx-bpi-CRX/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/opencrx-bpi-CRX/META-INF/context.xml
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
 	INFO: using default host: localhost
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/opencrx-calendar-CRX/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/opencrx-calendar-CRX/META-INF/context.xml
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
 	INFO: using default host: localhost
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/opencrx-documents-CRX/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/opencrx-documents-CRX/META-INF/context.xml
 	Feb 02, 2015 4:29:04 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
 	INFO: using default host: localhost
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.assembler.classic.Assembler createApplication
-	INFO: Deployed Application(path=/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX)
+	INFO: Deployed Application(path=/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX)
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.assembler.classic.Assembler createApplication
 	INFO: Assembling app: openejb
 	Feb 02, 2015 4:29:04 PM org.apache.openejb.util.OptionsLog info
@@ -521,9 +521,9 @@ Finally you can start _TomEE_. Open the _Run_ dialog with _Run > Open Run Dialog
 	Feb 02, 2015 4:29:05 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
 	INFO: OpenWebBeans Container has started, it took 8 ms.
 	Feb 02, 2015 4:29:05 PM org.openmdx.kernel.log.LoggerFactory getLogger
-	INFO: Sys|openMDX Version|openmdx-system: 2.15.0, openmdx-base: 2.15.0
+	INFO: Sys|openMDX Version|openmdx-system: 2.16.2, openmdx-base: 2.16.2
 	Feb 02, 2015 4:29:05 PM org.openmdx.base.mof.spi.Model_1Factory getModelPackages
-	INFO: The model package set [org:opencrx, org:opencrx:kernel:base, org:opencrx:kernel:generic, org:opencrx:kernel:home1, org:opencrx:kernel:document1, org:opencrx:kernel:workflow1, org:opencrx:kernel:building1, org:opencrx:kernel:address1, org:opencrx:kernel:account1, org:opencrx:kernel:product1, org:opencrx:kernel:contract1, org:opencrx:kernel:activity1, org:opencrx:kernel:forecast1, org:opencrx:kernel:code1, org:opencrx:kernel:uom1, org:opencrx:security:identity1, org:opencrx:security:realm1, org:opencrx:security:authentication1, org:opencrx:security:authorization1, org:opencrx:kernel:reservation1, org:opencrx:kernel:admin1, org:opencrx:kernel:model1, org:opencrx:kernel:ras1, org:opencrx:kernel:depot1, org:opencrx:kernel, org:opencrx:security, org:opencrx:application:shop1, org:oasis-open, org:omg:model1, org:openmdx:base, org:openmdx:generic1, org:openmdx:kernel, org:openmdx:preferences2, org:openmdx:state2, org:openmdx:role2, org:w3c, org:openmdx:ui1, org:openmdx:security:realm1, org:openmdx:security:authorization1, org:openmdx:security:authentication1, org:openmdx:audit2, test:openmdx:app1, test:openmdx:clock1, test:openmdx:datatypes1, test:openmdx:model1, org:openmdx:example:helloworld1, org:openmdx:example:workshop1] is based on the openmdxmof.properties located at [file:/tmp/dev/opencrx4/core/src/resource/META-INF/openmdxmof.properties, file:/tmp/dev/openmdx2/core/src/resource/META-INF/openmdxmof.properties, file:/tmp/dev/openmdx2/portal/src/resource/META-INF/openmdxmof.properties, file:/tmp/dev/openmdx2/security/src/resource/META-INF/openmdxmof.properties, file:/tmp/dev/openmdx2/test-core/src/resource/META-INF/openmdxmof.properties, file:/tmp/dev/openmdx2-example/helloworld/build/jre-1.8/eclipse/META-INF/openmdxmof.properties, file:/tmp/dev/openmdx2-example/workshop/build/jre-1.8/eclipse/META-INF/openmdxmof.properties, jar:file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/APP-INF/lib/openmdx-security.jar!/META-INF/openmdxmof.properties, jar:file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/APP-INF/lib/openmdx-portal.jar!/META-INF/openmdxmof.properties, jar:file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/APP-INF/lib/openmdx-base.jar!/META-INF/openmdxmof.properties, jar:file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/APP-INF/lib/opencrx-kernel.jar!/META-INF/openmdxmof.properties]
+	INFO: The model package set [org:opencrx, org:opencrx:kernel:base, org:opencrx:kernel:generic, org:opencrx:kernel:home1, org:opencrx:kernel:document1, org:opencrx:kernel:workflow1, org:opencrx:kernel:building1, org:opencrx:kernel:address1, org:opencrx:kernel:account1, org:opencrx:kernel:product1, org:opencrx:kernel:contract1, org:opencrx:kernel:activity1, org:opencrx:kernel:forecast1, org:opencrx:kernel:code1, org:opencrx:kernel:uom1, org:opencrx:security:identity1, org:opencrx:security:realm1, org:opencrx:security:authentication1, org:opencrx:security:authorization1, org:opencrx:kernel:reservation1, org:opencrx:kernel:admin1, org:opencrx:kernel:model1, org:opencrx:kernel:ras1, org:opencrx:kernel:depot1, org:opencrx:kernel, org:opencrx:security, org:opencrx:application:shop1, org:oasis-open, org:omg:model1, org:openmdx:base, org:openmdx:generic1, org:openmdx:kernel, org:openmdx:preferences2, org:openmdx:state2, org:openmdx:role2, org:w3c, org:openmdx:ui1, org:openmdx:security:realm1, org:openmdx:security:authorization1, org:openmdx:security:authentication1, org:openmdx:audit2, test:openmdx:app1, test:openmdx:clock1, test:openmdx:datatypes1, test:openmdx:model1, org:openmdx:example:helloworld1, org:openmdx:example:workshop1] is based on the openmdxmof.properties located at [file:/tmp/dev/opencrx4/core/src/resource/META-INF/openmdxmof.properties, file:/tmp/dev/openmdx2/core/src/resource/META-INF/openmdxmof.properties, file:/tmp/dev/openmdx2/portal/src/resource/META-INF/openmdxmof.properties, file:/tmp/dev/openmdx2/security/src/resource/META-INF/openmdxmof.properties, file:/tmp/dev/openmdx2/test-core/src/resource/META-INF/openmdxmof.properties, file:/tmp/dev/openmdx2-example/helloworld/build/jre-1.8/eclipse/META-INF/openmdxmof.properties, file:/tmp/dev/openmdx2-example/workshop/build/jre-1.8/eclipse/META-INF/openmdxmof.properties, jar:file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/APP-INF/lib/openmdx-security.jar!/META-INF/openmdxmof.properties, jar:file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/APP-INF/lib/openmdx-portal.jar!/META-INF/openmdxmof.properties, jar:file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/APP-INF/lib/openmdx-base.jar!/META-INF/openmdxmof.properties, jar:file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/APP-INF/lib/opencrx-kernel.jar!/META-INF/openmdxmof.properties]
 	Feb 02, 2015 4:29:05 PM org.openmdx.kernel.id.spi.TimeBasedIdGenerator createClockSequence
 	INFO: Sys|Clock sequence created|cef
 	Feb 02, 2015 4:29:05 PM org.openmdx.kernel.id.spi.TimeBasedIdGenerator createRandomBasedNode
@@ -1091,7 +1091,7 @@ Finally you can start _TomEE_. Open the _Run_ dialog with _Run > Open Run Dialog
 	Feb 02, 2015 4:29:09 PM org.openmdx.base.mof.cci.Persistency <init>
 	INFO: Sys|ORM mapping: Persistence Modifiers|Apply configuration file:/tmp/dev/openmdx2-example/helloworld/build/jre-1.8/eclipse/META-INF/openmdxorm.properties
 	Feb 02, 2015 4:29:09 PM org.openmdx.base.mof.cci.Persistency <init>
-	INFO: Sys|ORM mapping: Persistence Modifiers|Apply configuration jar:file:/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/apps/opencrx-core-CRX/APP-INF/lib/openmdx-base.jar!/META-INF/openmdxorm.properties
+	INFO: Sys|ORM mapping: Persistence Modifiers|Apply configuration jar:file:/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/apps/opencrx-core-CRX/APP-INF/lib/openmdx-base.jar!/META-INF/openmdxorm.properties
 	IMAPServer CRX is listening on port 1143
 	Feb 02, 2015 4:29:09 PM org.apache.tomee.catalina.TomcatWebAppBuilder init
 	INFO: ------------------------- localhost -> /opencrx-vcard-CRX
@@ -1219,15 +1219,15 @@ Finally you can start _TomEE_. Open the _Run_ dialog with _Run > Open Run Dialog
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
 	INFO: OpenWebBeans Container has started, it took 8 ms.
 	Feb 02, 2015 4:29:10 PM org.apache.catalina.startup.HostConfig deployDirectory
-	INFO: Deploying web application directory /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/docs
+	INFO: Deploying web application directory /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/docs
 	Feb 02, 2015 4:29:10 PM org.apache.tomee.catalina.TomcatWebAppBuilder init
 	INFO: ------------------------- localhost -> /docs
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.config.ConfigurationFactory configureApplication
-	INFO: Configuring enterprise application: /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/docs
+	INFO: Configuring enterprise application: /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/docs
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.config.AppInfoBuilder build
-	INFO: Enterprise application "/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/docs" loaded.
+	INFO: Enterprise application "/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/docs" loaded.
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.assembler.classic.Assembler createApplication
-	INFO: Assembling app: /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/docs
+	INFO: Assembling app: /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/docs
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.cdi.CdiBuilder initSingleton
 	INFO: Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@2068d09d
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
@@ -1241,19 +1241,19 @@ Finally you can start _TomEE_. Open the _Run_ dialog with _Run > Open Run Dialog
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
 	INFO: OpenWebBeans Container has started, it took 8 ms.
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.assembler.classic.Assembler createApplication
-	INFO: Deployed Application(path=/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/docs)
+	INFO: Deployed Application(path=/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/docs)
 	Feb 02, 2015 4:29:10 PM org.apache.catalina.startup.HostConfig deployDirectory
-	INFO: Deployment of web application directory /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/docs has finished in 60 ms
+	INFO: Deployment of web application directory /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/docs has finished in 60 ms
 	Feb 02, 2015 4:29:10 PM org.apache.catalina.startup.HostConfig deployDirectory
-	INFO: Deploying web application directory /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/host-manager
+	INFO: Deploying web application directory /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/host-manager
 	Feb 02, 2015 4:29:10 PM org.apache.tomee.catalina.TomcatWebAppBuilder init
 	INFO: ------------------------- localhost -> /host-manager
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.config.ConfigurationFactory configureApplication
-	INFO: Configuring enterprise application: /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/host-manager
+	INFO: Configuring enterprise application: /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/host-manager
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.config.AppInfoBuilder build
-	INFO: Enterprise application "/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/host-manager" loaded.
+	INFO: Enterprise application "/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/host-manager" loaded.
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.assembler.classic.Assembler createApplication
-	INFO: Assembling app: /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/host-manager
+	INFO: Assembling app: /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/host-manager
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.cdi.CdiBuilder initSingleton
 	INFO: Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@2068d09d
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
@@ -1267,21 +1267,21 @@ Finally you can start _TomEE_. Open the _Run_ dialog with _Run > Open Run Dialog
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
 	INFO: OpenWebBeans Container has started, it took 4 ms.
 	Feb 02, 2015 4:29:10 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/host-manager/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/host-manager/META-INF/context.xml
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.assembler.classic.Assembler createApplication
-	INFO: Deployed Application(path=/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/host-manager)
+	INFO: Deployed Application(path=/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/host-manager)
 	Feb 02, 2015 4:29:10 PM org.apache.catalina.startup.HostConfig deployDirectory
-	INFO: Deployment of web application directory /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/host-manager has finished in 80 ms
+	INFO: Deployment of web application directory /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/host-manager has finished in 80 ms
 	Feb 02, 2015 4:29:10 PM org.apache.catalina.startup.HostConfig deployDirectory
-	INFO: Deploying web application directory /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/manager
+	INFO: Deploying web application directory /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/manager
 	Feb 02, 2015 4:29:10 PM org.apache.tomee.catalina.TomcatWebAppBuilder init
 	INFO: ------------------------- localhost -> /manager
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.config.ConfigurationFactory configureApplication
-	INFO: Configuring enterprise application: /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/manager
+	INFO: Configuring enterprise application: /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/manager
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.config.AppInfoBuilder build
-	INFO: Enterprise application "/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/manager" loaded.
+	INFO: Enterprise application "/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/manager" loaded.
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.assembler.classic.Assembler createApplication
-	INFO: Assembling app: /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/manager
+	INFO: Assembling app: /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/manager
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.cdi.CdiBuilder initSingleton
 	INFO: Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@2068d09d
 	Feb 02, 2015 4:29:10 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
@@ -1295,21 +1295,21 @@ Finally you can start _TomEE_. Open the _Run_ dialog with _Run > Open Run Dialog
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
 	INFO: OpenWebBeans Container has started, it took 4 ms.
 	Feb 02, 2015 4:29:11 PM org.apache.tomee.catalina.TomcatWebAppBuilder deployWebApps
-	INFO: using context file /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/manager/META-INF/context.xml
+	INFO: using context file /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/manager/META-INF/context.xml
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.assembler.classic.Assembler createApplication
-	INFO: Deployed Application(path=/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/manager)
+	INFO: Deployed Application(path=/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/manager)
 	Feb 02, 2015 4:29:11 PM org.apache.catalina.startup.HostConfig deployDirectory
-	INFO: Deployment of web application directory /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/manager has finished in 54 ms
+	INFO: Deployment of web application directory /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/manager has finished in 54 ms
 	Feb 02, 2015 4:29:11 PM org.apache.catalina.startup.HostConfig deployDirectory
-	INFO: Deploying web application directory /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/ROOT
+	INFO: Deploying web application directory /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/ROOT
 	Feb 02, 2015 4:29:11 PM org.apache.tomee.catalina.TomcatWebAppBuilder init
 	INFO: ------------------------- localhost -> /
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.config.ConfigurationFactory configureApplication
-	INFO: Configuring enterprise application: /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/ROOT
+	INFO: Configuring enterprise application: /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/ROOT
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.config.AppInfoBuilder build
-	INFO: Enterprise application "/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/ROOT" loaded.
+	INFO: Enterprise application "/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/ROOT" loaded.
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.assembler.classic.Assembler createApplication
-	INFO: Assembling app: /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/ROOT
+	INFO: Assembling app: /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/ROOT
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.cdi.CdiBuilder initSingleton
 	INFO: Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@2068d09d
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
@@ -1323,19 +1323,19 @@ Finally you can start _TomEE_. Open the _Run_ dialog with _Run > Open Run Dialog
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
 	INFO: OpenWebBeans Container has started, it took 4 ms.
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.assembler.classic.Assembler createApplication
-	INFO: Deployed Application(path=/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/ROOT)
+	INFO: Deployed Application(path=/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/ROOT)
 	Feb 02, 2015 4:29:11 PM org.apache.catalina.startup.HostConfig deployDirectory
-	INFO: Deployment of web application directory /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/ROOT has finished in 46 ms
+	INFO: Deployment of web application directory /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/ROOT has finished in 46 ms
 	Feb 02, 2015 4:29:11 PM org.apache.catalina.startup.HostConfig deployDirectory
-	INFO: Deploying web application directory /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/tomee
+	INFO: Deploying web application directory /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/tomee
 	Feb 02, 2015 4:29:11 PM org.apache.tomee.catalina.TomcatWebAppBuilder init
 	INFO: ------------------------- localhost -> /tomee
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.config.ConfigurationFactory configureApplication
-	INFO: Configuring enterprise application: /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/tomee
+	INFO: Configuring enterprise application: /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/tomee
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.config.AppInfoBuilder build
-	INFO: Enterprise application "/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/tomee" loaded.
+	INFO: Enterprise application "/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/tomee" loaded.
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.assembler.classic.Assembler createApplication
-	INFO: Assembling app: /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/tomee
+	INFO: Assembling app: /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/tomee
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.cdi.CdiBuilder initSingleton
 	INFO: Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@2068d09d
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
@@ -1349,9 +1349,9 @@ Finally you can start _TomEE_. Open the _Run_ dialog with _Run > Open Run Dialog
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.cdi.OpenEJBLifecycle startApplication
 	INFO: OpenWebBeans Container has started, it took 5 ms.
 	Feb 02, 2015 4:29:11 PM org.apache.openejb.assembler.classic.Assembler createApplication
-	INFO: Deployed Application(path=/tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/tomee)
+	INFO: Deployed Application(path=/tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/tomee)
 	Feb 02, 2015 4:29:11 PM org.apache.catalina.startup.HostConfig deployDirectory
-	INFO: Deployment of web application directory /tmp/dev/opencrxServer-4.1.0/apache-tomee-webprofile-1.7.4/webapps/tomee has finished in 54 ms
+	INFO: Deployment of web application directory /tmp/dev/opencrxServer-4.2.0/apache-tomee-plus-7.0.5/webapps/tomee has finished in 54 ms
 	Feb 02, 2015 4:29:11 PM org.apache.coyote.AbstractProtocol start
 	INFO: Starting ProtocolHandler ["http-bio-8080"]
 	Feb 02, 2015 4:29:11 PM org.apache.coyote.AbstractProtocol start

@@ -1,4 +1,4 @@
-# openCRX 4.1 Development Guides #
+# openCRX 4.2 Development Guides #
 
 1. [openCRX SDK for Ant Step-by-Step Guide](StepByStepAnt.md)
 1. [openCRX SDK for Eclipse Step-by-Step Guide](StepByStepEclipse.md)
@@ -11,4 +11,3 @@
 1. [3rd party integration with the openCRX BPI adapter](BpiAdapter.md)
 1. [Workflow Engine Integration](WFE.md)
 1. [How to extend the standard GUI using PortalExtension](PortalExtension.md)
-1. [How to rename a provider and/or segment](HowToRenameProviderAndSegment.md)

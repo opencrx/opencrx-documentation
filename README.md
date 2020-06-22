@@ -9,12 +9,11 @@ For more information go to the [openCRX web site](http://www.opencrx.org/).
 
 I. [Installation and Administration](Admin/README.md)
 
-1. [Release Notes](http://www.opencrx.org./opencrx/4.1/RELEASE-NOTES-4.1.txt)
+1. [Release Notes](http://www.opencrx.org./opencrx/4.2/RELEASE-NOTES-4.2.txt)
 1. [openCRX Server Installation](Admin/InstallerServer.md)
 1. [Install on Docker](Admin/InstallOnDocker.md)
-1. [Install on Jelastic](Admin/InstallOnJelastic.md)
 1. [Upgrade Guide](Admin/HowToUpgrade.md)
-1. [Database Setup and Migration Guide](Admin/DatabaseMigration.md)
+1. [Database Management Guide](Admin/DatabaseManagement.md)
 1. [Managing Security](Admin/ManagingSecurity.md)
 1. [Managing Users](Admin/ManagingUsers.md)
 1. [Configuring the Groupware Services](Admin/GroupwareServices.md)
@@ -35,7 +34,6 @@ II. [Development](Sdk/README.md)
 1. [3rd party integration with the openCRX BPI adapter](Sdk/BpiAdapter.md)
 1. [Workflow Engine Integration](Sdk/WFE.md)
 1. [How to extend the standard GUI using PortalExtension](Sdk/PortalExtension.md)
-1. [How to rename a provider and/or segment](Sdk/HowToRenameProviderAndSegment.md)
 
 III. [User](Users/README.md)
 
@@ -54,7 +52,7 @@ IV. [Customizing](Customizing/README.md)
 
 V. Reference
 
-1. [openCRX/Core JavaDoc](http://www.opencrx.org/opencrx/4.1/java/index.html)
-1. [openCRX/Core UML Class Diagrams](http://www.opencrx.org/opencrx/4.1/uml/opencrx-core/index.html)
-1. [openMDX/Core UML Class Diagrams](http://www.opencrx.org/opencrx/4.1/uml/openmdx-core/index.html)
-1. [openMDX/Portal UML Class Diagrams](http://www.opencrx.org/opencrx/4.1/uml/openmdx-portal/index.html)
+1. [openCRX/Core JavaDoc](http://www.opencrx.org/opencrx/4.2/java/index.html)
+1. [openCRX/Core UML Class Diagrams](http://www.opencrx.org/opencrx/4.2/uml/opencrx-core/index.html)
+1. [openMDX/Core UML Class Diagrams](http://www.opencrx.org/opencrx/4.2/uml/openmdx-core/index.html)
+1. [openMDX/Portal UML Class Diagrams](http://www.opencrx.org/opencrx/4.2/uml/openmdx-portal/index.html)

@@ -1,25 +1,25 @@
-# How to setup and migrate an existing openCRX database #
+# Database Management #
 
-This guide explains how to setup and migrate from an existing openCRX database to another database.
+This guide explains how to manage to openCRX database.
 
-__IMPORTANT:__ This guide assumes that _openCRX 4.1 Server_ is successfully setup as described in [openCRX 4.1.0 Server Installation Guide](Admin/InstallerServer.md).
+__IMPORTANT:__ This guide assumes that _openCRX 4.2 Server_ is successfully setup as described in [openCRX 4.2.0 Server Installation Guide](Admin/InstallerServer.md).
 
-openCRX provides the following tools to migrate from an existing database to an other database
+openCRX provides the following tools for the database management:
 
 * __DbSchemaWizard__: The schema wizard allows to create or upgrade an openCRX schema for
-  a given target database. The target database is specified with the JDBC connection URL, 
-  username and password.
+  a given target database. The target database is specified with the JDBC connection URL.
 * __DbCopy__: The database copy wizard allows to copy the openCRX data from a source database
-  to a given target database. All rows of all tables are copied, so the DbCopy in fact performs
-  creates a clone. Source and target database are specified by their JDBC connection URLs,
-  usernames and passwords.
-   
+  to a given target database. __DbCopy__ offers the following features:
+	* the set of tables to be copied are specified with a regexp pattern
+	* the source and target database can be of different types (e.g. HSQLDB, PostgreSQL)
+	* replace string patterns
+
 __IMPORTANT:__ The wizards assume that the required JDBC database driver JARs are installed in the
-Apache TomEE directory _apache-tomee-webprofile-1.7.4/lib/_. The driver for HSQLDB is installed by
+Apache TomEE directory _apache-tomee-plus-7.0.5/lib/_. The driver for HSQLDB is installed by
 default. However, the drivers for other databases must be installed manually. After installing the
 drivers restart _openCRX_.
 
-## Prepare the target database ##
+## DbSchemaWizard ##
 
 _openCRX_ supports the following databases: HSQLDB, PostgreSQL, MySQL, DB/2, Oracle, and MS SQL Server.
 
@@ -111,16 +111,16 @@ On Windows, use the pgInstaller which allows you to set initdb parameters.
 ## Create the database schema ##
 Start _openCRX Server_ dad login as _admin-Root_. Launch the Database schema wizard as shown below.
 
-![img](files/DatabaseMigration/pic010.png)
+![img](files/DatabaseManagement/pic010.png)
 
 Specify the JDBC connection URL, username and password for the target database.
 
-![img](files/DatabaseMigration/pic020.png)
+![img](files/DatabaseManagement/pic020.png)
 
 Now click on _Validate_. The wizard checks the schema of the target database and reports any
 missing tables and views. It also checks the table columns and reports missing and extra columns.
 
-![img](files/DatabaseMigration/pic030.png)
+![img](files/DatabaseManagement/pic030.png)
 
 For every reported problem the wizard also offers a fix in form a a database statement 
 (_CREATE TABLE ..._, _CREATE VIEW ..._, _ALTER TABLE ..._, etc.). You can copy/paste the statement
@@ -130,22 +130,31 @@ database. In case of a database with an empty schema you have to run the _Valida
 two or three times: In a first step it creates all tables, in a second step all dependent 
 views and indexes. Finally, if everything goes well no errors should be reported.
 
-![img](files/DatabaseMigration/pic040.png)
+![img](files/DatabaseManagement/pic040.png)
 
-## Copy the database ##
-If you want to migrate the data from an existing database to the new target database you
-can do it with the DbCopy wizard. Start _openCRX Server_ and login as _admin-Root_.
+## DbCopy ##
+If you want to migrate the data from an existing database to a new target database you can do it with the DbCopy wizard. Start _openCRX Server_ and login as _admin-Root_.
 
-![img](files/DatabaseMigration/pic050.png)
+![img](files/DatabaseManagement/pic050.png)
 
 Specify the JDBC connection URL, username and password of the source database and target database.
 
-![img](files/DatabaseMigration/pic060.png)
+![img](files/DatabaseManagement/pic060.png)
+
+In addition you must specify the tables which are to be copied:
+
+* Include objects: a list of regexp patterns. A table is copied if it matches one of the specified patterns.
+  The pattern «.\*» can be used to copy all tables.
+* Exclude objects: a list of regexp patterns. A table is not copied if it matches one of the specified regexp patterns.
+  E.g. the pattern «_OOCKE1\_AUDITENTRY_» excludes the table _OOCKE1\_AUDITENTRY.
 
 Then click _Copy_. The wizard shows to progress of the copy procedure. Clicking _Refresh_ updates
 the progress output.
 
-![img](files/DatabaseMigration/pic070.png)
+![img](files/DatabaseManagement/pic070.png)
+
+_DbCopy_ also allows to search / replace string values. This can be done by specifying a list of value and replace patterns. E.g. with the value
+pattern «TEST» and the replacement pattern «MYCOMPANY», all occurrences of the string TEST are replaced with the string MYCOMPANY.
 
 ### Troubleshooting ###
 
@@ -166,7 +175,7 @@ _oocke1\_position\_number\_seq_) are not migrated by _DbCopy_. Set the values ma
 values before using the database.
 
 ## Setup a database connector ##
-Next configure the database connector which allows _Apache TomEE_ to connect to your newly created database. For this purpose open the file _{opencrxServer_installdir}/apache-tomee-webprofile-1.7.4/conf/tomee.xml_ and adapt the following section:
+Next configure the database connector which allows _Apache TomEE_ to connect to your newly created database. For this purpose open the file _{opencrxServer_installdir}/apache-tomee-plus-7.0.5/conf/tomee.xml_ and adapt the following section:
 
 ```
 <Resource id="jdbc_opencrx_CRX" type="DataSource">
@@ -215,7 +224,7 @@ __SQL Server:__
 	JdbcUrl jdbc:sqlserver://localhost:1433;databaseName=CRX;selectMethod=cursor
 ```
 
-Also adapt correspondingly the _openCRX_ launch script _{opencrxServer_installdir}/apache-tomee-webprofile-1.7.4/bin/opencrx.sh_ and _{opencrxServer_installdir}/apache-tomee-webprofile-1.7.4/bin/opencrx.bat_. If required, disable the START and STOP commands for the _HSQLDB_ database.
+Also adapt correspondingly the _openCRX_ launch script _{opencrxServer_installdir}/apache-tomee-plus-7.0.5/bin/opencrx.sh_ and _{opencrxServer_installdir}/apache-tomee-plus-7.0.5/bin/opencrx.bat_. If required, disable the START and STOP commands for the _HSQLDB_ database.
 
 ## Start TomEE ##
 Now you are ready to start _TomEE_. _openCRX_ now connects to the newly created and populated database.

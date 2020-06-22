@@ -2,8 +2,8 @@
 
 This guide explains how to write a remote Java client accessing _openCRX_.
 
-__IMPORTANT:__ This guide assumes that _openCRX 4.1 Server_ is successfully setup as described in 
-[openCRX 4.1.0 Server Installation Guide](http://www.opencrx.org/opencrx/4.1/installerServer/installer_openCRX_server.html). In addition 
+__IMPORTANT:__ This guide assumes that _openCRX 4.2 Server_ is successfully setup as described in 
+[openCRX 4.2.0 Server Installation Guide](http://www.opencrx.org/opencrx/4.2/installerServer/installer_openCRX_server.html). In addition 
 the _openCRX SDK_ must be installed as described in [openCRX SDK for Ant Step-by-Step Guide](Sdk/StepByStepAnt.md).
 
 For non-_Java_ programming languages, openCRX offers a _REST_ service which allows remote clients to 
@@ -76,8 +76,8 @@ Create a working directory (e.g. _~/temp/opencrx-sample-client_) and add the fol
   the values for the variables _userName_, _password_ and _connectionUrl_ to your environment. 
   The default values are ok for standard installations.
 * The library _opencrx_client.jar_. Copy it from _./opencrx4/jre-1.8/core/lib/_.
-* The library _openmdx_client.jar_. Copy it from _./opencrx4/opt/openmdx-2.15.0/jre-1.8/client/lib/_.
-* The library _resource.jar_. Copy it from _./opencrx4/opt/openmdx-2.15.0/osgi/jre-1.8/extension/lib/_.   
+* The library _openmdx_client.jar_. Copy it from _./opencrx4/opt/openmdx-2.16.0/jre-1.8/client/lib/_.
+* The library _resource.jar_. Copy it from _./opencrx4/opt/openmdx-2.16.0/osgi/jre-1.8/extension/lib/_.   
 
 ## Compile ##
 

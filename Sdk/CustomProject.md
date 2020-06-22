@@ -31,7 +31,7 @@ cd /tmp/dev
 Then checkout and build the sample project.
 
 ```
-git clone https://git.code.sf.net/p/opencrx/opencrx4-custom opencrx4-custom
+git clone https://github.com/opencrx/opencrx-custom.git opencrx4-custom
 cd opencrx4-custom
 cd opt
 ant install-opt
@@ -51,7 +51,7 @@ setenv.bat
 Then checkout and build the sample project.
 
 ```
-git clone ssh://<user>@git.code.sf.net/p/opencrx/opencrx4-custom-git opencrx4-custom
+git clone https://github.com/opencrx/opencrx-custom.git opencrx4-custom
 cd opencrx4-custom
 cd opt
 ant install-opt
@@ -80,24 +80,6 @@ Import the _Eclipse_ projects which come with the _sample_ project:
 * _sample/.project_: openCRX 4 Custom ~ Sample (jre-1.8)
 * _sample/src/model/emf/.project_: openCRX 4 Custom ~ Sample (EMF)
 * _sample/src/model/papyrus/.project_: openCRX 4 Custom ~ Sample (Papyrus)
-
-## MyWebApp ##
-_MyWebApp_ shows how to add a custom-specific web application to _openCRX_. _MyWebApp_ is developed with Google Web Toolkit (GWT). 
-
-Unzip _MyWebApp.zip_ to a directory of your choice. Open a shell and switch to this directory. Before you can build the project we have to adapt _build.xml_. Open _build.xml_ with a text editor and adapt the following variables to your environment:
-
-```
-<!-- Configure path to GWT SDK -->
-<property name="gwt.sdk" location="/opt/gwt-2.5.1" />
-<property name="openmdx.sdk" location="/tmp/dev/opencrx4/opt/openmdx-2.15.0/jre-1.8/core/lib" />
-<property name="opencrx.sdk" location="/tmp/dev/opencrx4/jre-1.8/core/lib" />
-```
- 
-Now build the project with _ant war_. Copy the resulting _MyWebApp.war_ to the directory _sample/etc/deployment-unit_ and build the sample EAR with _ant assemble_. 
-
-_MyWebApp.war_ is now part of the resulting _opencrx-core-CRX.ear_. The web module is registered in _application.xml_ (see _src/ear/opencrx-core-CRX.ear/META-INF_).
- 
-The class _com.mycompany.mywebapp.server.GreetingServiceImpl_ shows how a GWT service accesses the _openCRX_ backend. Deploy the _EAR_ and lauch _MyWebApp_ with the URL _http://localhost:8080/mywebapp_.
 
 ## Store ##
 The _Store_ application shows how to build a stand-alone web application which uses _openCRX_ as backend. 
@@ -147,7 +129,7 @@ must be extended in case new attributes or operations are to be added to the _AP
 to get a basic understanding of the _MDSD_ approach it is a good idea to read the following documents:
 
 * [_Introduction to Modeling with openMDX_](http://sourceforge.net/p/openmdx/wiki/IntroductionToModeling/) 
-* [_openMDX Workshop_ project](http://sourceforge.net/p/openmdx/wiki/Sdk41.Workshop/)
+* [_openMDX Workshop_ project](http://sourceforge.net/p/openmdx/wiki/Sdk42.Workshop/)
 * The source files of the _openCRX Sample_ project
 
 The _sample_ project comes with a simple model extension. In _Eclipse_ open the _Papyrus_ model by opening
