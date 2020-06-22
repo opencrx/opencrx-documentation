@@ -2,7 +2,7 @@
 
 This guide explains how to setup and migrate from an existing openCRX database to another database.
 
-__IMPORTANT:__ This guide assumes that _openCRX 3.1 Server_ is successfully setup as described in [openCRX 3.1.0 Server Installation Guide](Admin/InstallerServer.md).
+__IMPORTANT:__ This guide assumes that _openCRX 4.0 Server_ is successfully setup as described in [openCRX 4.0.0 Server Installation Guide](Admin40..InstallerServer).
 
 openCRX provides the following tools to migrate from an existing database to an other database
 
@@ -15,7 +15,7 @@ openCRX provides the following tools to migrate from an existing database to an 
   usernames and passwords.
    
 __IMPORTANT:__ The wizards assume that the required JDBC database driver JARs are installed in the
-Apache TomEE directory _apache-tomee-webprofile-1.7.1/lib/_. The driver for HSQLDB is installed by
+Apache TomEE directory _apache-tomee-webprofile-1.7.4/lib/_. The driver for HSQLDB is installed by
 default. However, the drivers for other databases must be installed manually. After installing the
 drivers restart _openCRX_.
 
@@ -166,7 +166,7 @@ _oocke1\_position\_number\_seq_) are not migrated by _DbCopy_. Set the values ma
 values before using the database.
 
 ## Setup a database connector ##
-Next configure the database connector which allows _Apache TomEE_ to connect to your newly created database. For this purpose open the file _{opencrxServer_installdir}/apache-tomee-webprofile-1.7.1/conf/tomee.xml_ and adapt the following section:
+Next configure the database connector which allows _Apache TomEE_ to connect to your newly created database. For this purpose open the file _{opencrxServer_installdir}/apache-tomee-webprofile-1.7.4/conf/tomee.xml_ and adapt the following section:
 
 ```
 <Resource id="jdbc_opencrx_CRX" type="DataSource">
@@ -215,7 +215,7 @@ __SQL Server:__
 	JdbcUrl jdbc:sqlserver://localhost:1433;databaseName=CRX;selectMethod=cursor
 ```
 
-Also adapt correspondingly the _openCRX_ launch script _{opencrxServer_installdir}/apache-tomee-webprofile-1.7.1/bin/opencrx.sh_ and _{opencrxServer_installdir}/apache-tomee-webprofile-1.7.1/bin/opencrx.bat_. If required, disable the START and STOP commands for the _HSQLDB_ database.
+Also adapt correspondingly the _openCRX_ launch script _{opencrxServer_installdir}/apache-tomee-webprofile-1.7.4/bin/opencrx.sh_ and _{opencrxServer_installdir}/apache-tomee-webprofile-1.7.4/bin/opencrx.bat_. If required, disable the START and STOP commands for the _HSQLDB_ database.
 
 ## Start TomEE ##
 Now you are ready to start _TomEE_. _openCRX_ now connects to the newly created and populated database.

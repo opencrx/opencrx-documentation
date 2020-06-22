@@ -1,4 +1,4 @@
-# openCRX 3.1 Development Guides #
+# openCRX 4.0 Development Guides #
 
 1. [openCRX SDK for Ant Step-by-Step Guide](StepByStepAnt.md)
 1. [openCRX SDK for Eclipse Step-by-Step Guide](StepByStepEclipse.md)

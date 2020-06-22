@@ -50,21 +50,21 @@ numbers is listed in the table below:
 	<tr>
 </table>
 
-## Upgrading from v3.0.0 to v3.1.0 ##
+## Upgrading from v3.1.0 to v4.0.0 ##
 
 * Stop the openCRX server (i.e. the servlet container Tomcat/application server, etc. and HSQLDB _if running_)
 * Backup your database
-* Install openCRX 3.1.0 with the <a href="server.htm">openCRX Server Installer</a> in a new directory
+* Install openCRX 4.0.0 with the <a href="server.htm">openCRX Server Installer</a> in a new directory
 * In case you made changes to the standard configuration of your previous openCRX installation, amend the changes in the new openCRX installation:
-    * Verify _{openCRX_INSTALL_DIR}/apache-tomee-webprofile-1.7.1/bin/setenv.sh_ (or setenv.bat on Windows)
-    * Verify _{openCRX_INSTALL_DIR}/apache-tomee-webprofile-1.7.1/conf/tomee.xml_ (called openejb.xml in older versions)
-    * Verify _{openCRX_INSTALL_DIR}/apache-tomee-webprofile-1.7.1/conf/server.xml_
-    * Verify _{openCRX_INSTALL_DIR}/apache-tomee-webprofile-1.7.1/conf/tomcat-users.xml_
-    * Copy JARs (e.g. JDBC-drivers, etc.) you added to _{openCRX_INSTALL_DIR}/apache-tomee-webprofile-1.7.1/lib_
+    * Verify _{openCRX_INSTALL_DIR}/apache-tomee-webprofile-1.7.4/bin/setenv.sh_ (or setenv.bat on Windows)
+    * Verify _{openCRX_INSTALL_DIR}/apache-tomee-webprofile-1.7.4/conf/tomee.xml_ (called openejb.xml in older versions)
+    * Verify _{openCRX_INSTALL_DIR}/apache-tomee-webprofile-1.7.4/conf/server.xml_
+    * Verify _{openCRX_INSTALL_DIR}/apache-tomee-webprofile-1.7.4/conf/tomcat-users.xml_
+    * Copy JARs (e.g. JDBC-drivers, etc.) you added to _{openCRX_INSTALL_DIR}/apache-tomee-webprofile-1.7.4/lib_
 * In case you use HSQLDB as a database:
     * Copy _{openCRX_INSTALL_DIR_OLD}/data/crx/crx.script_ to _{openCRX_INSTALL_DIR}/data/crx/crx.script_
 * Start openCRX Server (the newly installed instance); you can either use the shortcut created by the installer or open a shell/cmd window and
-    * cd to _{openCRX_INSTALL_DIR}/apache-tomee-webprofile-1.7.1/bin_ and
+    * cd to _{openCRX_INSTALL_DIR}/apache-tomee-webprofile-1.7.4/bin_ and
     * execute ./opencrx.sh run (or opencrx.bat run on Windows)
 * Once you have openCRX running again, proceed as follows:
     * Login as _admin-Root_
@@ -89,7 +89,7 @@ numbers is listed in the table below:
             * 2 for Delete access level
             * 1 for Mode Recursive
     * Stop openCRX Server; it is important to shut down openCRX properly - you can either use the shortcut created by the installer or open a shell/cmd window and
-        * cd to _{openCRX_INSTALL_DIR}/apache-tomee-webprofile-1.7.1/bin_ and
+        * cd to _{openCRX_INSTALL_DIR}/apache-tomee-webprofile-1.7.4/bin_ and
         * execute _./opencrx.sh stop_ (or _opencrx.bat stop_ on Windows)
 * Start openCRX Server
 * For each of your segments (e.g. Standard) login as segment administrator (e.g. _admin-Standard_) and run the wizard Segment Setup (_Home > Wizards > Segment Setup_) to bring your configuration up to date

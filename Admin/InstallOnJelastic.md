@@ -7,7 +7,7 @@ how to setup openCRX on Jelastic.
 ## Prerequisites ##
 This guide assumes that you are familiar with the basic features of Jelastic.
 
-__IMPORTANT:__ This guide assumes that _openCRX 3.1 Server_ is successfully setup as described in [openCRX 3.1.0 Server Installation Guide](Admin/InstallerServer.md).
+__IMPORTANT:__ This guide assumes that _openCRX 4.0 Server_ is successfully setup as described in [openCRX 4.0.0 Server Installation Guide](Admin/InstallerServer.md).
 
 ## Create and configure environment ##
 Launch the Jelastic administration console and create a new _JAVA_ environment with the following topology:
@@ -20,7 +20,7 @@ Select _Apache 2.2_ as frontend:
 
 ![img](files/InstallOnJelastic/pic010.png)
 
-Select _TomEE 1.7_ / _Java 7_ as application server:
+Select _TomEE 1.7_ / _Java 8_ as application server:
 
 ![img](files/InstallOnJelastic/pic020.png)
 
@@ -55,13 +55,13 @@ Next we have to prepare _TomEE 1.7_. Click on the _Config_ button of the _TomEE_
 
 ![img](files/InstallOnJelastic/pic080.png)
 
-Select the directory _apps_ click on the _Upload_ button and upload the file _opencrx-core-CRX.ear_. You can get the file from an existing _openCRX server_ installation. It is located in the directory _./apache-tomee-webprofile-1.7.1/apps/_. 
+Select the directory _apps_ click on the _Upload_ button and upload the file _opencrx-core-CRX.ear_. You can get the file from an existing _openCRX server_ installation. It is located in the directory _./apache-tomee-webprofile-1.7.4/apps/_. 
 
 ![img](files/InstallOnJelastic/pic090.png)
 
 Next switch to the directory _lib_ and upload the following files:
 
-* _catalina-openmdx.jar_: You can get the file from an existing _openCRX server_ installation. It is located in the directory _./apache-tomee-webprofile-1.7.1/lib/_.
+* _catalina-openmdx.jar_: You can get the file from an existing _openCRX server_ installation. It is located in the directory _./apache-tomee-webprofile-1.7.4/lib/_.
 * _postgresql-9.4-1202.jdbc4.jar_: you should download the latest JDBC driver for PostgreSQL from [here](https://jdbc.postgresql.org/).
 
 ![img](files/InstallOnJelastic/pic100.png)

@@ -15,8 +15,8 @@ You can test this feature on our demo server (or on your own installation if you
 
 If you installed the openCRX SDK you will find the templates and the JSP wizard in the following locations:
 
-* _SDK_Install_Dir/opencrx2/core/src/data/org.opencrx/documents_
-* _SDK_Install_Dir/opencrx2/core/src/data/org.opencrx/wizards/en_US/MailMerge.jsp
+* _SDK_Install_Dir/opencrx4/core/src/data/org.opencrx/documents_
+* _SDK_Install_Dir/opencrx4/core/src/data/org.opencrx/wizards/en_US/MailMerge.jsp
 
 With this approach it is quite easy to generate all kinds of documents, including letters, invoices, purchase orders, etc.
 
