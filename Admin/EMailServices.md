@@ -21,7 +21,7 @@ Detailed installation instructions are provided at the JavaMail home. And here i
 * Download JavaMail from [here](https://java.net/projects/javamail/downloads)
 * Put mail.jar (or _javax.mail.jar_) into the directory _TOMCAT_HOME/lib_
 
-If you have an installation based on our Server Installer, remove _geronimo-javamail_1.4_mail-*.jar_, which is part of the original TomEE distribution and replace it with mail.jar (or _javax.mail.jar_).
+If you have an installation based on our Server Installer, remove _geronimo-javamail_1.4_mail-*.jar_, which is part of the original TomEE distribution and replace it with mail.jar (or _javax.mail.jar_). Put _geronimo-osgi-locator-1.0.jar_ into the directory _TOMCAT_HOME/lib_. 
 
 ### Mail Resource for openCRX on Apache Tomcat ###
 
@@ -309,7 +309,7 @@ If mail is sent as an openCRX user, the FROM value of outgoing e-mails is determ
 Please note that many mail servers reject incoming mails if the hostname contained in an e-mail's FROM value cannot be resolved. (and FROM: noreply@localhost is very likely to cause delivery issues). Hence, ensure that at least the value in tomee.xml makes sense.
 
 ### Export E-mails ###
-Please refer to [Groupware Services IMAP](https://sourceforge.net/p/opencrx/wiki/Admin40.GroupwareServices/).
+Please refer to [Groupware Services IMAP](https://sourceforge.net/p/opencrx/wiki/Admin41.GroupwareServices/).
 
 ### Send E-mails directly from openCRX ###
 Any openCRX E-Mail Activity can be sent as e-mail directly from openCRX:

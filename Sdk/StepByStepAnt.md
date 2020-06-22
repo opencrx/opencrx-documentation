@@ -1,6 +1,6 @@
 # openCRX SDK for Ant Step-by-Step Guide #
 
-This guide explains how to build _openCRX 4.0_ from the sources.
+This guide explains how to build _openCRX 4.1_ from the sources.
 
 ## Prerequisites ##
 
@@ -24,14 +24,14 @@ cd /tmp/dev
 Get the openCRX sources from the GIT repository:
 
 ```
-git clone ssh://<user>@git.code.sf.net/p/opencrx/opencrx4 opencrx4
+git clone https://git.code.sf.net/p/opencrx/opencrx4 opencrx4
 ```
 
 Then prepare the _opt_ directory:
 
 ```
 cd opencrx4
-git checkout OPENCRX_4_0_0
+git checkout OPENCRX_4_1_0
 cd opt
 ant install-opt
 cd ..
@@ -55,14 +55,14 @@ setenv.bat
 Get the openCRX sources from the GIT repository:
 
 ```
-git clone ssh://<user>@git.code.sf.net/p/opencrx/opencrx4 opencrx4
+git clone https://git.code.sf.net/p/opencrx/opencrx4 opencrx4
 ```
 
 Then prepare the _opt_ directory:
 
 ```
 cd opencrx4
-git checkout OPENCRX_4_0_0
+git checkout OPENCRX_4_1_0
 cd opt
 ant install-opt
 cd ..

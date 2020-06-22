@@ -2,8 +2,8 @@
 
 This guide explains how to write a remote Java client accessing _openCRX_.
 
-__IMPORTANT:__ This guide assumes that _openCRX 4.0 Server_ is successfully setup as described in 
-[openCRX 4.0.0 Server Installation Guide](http://www.opencrx.org/opencrx/4.0/installerServer/installer_openCRX_server.html). In addition 
+__IMPORTANT:__ This guide assumes that _openCRX 4.1 Server_ is successfully setup as described in 
+[openCRX 4.1.0 Server Installation Guide](http://www.opencrx.org/opencrx/4.1/installerServer/installer_openCRX_server.html). In addition 
 the _openCRX SDK_ must be installed as described in [openCRX SDK for Ant Step-by-Step Guide](Sdk/StepByStepAnt.md).
 
 For non-_Java_ programming languages, openCRX offers a _REST_ service which allows remote clients to 

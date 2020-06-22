@@ -7,7 +7,7 @@ how to setup openCRX on Jelastic.
 ## Prerequisites ##
 This guide assumes that you are familiar with the basic features of Jelastic.
 
-__IMPORTANT:__ This guide assumes that _openCRX 4.0 Server_ is successfully setup as described in [openCRX 4.0.0 Server Installation Guide](Admin/InstallerServer.md).
+__IMPORTANT:__ This guide assumes that _openCRX 4.1 Server_ is successfully setup as described in [openCRX 4.1.0 Server Installation Guide](Admin/InstallerServer.md).
 
 ## Create and configure environment ##
 Launch the Jelastic administration console and create a new _JAVA_ environment with the following topology:
