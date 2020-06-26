@@ -1,0 +1,41 @@
+# openCRX SDK: build from source #
+
+This guide explains how to build _openCRX_ from the sources.
+
+## Prerequisites ##
+
+Make sure that you have the following software installed:
+
+* [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/) or [OpenJDK 1.8](https://jdk8.java.net/)
+* [Gradle 6.2.2](https://gradle.org/install/)
+* [GIT](http://git-scm.com/downloads)
+
+## Build ##
+
+Get the openCRX sources from the GIT repository:
+
+```
+git clone https://github.com/opencrx/opencrx.git opencrx
+```
+
+And then build the _openCRX_.
+
+```
+cd opencrx
+git checkout opencrx-4.2.0
+gradle clean
+gradle assemble
+```
+
+## Eclipse project files ##
+
+Generate the Eclipse project files as follows:
+
+```
+gradle eclipse
+```
+
+This generates the Eclipse project files _opencrx/core/.project_ and _opencrx/core/.classpath_. Import the project into a new or existing Eclipse workspace.  
+
+## Congratulations ##
+Congratulations! You have successfully built _openCRX SDK_ from the sources.

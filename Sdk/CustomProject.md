@@ -13,51 +13,17 @@ This guide explains how to create a custom project for _openCRX_. A custom proje
 
 A custom project allows to separate the directory structure of the _openCRX_ distribution and the custom-specific files.
 
-This guide assumes that the _openCRX SDK_ is installed (also see [here](Sdk/StepByStepEclipse.md)).
+This guide assumes that the _openCRX SDK_ is installed (also see [here](Sdk/BuildFromSource.md)).
 
 ## Checkout and build the sample custom project ##
 
-_openCRX SDK_ comes with a sample custom project. Follow the steps below to install and build it. 
-
-### Build for Linux ###
-
-In a first step open a shell and cd to a directory where you have installed _openCRX SDK_ (see  [here](Sdk/StepByStepEclipse.md) for more information).
+_openCRX SDK_ comes with a sample custom project.
 
 ```
-cd /tmp/dev
-./setenv.sh
-```
-
-Then checkout and build the sample project.
-
-```
-git clone https://github.com/opencrx/opencrx-custom.git opencrx4-custom
-cd opencrx4-custom
-cd opt
-ant install-opt
-cd ..
-cd sample
-ant all
-```
-
-### Build for Windows ###
-In a first step open a shell and cd to a directory where you have installed _openCRX SDK_ (see  [here](Sdk/StepByStepEclipse.md) for more information).
-
-```
-cd \temp\dev
-setenv.bat
-```
-
-Then checkout and build the sample project.
-
-```
-git clone https://github.com/opencrx/opencrx-custom.git opencrx4-custom
-cd opencrx4-custom
-cd opt
-ant install-opt
-cd ..
-cd sample
-ant all
+git clone https://github.com/opencrx/opencrx-custom.git opencrx-custom
+cd opencrx-custom
+gradle clean
+gradle assemble
 ```
 
 ## Verify project structure ##
@@ -69,17 +35,20 @@ After successfully building the project the directory structure looks as shown b
 * _jre-1.8/sample/lib_: custom-specific _JARs_
 * _sample/etc/deployment-unit_: custom web application.
 * _sample/build.properties_: allows to customize project-specific properties
-* _sample/build.xml_: custom-specific Ant _build.xml_
+* _sample/build.gradle.kts_: custom-specific Gradle build file
 * _sample/src/data/org.opencrx.sample_: contains the custom-specific UI extensions. You have to put the custom-specific files such for ui, codes, reports, wizards, etc. in these directories. They are added to the _WAR_. A very important file is the ./WEB-INF/web.xml which contains the configuration of all servlets.
 * _sample/src/java_: custom-specific backend
 * _sample/src/ear_: custom-specific deployment descriptors
 * _sample/src/model_: custom-specific model extension
 
 ## Import the Eclipse projects ##
-Import the _Eclipse_ projects which come with the _sample_ project:
-* _sample/.project_: openCRX 4 Custom ~ Sample (jre-1.8)
-* _sample/src/model/emf/.project_: openCRX 4 Custom ~ Sample (EMF)
-* _sample/src/model/papyrus/.project_: openCRX 4 Custom ~ Sample (Papyrus)
+Generate the Eclipse project files as follows:
+
+```
+gradle eclipse
+```
+
+Then import the project into a new or existing _Eclipse_ workspace.
 
 ## Store ##
 The _Store_ application shows how to build a stand-alone web application which uses _openCRX_ as backend. 
@@ -128,8 +97,8 @@ _openMDX_ (see [here](http://www.opencrx.org) for more information). As a conseq
 must be extended in case new attributes or operations are to be added to the _API_, GUI, or database. In order 
 to get a basic understanding of the _MDSD_ approach it is a good idea to read the following documents:
 
-* [_Introduction to Modeling with openMDX_](http://sourceforge.net/p/openmdx/wiki/IntroductionToModeling/) 
-* [_openMDX Workshop_ project](http://sourceforge.net/p/openmdx/wiki/Sdk42.Workshop/)
+* [Introduction to Modeling with openMDX](https://github.com/openmdx/openmdx-documentation/blob/master/Modeling/README.md) 
+* [openMDX Workshop Project](https://github.com/openmdx/openmdx-documentation/blob/master/Sdk/Workshop.md)
 * The source files of the _openCRX Sample_ project
 
 The _sample_ project comes with a simple model extension. In _Eclipse_ open the _Papyrus_ model by opening
