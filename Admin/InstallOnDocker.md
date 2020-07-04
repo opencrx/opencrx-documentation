@@ -15,9 +15,9 @@ openCRX comes with a _Dockerfile_ which allows you to get openCRX up and running
 
 
 	```
-	wget -O Dockerfile https://sourceforge.net/p/opencrx/opencrx4/ci/master/tree/installer/src/docker/opencrx/4.2/Dockerfile?format=raw
-	wget -O docker-entrypoint.sh https://sourceforge.net/p/opencrx/opencrx4/ci/master/tree/installer/src/docker/opencrx/4.2/docker-entrypoint.sh?format=raw
+	wget -O Dockerfile https://raw.githubusercontent.com/opencrx/opencrx/master/installer/src/docker/opencrx/4.3/Dockerfile
+	wget -O docker-entrypoint.sh https://raw.githubusercontent.com/opencrx/opencrx/master/installer/src/docker/opencrx/4.3/docker-entrypoint.sh
 	```
 
 
-Then follow the instructions [here](https://sourceforge.net/p/opencrx/opencrx4/ci/master/tree/installer/src/docker/docs/opencrx/README.md).
+Then follow the instructions [here](https://github.com/opencrx/opencrx/tree/master/installer/src/docker/docs/opencrx).
