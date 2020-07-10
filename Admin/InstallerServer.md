@@ -1,4 +1,4 @@
-# openCRX Server Installation 4.2 #
+# openCRX Server Installation #
 This book describes how to install an openCRX Server with the IzPack cross-platform installer 
 (works on Windows, Linux, Mac OS, etc.). Please note that this is a guide to set up a runtime 
 environment suitable for evaluation and testing purposes. If you intend to use openCRX in a 
@@ -21,7 +21,7 @@ and once they are met you should have openCRX up and running in less than 5 minu
 ## Prerequisites ##
 
 ### JDK 8 ###
-Install [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/) or [OpenJDK 1.8](https://jdk8.java.net/).
+Install [OpenJDK 1.8](https://www.azul.com/downloads/zulu-community).
 
 __IMPORTANT:__
 
@@ -32,13 +32,12 @@ __IMPORTANT:__
 * On Windows, it is a good idea to avoid paths containing blanks like the default installation 
   directory ...\\Program Files\\....
 
-### Ant 1.9.4 ###
-Download [Ant 1.9.4](http://ant.apache.org/) for your platform and install it by expanding the downloaded file to a directory of your choice.
+### Ant 1.10.8 ###
+Download [Ant 1.10.8](https://ant.apache.org/bindownload.cgi) for your platform and install it by expanding the downloaded file to a directory of your choice.
 
 ### openCRX Server Installer ###
-Download the openCRX Server Installer opencrxServer-4.2.0-installer.jre-1.8.jar from 
-[Sourceforge](http://www.opencrx.org/downloads.htm). The openCRX Server installer installs Apache TomEE, the openCRX EAR, 
-an openCRX database (HSQLDB) and various configuration files on your system.
+Download the openCRX Server Installer from [GitHub](https://github.com/opencrx/opencrx/releases/). The openCRX Server installer
+installs Apache TomEE, the openCRX EAR, an openCRX database (HSQLDB) and various configuration files on your system.
 
 __NOTE:__
 Please note that HSQLDB is not exactly a high performance DBMS nor is it meant to be 
@@ -56,7 +55,7 @@ suitable DBMS and migrating from HSQLDB to another DBMS is available [here](http
 
 
 ```
-java -jar opencrxServer-4.2.0-installer.jre-1.8.jar
+java -jar opencrxServer-4.3.0-installer.jre-1.8.jar
 ```
 
 
@@ -80,7 +79,7 @@ java -jar opencrxServer-4.2.0-installer.jre-1.8.jar
   
 ![img](files/InstallerServer/pic040.png)
 
-* Select the installation directory - for example /home/crx/opencrxServer-4.2.0 - and then click 
+* Select the installation directory - for example /opt/opencrxServer - and then click 
   _Next_ to continue. Note that if you choose to create a new directory you will have to confirm 
   your choice by clicking _OK_ in the respective pop-up.
   
@@ -118,7 +117,7 @@ The installation process created various shortcuts in your Windows Start Menu
 __NOTE:__ Your version numbers might be different depending on the Tomcat version included in the installer.
 
 ### Starting openCRX Server ###
-Launch the shortcut _Start openCRX Server 4.2.0 (8080)_.
+Launch the shortcut _Start openCRX Server 4.3.0 (8080)_.
 
 If you did not create the shortcuts (or if the installer could not create them) you can start 
 openCRX Server with the command:
@@ -126,14 +125,14 @@ openCRX Server with the command:
 Linux:
 
 ```
-cd ./opencrxServer-4.2.0/apache-tomee-plus-7.0.5/bin
+cd ./opencrxServer/apache-tomee-plus-7.0.5/bin
 ./opencrx.sh run
 ```
 
 Windows:
 
 ```
-cd .\opencrxServer-4.2.0\apache-tomee-plus-7.0.5\bin
+cd .\opencrxServer\apache-tomee-plus-7.0.5\bin
 opencrx.bat run
 ```
 
@@ -152,7 +151,7 @@ If you want to load the login page in a specific language,
 read [here](http://www.opencrx.org/faq.htm#login) on how to do it.
 
 ### Stopping openCRX Server ###
-Launch the shortcut _Stop openCRX Server 4.2.0 (8080)_.
+Launch the shortcut _Stop openCRX Server 4.3.0 (8080)_.
 
 ## Next Steps ##
 Now that you have successfully installed openCRX you might want to have a look at some of 

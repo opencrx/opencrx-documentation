@@ -50,11 +50,11 @@ numbers is listed in the table below:
 	<tr>
 </table>
 
-## Upgrading from v4.1.0 to v4.2.0 ##
+## Upgrading from v4.2.0 to v4.3.0 ##
 
 * Stop the openCRX server (i.e. the servlet container Tomcat/application server, etc. and HSQLDB _if running_)
 * Backup your database
-* Install openCRX 4.2.0 with the <a href="server.htm">openCRX Server Installer</a> in a new directory
+* Install openCRX 4.3.0 with the <a href="server.htm">openCRX Server Installer</a> in a new directory
 * In case you made changes to the standard configuration of your previous openCRX installation, amend the changes in the new openCRX installation:
     * Verify _{openCRX_INSTALL_DIR}/apache-tomee-plus-7.0.5/bin/setenv.sh_ (or setenv.bat on Windows)
     * Verify _{openCRX_INSTALL_DIR}/apache-tomee-plus-7.0.5/conf/tomee.xml_ (called openejb.xml in older versions)

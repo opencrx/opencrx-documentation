@@ -2,7 +2,7 @@
 
 This guide explains how to manage to openCRX database.
 
-__IMPORTANT:__ This guide assumes that _openCRX 4.2 Server_ is successfully setup as described in [openCRX 4.2.0 Server Installation Guide](Admin/InstallerServer.md).
+__IMPORTANT:__ This guide assumes that _openCRX Server_ is successfully setup as described in [openCRX Server Installation Guide](Admin/InstallerServer.md).
 
 openCRX provides the following tools for the database management:
 

@@ -22,10 +22,12 @@ And then build the _openCRX_.
 
 ```
 cd opencrx
-git checkout opencrx-4.2.0
+git checkout opencrx-4.3.0
 gradle clean
 gradle assemble
 ```
+
+**Note:** If the build fails with a certificate validation exception see [here](https://github.com/opencrx/opencrx-documentation/issues/1) how to solve the issue. 
 
 ## Eclipse project files ##
 
