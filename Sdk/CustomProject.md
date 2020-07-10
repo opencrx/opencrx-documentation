@@ -22,6 +22,7 @@ _openCRX SDK_ comes with a sample custom project.
 ```
 git clone https://github.com/opencrx/opencrx-custom.git opencrx-custom
 cd opencrx-custom
+cd sample
 gradle clean
 gradle assemble
 ```
