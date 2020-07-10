@@ -74,17 +74,17 @@ If any of the following conditions is true you can override the default setting 
   
 With PostgreSQL, the system property 
 
-	```
-	-Dorg.openmdx.persistence.jdbc.useLikeForOidMatching
-	```
+```
+-Dorg.openmdx.persistence.jdbc.useLikeForOidMatching
+```
 
 is by default set to true; this ensures that OID matching works as expected, but the price is a performance hit. 
 If any of the above conditions is satisfied you can safely set this system property to false resulting in much 
 improved performance. You can override the default setting by providing the following startup option to openCRX:
 
-	```
-	-Dorg.openmdx.persistence.jdbc.useLikeForOidMatching=false
-	```
+```
+-Dorg.openmdx.persistence.jdbc.useLikeForOidMatching=false
+```
 
 ####  Support for SOUNDS LIKE and SOUNDS NOT LIKE ####
 Out of the box PostgreSQL does not support the operators SOUNDS LIKE and SOUNDS NOT LIKE. However, you can run the 

@@ -1,4 +1,4 @@
-# openCRX SDK: build from source #
+# Build from source #
 
 This guide explains how to build _openCRX_ from the sources.
 
