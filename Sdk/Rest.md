@@ -157,3 +157,34 @@ __Method__
 ```
 DELETE
 ```
+
+## Debugging
+
+Putting a proxy between a native openCRX client and server allows you to inspect the REST interactions. The helps in cases where complex REST
+request bodies need to be created such as for nested queries. Good proxy servers for debugging purposes are
+[Grinder TCPProxy](http://grinder.sourceforge.net/index.html) or [socat on Linux](https://linux.die.net/man/1/socat).
+
+[How to write a remote openCRX Java client](RemoteJavaClient.md) describes how to create a native, remote Java client. Further examples can also be found
+[here](https://github.com/opencrx/opencrx/tree/master/core/src/test/java/org/opencrx/kernel/api).
+
+Once the remote Java client is working you are ready to work with a proxy. It is expected that the openCRX server is running at 
+`http://127.0.0.1:8080/opencrx-rest-CRX`.
+
+Start Grinder as follows:
+
+```
+java -cp lib/grinder.jar net.grinder.TCPProxy -console -responsefilter NONE -localhost 127.0.0.1  -localport 7180 -remotehost http://127.0.0.1 -remoteport 8080
+```
+
+Start the openCRX client with the following configuration:
+
+```
+entityManagerFactory = org.opencrx.kernel.utils.Utils.getPersistenceManagerFactoryProxy(
+	"http://127.0.0.1:7180/opencrx-rest-CRX/", // local proxy, e.g. Grinder
+	USER_NAME, 
+	USER_PASSWORD, 
+	"application/json" // or "text/xml"
+);
+```
+
+Watch the output of Grinder. The request bodies can be used as templates for native REST clients.

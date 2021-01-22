@@ -6,7 +6,7 @@ This guide explains how to build _openCRX_ from the sources.
 
 Make sure that you have the following software installed:
 
-* [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/) or [OpenJDK 1.8](https://jdk8.java.net/)
+* [JDK 11](http://www.oracle.com/technetwork/java/javase/downloads/) or [OpenJDK 11](https://openjdk.java.net/projects/jdk/11/)
 * [Gradle 6.2.2](https://gradle.org/install/)
 * [GIT](http://git-scm.com/downloads)
 
@@ -22,7 +22,7 @@ And then build the _openCRX_.
 
 ```
 cd opencrx
-git checkout opencrx-4.3.0
+git checkout opencrx-v5.0.0
 gradle clean
 gradle assemble
 ```

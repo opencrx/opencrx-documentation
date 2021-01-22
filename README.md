@@ -9,7 +9,7 @@ For more information go to the [openCRX web site](http://www.opencrx.org/).
 
 I. [Installation and Administration](Admin/README.md)
 
-1. [New features and changes](https://github.com/opencrx/opencrx/issues?q=is%3Aissue+is%3Aclosed+milestone%3Aopencrx-v4.3.0)
+1. [New features and changes](https://github.com/opencrx/opencrx/issues?q=is%3Aissue+is%3Aclosed+milestone%3Aopencrx-v5.0.0)
 1. [openCRX Server Installation](Admin/InstallerServer.md)
 1. [Install on Docker](Admin/InstallOnDocker.md)
 1. [Upgrade Guide](Admin/HowToUpgrade.md)
@@ -50,6 +50,6 @@ IV. [Customizing](Customizing/README.md)
 
 V. Reference
 
-1. [openCRX/Core UML Class Diagrams](http://www.opencrx.org/opencrx/4.3/uml/opencrx-core/index.html)
-1. [openMDX/Core UML Class Diagrams](http://www.opencrx.org/opencrx/4.3/uml/openmdx-core/index.html)
-1. [openMDX/Portal UML Class Diagrams](http://www.opencrx.org/opencrx/4.3/uml/openmdx-portal/index.html)
+1. [openCRX/Core UML Class Diagrams](http://www.opencrx.org/opencrx/5.0/uml/opencrx-core/index.html)
+1. [openMDX/Core UML Class Diagrams](http://www.opencrx.org/opencrx/5.0/uml/openmdx-core/index.html)
+1. [openMDX/Portal UML Class Diagrams](http://www.opencrx.org/opencrx/5.0/uml/openmdx-portal/index.html)
