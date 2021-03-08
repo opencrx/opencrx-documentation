@@ -54,10 +54,10 @@ Then import the project into a new or existing _Eclipse_ workspace.
 
 ## Store ##
 The _Store_ application shows how to build a stand-alone web application which uses _openCRX_ as backend. 
-After running _ant all_ you will find in _jre-1.8/sample/deployment-units_ the file _opencrx-sample-store.war_. 
+After running _ant all_ you will find in _jre-11/sample/deployment-units_ the file _opencrx-store-CRX.war_. 
 You can deploy this _WAR_ to any application server instance. E.g. deploy to the _webapps_ directory of your 
 current _Tomcat_ instance. In order to be able to connect to your _openCRX Server_ instance, check the 
-following entries  in the _./sample/src/war/opencrx-sample-store.war/WEB-INF/web.xml_:
+following entries  in the _./sample/src/war/opencrx-store-CRX.war/WEB-INF/web.xml_:
 
 ```
 <context-param>
@@ -79,9 +79,9 @@ Adapt the parameter values according to your environment and run _ant assemble_ 
 The _Store_ application comes with some sample data which you can load with the standard _openCRX GUI_:
 
 * Login as segment administrator (e.g. _admin-Standard_).
-* On the user's home select _File > Import_ and import the file _sample/src/war/opencrx-sample-store.war/data/uoms.xml_.
-* Next import the file _sample/src/war/opencrx-sample-store.war/data/products.xml_.
-* Now launch the _Store_ application with _http://localhost:8080/opencrx-sample-store/Store.jsp_. Adapt host and
+* On the user's home select _File > Import_ and import the file _sample/src/war/opencrx-store-CRX.war/data/uoms.xml_.
+* Next import the file _sample/src/war/opencrx-store-CRX.war/data/products.xml_.
+* Now launch the _Store_ application with _http://localhost:8080/opencrx-store-CRX/Store.jsp_. Adapt host and
   port according to your environment.
   
 You then get the start screen as shown below:
@@ -120,7 +120,7 @@ The _sample_ project extends the _openCRX Core_ model by the following elements:
   to a _MyContact_. 
 
 ## Next steps ##
-* If you want to rename the project _sample_ by your own name, e.g. _myname_ then you have to adapt _build.xml_, _build.properties_ and the directory name containing the data files in _src/data_
+* If you want to rename the project _sample_ by your own name, e.g. _myname_ then you have to adapt _build.gradle.kts_, _build.properties_ and the directory name containing the data files in _src/data_
 * If you want to learn more about UI customizing then see [here](http://www.opencrx.org/documents.htm) for more information
 
 ## Congratulations ##
