@@ -33,8 +33,8 @@ After successfully building the project the directory structure looks as shown b
 
 ![img](files/CustomProject/pic150.png)
 
-* _jre-1.8/sample/deployment-units_: custom-specific deployment units (e.g. _EAR_, _WAR_)
-* _jre-1.8/sample/lib_: custom-specific _JARs_
+* _jre-11/sample/deployment-units_: custom-specific deployment units (e.g. _EAR_, _WAR_)
+* _jre-11/sample/lib_: custom-specific _JARs_
 * _sample/etc/deployment-unit_: custom web application.
 * _sample/build.properties_: allows to customize project-specific properties
 * _sample/build.gradle.kts_: custom-specific Gradle build file
