@@ -109,7 +109,7 @@ Alternatively, you can set "LC_ALL=C" in the environment of the relevant pg proc
 On Windows, use the pgInstaller which allows you to set initdb parameters.
 
 ## Create the database schema ##
-Start _openCRX Server_ dad login as _admin-Root_. Launch the Database schema wizard as shown below.
+Start _openCRX Server_ and login as _admin-Root_. Launch the Database schema wizard as shown below.
 
 ![img](files/DatabaseManagement/pic010.png)
 
@@ -225,6 +225,74 @@ __SQL Server:__
 ```
 
 Also adapt correspondingly the _openCRX_ launch script _{opencrxServer_installdir}/apache-tomee-plus-7.0.5/bin/opencrx.sh_ and _{opencrxServer_installdir}/apache-tomee-plus-7.0.5/bin/opencrx.bat_. If required, disable the START and STOP commands for the _HSQLDB_ database.
+
+## Segment management
+Start _openCRX Server_ and login as _admin-Root_. Open the generate database script dialog as shown below:
+
+![img](files/DatabaseManagement/pic080.png)
+
+After entering the command and clicking OK the script will be generated and can be downloaded as text file for further processing.
+
+![img](files/DatabaseManagement/pic090.png)
+
+Please note that the operation _::generateDatabaseScript_ is available as REST service and can therefore be used in scripts to automate workflows.
+
+```
+	curl -X POST "http://localhost:8080/opencrx-rest-CRX/org.opencrx.kernel.admin1/provider/CRX/segment/Root/generateDatabaseScript" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"org.opencrx.kernel.admin1.GenerateDatabaseScriptParams\":{\"command\":\"createSchema -t HSQL\"}}"
+```
+
+__Usage createDatabaseScript:__
+
+```
+	Usage: generateDatabaseScript [COMMAND]
+	Commands:
+	  createSchema   Generate script with database schema (tables only).
+	  deleteSegment  Generate script to delete a segment.
+	  copySegment    Generate script to copy a segment.
+	  renameSegment  Generate script to rename a segment.
+```
+
+__Usage createSchema:__
+
+```
+	Usage: generateDatabaseScript createSchema [-h] -t=TYPE
+	Generate script with database schema (tables only).
+	  -h, --help                display a help message
+	  -t, --databaseType=TYPE   database type [PostgreSQL, HSQL, MySQL, DB2, Oracle, Microsoft]
+```
+
+__Usage deleteSegment:__
+
+```
+	Missing required option: '--segment=SEGMENT'
+	Usage: generateDatabaseScript deleteSegment [-h] [-p=PROVIDER] -s=SEGMENT
+	Generate script to delete a segment.
+	  -h, --help                display a help message
+	  -p, --provider=PROVIDER   the provider name
+	  -s, --segment=SEGMENT     the segment name
+```
+
+__Usage renameSegment:__
+
+```
+	Usage: generateDatabaseScript renameSegment [-h] -f=FROM [-p=PROVIDER] -t=TO
+	Generate script to rename a segment.
+	  -f, --segmentFrom=FROM    the FROM segment name
+	  -h, --help                display a help message
+	  -p, --provider=PROVIDER   the provider name
+	  -t, --segmentTo=TO        the TO segment name
+```
+
+__Usage copySegment:__
+
+```
+	Usage: generateDatabaseScript copySegment [-h] -d=DATABASE [-p=PROVIDER] -s=SEGMENT
+	Generate script to copy a segment.
+	  -d, --database=DATABASE   the name of the source database / schema
+	  -h, --help                display a help message
+	  -p, --provider=PROVIDER   the provider name
+	  -s, --segment=SEGMENT     the segment name
+```
 
 ## Start TomEE ##
 Now you are ready to start _TomEE_. _openCRX_ now connects to the newly created and populated database.
