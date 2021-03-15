@@ -53,11 +53,11 @@ gradle eclipse
 Then import the project into a new or existing _Eclipse_ workspace.
 
 ## Store ##
-The _Store_ application shows how to build a stand-alone web application which uses _openCRX_ as backend. 
-After running _ant all_ you will find in _jre-11/sample/deployment-units_ the file _opencrx-store-CRX.war_. 
-You can deploy this _WAR_ to any application server instance. E.g. deploy to the _webapps_ directory of your 
-current _Tomcat_ instance. In order to be able to connect to your _openCRX Server_ instance, check the 
-following entries  in the _./sample/src/war/opencrx-store-CRX.war/WEB-INF/web.xml_:
+The _Store_ application shows how to build a stand-alone web application which uses _openCRX Server_ as
+backend. After running _gradle assemble_ you will find in _jre-11/sample/deployment-units_ the file _opencrx-store-CRX.war_.
+Deploy this _WAR_ to any _Java EE Web Profile_ compliant application server. E.g. deploy it to the _webapps_ directory of
+your _TomEE_ instance created by the _openCRX Server Installer_. In order to be able to connect to the
+_openCRX Server_ instance, check the following entries in _./sample/src/war/opencrx-store-CRX.war/WEB-INF/web.xml_:
 
 ```
 <context-param>
@@ -74,7 +74,7 @@ following entries  in the _./sample/src/war/opencrx-store-CRX.war/WEB-INF/web.xm
 </context-param>
 ```
 
-Adapt the parameter values according to your environment and run _ant assemble_ again after having made modifications.
+Adapt the parameter values according to your environment and run _gradle assemble_ again after having made modifications.
 
 The _Store_ application comes with some sample data which you can load with the standard _openCRX GUI_:
 
@@ -88,8 +88,9 @@ You then get the start screen as shown below:
 
 ![img](files/CustomProject/pic140.png)
 
-If you want to build your own web application and use _openCRX_ as backend it should be straight-forward 
-to use the _Store_ application as template and adapt it to your use-cases and _GUI_ frameworks.
+If you want to build your own web application and use _openCRX Server_ as backend it should be
+straight-forward to use the _Store_ application as template and adapt it to your use-cases and
+_GUI_ frameworks.
 
 ## Model extension ##
 _openCRX_ follows a _Model Driven Software Development_ (MDSD) approach. Hence, many _openCRX_ artifacts (_API_,
