@@ -22,7 +22,7 @@ And then build the _openCRX_.
 
 ```
 cd opencrx
-git checkout opencrx-v5.0.0
+git checkout opencrx-v5.1.0
 gradle clean
 gradle assemble
 ```
