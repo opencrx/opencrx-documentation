@@ -104,10 +104,8 @@ A _UserHome_ has the following features:
   have to be exported starting from the object the operation is invoked on. The current 
   version of _openCRX_ allows to export in the formats _XML_ and _XLS_. Export profiles 
   defined by the segment administrator are available to all users. 
-* _SyncProfile:_ _SyncProfile_s are used by adapters such as _AirSync_ and
-  _CalDAV_. The _AirSyncProfile_ allows the user to define the contact, calendar, 
-  tasks and email collections which have to be synchronized with an attached AirSync 
-  client. The _CalendarProfile_ allows to define the calendar collections exposed by 
+* _SyncProfile:_ _SyncProfile_s are used by adapters such as _CardDAV_ and
+  _CalDAV_. The _CalendarProfile_ allows to define the calendar collections exposed by 
   the _CalDAV_ servlet. For more information of how to configure the adapters see the 
   _openCRX administration guide_.
 

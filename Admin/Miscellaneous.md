@@ -176,7 +176,6 @@ The following Java Options are set by default by the openCRX Server Installer:
 	export JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8"
 	export JAVA_OPTS="$JAVA_OPTS -Djava.protocol.handler.pkgs=org.openmdx.kernel.url.protocol"
 	export JAVA_OPTS="$JAVA_OPTS -Dorg.opencrx.maildir=$CATALINA_BASE/maildir"
-	export JAVA_OPTS="$JAVA_OPTS -Dorg.opencrx.airsyncdir=$CATALINA_BASE/airsyncdir"
 	# export JAVA_OPTS="$JAVA_OPTS -Dorg.opencrx.usesendmail.CRX=false"
 	# export JAVA_OPTS="$JAVA_OPTS -Dorg.opencrx.mediadir=$CATALINA_BASE/mediadir"
 	# export JAVA_OPTS="$JAVA_OPTS -Dorg.openmdx.persistence.jdbc.useLikeForOidMatching=false"
@@ -200,9 +199,6 @@ Leave this value at org.openmdx.kernel.url.protocol.
 
 ### -Dorg.opencrx.maildir ###
 Base directory that contains all mail directories managed by the IMAP servlet – the default value is $CATALINA_BASE/maildir.
-
-### -Dorg.opencrx.airsyncdir ###
-Base directory that contains all mail directories managed by the airsync servlet – the default value is $CATALINA_BASE/airsyncdir.
 
 ### -Dorg.opencrx.usesendmail.{provider} ###
 Use sendmail instead of JavaMail.

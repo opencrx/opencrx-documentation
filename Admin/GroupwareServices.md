@@ -1,7 +1,7 @@
 # Configuring the Groupware Services #
 
 openCRX features groupware services for Contacts, Calendars, E-Mail and Documents. The data is 
-accessible by various protocols such as _WebDAV_, _CalDAV_, _CardDAV_, _AirSync_, _LDAP_ and _IMAP_.
+accessible by various protocols such as _WebDAV_, _CalDAV_, _CardDAV_, _LDAP_ and _IMAP_.
 
 ## Directory Service / LDAP ##
 openCRX provides LDAP Server functionality (get more information about LDAP or read what Wikipedia has to say about LDAP). In a nutshell this means that you can use any LDAP client to connect to openCRX and view openCRX accounts. openCRX LDAP supports SSL. Here is how to connect:
@@ -291,8 +291,6 @@ Mailing           | Automatic | VEVENT
 Absence           | Automatic | VEVENT
 External Activity | Automatic | VEVENT
 
-The openCRX AirSync Adapter uses a different mapping (see chapter 10.2 Mapping of openCRX Objects to AirSync Objects for details).
-
 Hence, all openCRX activities correspond to either calendar events (VEVENT) or tasks (VTODO). An openCRX activitiy's iCal representation is stored in the iCal attribute:
 
 ![img](files/GroupwareServices/pic190.png)
@@ -580,7 +578,7 @@ See also [here](http://www.opencrx.org/opencrx/2.4/Outlook_ICS_VCF_adapter.htm),
 #### Connecting iPhone ####
 Connect to any openCRX calendar collection as follows with your iPhone:
 
-* start the wizard Connection Helper: AirSync / Calendar / vCard from your openCRX homepage
+* start the wizard Connection Helper: Calendar / vCard from your openCRX homepage
 * select _Profiles_ and _Calendar Profiles_ and then your CalDAV collection, e.g. _Calendars_ - the wizard automatically _calculates_ the CalDAV URL required to connect:    
 
 ![img](files/GroupwareServices/pic310.png)
