@@ -3,8 +3,7 @@
 This guide explains how to write a remote Java client accessing _openCRX_.
 
 __IMPORTANT:__ This guide assumes that _openCRX Server_ is successfully setup as described in 
-[openCRX Server Installation Guide]((Admin/InstallerServer.md)). In addition 
-the _openCRX SDK_ must be installed as described [here](Sdk/BuildFromSource.md).
+[openCRX Server Installation Guide]((Admin/InstallerServer.md)).
 
 For non-_Java_ programming languages, openCRX offers a _REST_ service which allows remote clients to 
 access the full API of _openCRX_. For more information see [How to use the REST Servlet](Sdk/Rest.md). 
@@ -70,29 +69,39 @@ public class SampleOpenCrxClient {
 ```
 
 
-Create a working directory (e.g. _~/temp/opencrx-sample-client_) and add the following files:
+Create a working directory (e.g. _~/opencrx-sample-client_) with the following layout:
 
-* The _Java_ source file _SampleOpenCrxClient.java_. Copy/Paste the source code from above. Adapt
+```
+opencrx-sample-client/
+   + src/main/java/
+     - SampleOpenCrxClient.java
+   + lib/
+     - opencrx-client.jar
+     - openmdx-client.jar
+     - javaee-api-8.0-4.jar
+```
+
+* _SampleOpenCrxClient.java_: copy / paste the source code from above. Adapt
   the values for the variables _userName_, _password_ and _connectionUrl_ to your environment. 
   The default values are ok for standard installations.
-* The library _opencrx_client.jar_. Copy it from _./opencrx4/jre-1.8/core/lib/_.
-* The library _openmdx_client.jar_. Copy it from _./opencrx4/opt/openmdx-2.16.0/jre-1.8/client/lib/_.
-* The library _resource.jar_. Copy it from _./opencrx4/opt/openmdx-2.16.0/osgi/jre-1.8/extension/lib/_.   
+* _opencrx\_client.jar_: copy from _/opencrx/jre-11/core/lib/_
+* _openmdx\_client.jar_: copy from _/openmdx/jre-1.8/client/lib_
+* _javaee-api-8.0-4.jar_: copy from _TOMEE\_HOME/lib_
 
 ## Compile ##
 
-Next open a shell and go to the working directory (e.g. e.g. _~/temp/opencrx-sample-client_). Compile
-_SampleOpenCrxClient.java_ as follows:
+Next open a shell and go to the working directory (e.g. e.g. _~/opencrx-sample-client_). Compile
+_SampleOpenCrxClient.java_:
 
 ```
-javac -classpath "openmdx-client.jar:opencrx-client.jar" SampleOpenCrxClient.java
+javac -d bin -cp "bin:lib/openmdx-client.jar:lib/opencrx-client.jar:lib/javaee-api-8.0-4.jar" src/main/java/SampleOpenCrxClient.java
 ```
 
 ## Run ##
 Next run the client:
 
 ```
-java -Djava.protocol.handler.pkgs=org.openmdx.kernel.url.protocol -classpath "openmdx-client.jar:opencrx-client.jar:resource.jar:." SampleOpenCrxClient
+java -cp "bin:lib/openmdx-client.jar:lib/opencrx-client.jar:lib/javaee-api-8.0-4.jar" SampleOpenCrxClient
 ```
 
 ## Next Steps ##
