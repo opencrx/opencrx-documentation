@@ -3,6 +3,12 @@
 This guide explains how to write a remote Java client accessing _openCRX_. A remote client
 accesses a running _openCRX_ server instance via the REST/HTTP protocol.
 
+_SampleRemoteClient_ performs the following operations:
+
+* Setup the persistence manager
+* Connect to _openCRX_ using the _REST/Http_ transport
+* Run a query to retrieve contacts matching a given name pattern and display the result on the console
+
 __IMPORTANT:__ This guide assumes that _openCRX Server_ is successfully setup as described in 
 [openCRX Server Installation Guide]((Admin/InstallerServer.md)).
 
@@ -12,11 +18,6 @@ For the _Java_ programming language, _openCRX_ offers a client library which all
 the standard _openCRX_ Java API.
 
 ## Prepare ##
-_SampleRemoteClient_ performs the following operations:
-
-* Setup the persistence manager
-* Connect to _openCRX_ using the _REST/Http_ transport
-* Run a query to retrieve contacts matching a given name pattern and display the result on the console
 
 Create a working directory (e.g. _~/opencrx-sample-remote-client_) with the following layout:
 
