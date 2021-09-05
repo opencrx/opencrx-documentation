@@ -10,10 +10,10 @@ _SampleRemoteClient_ performs the following operations:
 * Run a query to retrieve contacts matching a given name pattern and display the result on the console
 
 __IMPORTANT:__ This guide assumes that _openCRX Server_ is successfully setup as described in 
-[openCRX Server Installation Guide]((Admin/InstallerServer.md)).
+[openCRX Server Installation Guide](/Admin/InstallerServer.md).
 
 __HINT:__ For non-_Java_ programming languages, openCRX offers a _REST_ service which allows remote clients to 
-access the full API of _openCRX_. For more information see [How to use the REST Servlet](Sdk/Rest.md). 
+access the full API of _openCRX_. For more information see [How to use the REST Servlet](Rest.md). 
 For the _Java_ programming language, _openCRX_ offers a client library which allows to access _openCRX_  using 
 the standard _openCRX_ Java API.
 
