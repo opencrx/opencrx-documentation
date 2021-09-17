@@ -1,24 +1,24 @@
 # How to write an _openCRX_ Polymer client #
 
-This guide explains how to write a [Polymer](https://www.polymer-project.org/) client accessing _openCRX_ using the [RESTful API](Sdk/Rest.md).
+This guide explains how to write a [Polymer](https://www.polymer-project.org/) client accessing _openCRX_ using the [RESTful API](Rest.md).
 
 ## Prepare ##
-This guide assumes that 
+This guide assumes that
 
-* the _openCRX Server_ is successfully installed as described in [openCRX Server Installation Guide](Admin/InstallerServer.md).
-* the _openCRX/Sample_ custom project is installed as described in [How to create a custom project](Sdk/CustomProject.md).
+* the _openCRX Server_ is successfully installed as described in [openCRX Server Installation Guide](/Admin/InstallerServer.md).
+* the _openCRX/Sample_ custom project is installed as described in [How to create a custom project](CustomProject.md).
 * _Bower_ is installed. See [Bower - A package manager for the web](http://bower.io/) for more information.
 
 ## Overview ##
-_MyContact_ is a sample _Polymer_ app that accesses _openCRX_ using the standard _RESTful API_. The app is located in the folder _sample/src/war/opencrx-sample-store.war/_ and consists of the following files:
+_MyContact_ is a sample _Polymer_ app that accesses _openCRX_ using the _RESTful API_. The app is located in the folder _sample/src/war/opencrx-sample-store.war/_ and consists of the following files:
 
-* __index.html:__ Main page of the _MyContact_ app 
+* __index.html:__ Main page of the _MyContact_ app
 * __elements/mycontact-toolbar.html:__ Component for the app toolbar
 * __elements/mycontact-contact-list.html:__ Component which allows to display a list of contacts retrieved from the API. The component extends the generic component _mycontact-object-list.html_.
 * __elements/mycontact-object-list.html:__ Component which allows to display a list of objects retrieved from the API. The component shows how to implement infinite, incremental scrolling using the _position_ and _size_ parameters of the query API.
 * __elements/mycontact-detail.html:__ Component which shows the detail information of a contact including some main attributes and address information. The component demonstrates how to use retrieve, display and update objects.
 
-The implementation using the _RESTful API_ is straight-forward. Use the _Swagger UI_ to explore the API. See [RESTful API](Sdk/Rest.md) for more information.
+The implementation using the _RESTful API_ is straight-forward. Use the _Swagger UI_ to explore the API. See [RESTful API](Rest.md) for more information.
 
 ## Build ##
 Build the _MyContact_ app as follows:
