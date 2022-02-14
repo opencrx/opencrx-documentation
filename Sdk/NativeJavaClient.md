@@ -55,7 +55,7 @@ javac -d bin -cp "bin:lib/*" src/main/java/org/opencrx/application/client/Sample
 Next run the client:
 
 ```
-java -cp "bin:lib/*" org.opencrx.kernel.application.SampleNativeClient
+java -cp "bin:lib/*" org.opencrx.application.client.SampleNativeClient
 ```
 
 ## Next Steps ##
