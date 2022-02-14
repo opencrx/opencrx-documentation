@@ -25,20 +25,20 @@ Create a working directory (e.g. _~/opencrx-sample-native-client_) with the foll
 
 ```
 opencrx-sample-native-client/
-   + src/main/java/org/opencrx/kernel/client
+   + src/main/java/org/opencrx/application/client
      - SampleNativeClient.java
    + lib/
      - geronimo-javamail_1.4_mail-1.9.0-alpha-2.jar
      - javaee-api-8.0-4.jar
      - opencrx-config-crx.jar
      - opencrx-core.jar
-     - openmdx-base-2.17.8.jar
-     - openmdx-portal-2.17.8.jar
-     - openmdx-security-2.17.8.jar
+     - openmdx-base-2.17.10.jar
+     - openmdx-portal-2.17.10.jar
+     - openmdx-security-2.17.10.jar
      - postgresql-42.2.12.jar
 ```
 
-* _SampleNativeClient.java_: copy the source from [here](https://github.com/opencrx/opencrx/tree/master/core/src/test/java/org/opencrx/kernel/client/). Adapt
+* _SampleNativeClient.java_: copy the source from [here](https://github.com/opencrx/opencrx/tree/master/core/src/sample/java/org/opencrx/application/client/). Adapt
   the jdbc connection url as required and add the corresponding jdbc driver jar to _./lib_
 * _lib/*.jar_: copy the jars from a running _openCRX_ server installation, e.g. _APP-INF/lib_ and _TOMEE\_HOME/lib_ directories
 
@@ -48,14 +48,14 @@ Next open a shell and go to the working directory (e.g. e.g. _~/opencrx-sample-n
 _SampleNativeClient.java_:
 
 ```
-javac -d bin -cp "bin:lib/*" src/main/java/org/opencrx/kernel/client/SampleNativeClient.java
+javac -d bin -cp "bin:lib/*" src/main/java/org/opencrx/application/client/SampleNativeClient.java
 ```
 
 ## Run ##
 Next run the client:
 
 ```
-java -cp "bin:lib/*" org.opencrx.kernel.client.SampleNativeClient
+java -cp "bin:lib/*" org.opencrx.kernel.application.SampleNativeClient
 ```
 
 ## Next Steps ##
