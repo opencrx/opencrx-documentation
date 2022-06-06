@@ -24,8 +24,8 @@ git clone https://github.com/opencrx/opencrx-custom.git opencrx-custom
 cd opencrx-custom
 git checkout opencrx-v{version}
 cd sample
-gradle clean
-gradle assemble
+./gradlew clean
+./gradlew assemble
 ```
 
 ## Verify project structure ##
@@ -47,7 +47,7 @@ After successfully building the project the directory structure looks as shown b
 Generate the Eclipse project files as follows:
 
 ```
-gradle eclipse
+./gradlew eclipse
 ```
 
 Then import the project into a new or existing _Eclipse_ workspace.
