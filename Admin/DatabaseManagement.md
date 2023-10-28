@@ -15,7 +15,7 @@ openCRX provides the following tools for the database management:
 	* replace string patterns
 
 __IMPORTANT:__ The wizards assume that the required JDBC database driver JARs are installed in the
-Apache TomEE directory _apache-tomee-plus-7.0.5/lib/_. The driver for HSQLDB is installed by
+Apache TomEE directory _apache-tomee-plus-8.0.15/lib/_. The driver for HSQLDB is installed by
 default. However, the drivers for other databases must be installed manually. After installing the
 drivers restart _openCRX_.
 
@@ -199,7 +199,7 @@ __MySQL:__
 
 ```
 	JdbcDriver com.mysql.jdbc.Driver
-	JdbcUrl jdbc:mysql://localhost:3306/CRX
+	JdbcUrl jdbc:mysql://localhost:3306/CRX?sessionVariables=sql_mode=ANSI
 ```
 
 __DB/2:__
@@ -224,7 +224,7 @@ __SQL Server:__
 	JdbcUrl jdbc:sqlserver://localhost:1433;databaseName=CRX;selectMethod=cursor
 ```
 
-Also adapt correspondingly the _openCRX_ launch script _{opencrxServer_installdir}/apache-tomee-plus-7.0.5/bin/opencrx.sh_ and _{opencrxServer_installdir}/apache-tomee-plus-7.0.5/bin/opencrx.bat_. If required, disable the START and STOP commands for the _HSQLDB_ database.
+Also adapt correspondingly the _openCRX_ launch script _{opencrxServer_installdir}/apache-tomee-plus-8.0.15/bin/opencrx.sh_ and _{opencrxServer_installdir}/apache-tomee-plus-7.0.5/bin/opencrx.bat_. If required, disable the START and STOP commands for the _HSQLDB_ database.
 
 ## Segment management
 Start _openCRX Server_ and login as _admin-Root_. Open the generate database script dialog as shown below:
