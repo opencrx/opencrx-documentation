@@ -9,7 +9,7 @@ For more information go to the [openCRX web site](http://www.opencrx.org/).
 
 I. [Installation and Administration](Admin/README.md)
 
-1. [New features and changes](https://github.com/opencrx/opencrx/issues?q=is%3Aissue+is%3Aclosed+milestone%3Aopencrx-v5.3.0)
+1. [New features and changes](https://github.com/opencrx/opencrx/issues?q=is%3Aissue+is%3Aclosed+milestone%3Aopencrx-v5.3.2)
 1. [openCRX Server Installation](Admin/InstallerServer.md)
 1. [Install on Docker](Admin/InstallOnDocker.md)
 1. [Upgrade Guide](Admin/HowToUpgrade.md)

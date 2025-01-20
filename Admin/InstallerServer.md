@@ -54,7 +54,7 @@ suitable DBMS and migrating from HSQLDB to another DBMS is available [here](http
 
 
 ```
-java -jar opencrxServer-5.3.0-installer.jre-11.jar
+java -jar opencrxServer-5.3.2-installer.jre-11.jar
 ```
 
 
@@ -116,7 +116,7 @@ The installation process created various shortcuts in your Windows Start Menu
 __NOTE:__ Your version numbers might be different depending on the Tomcat version included in the installer.
 
 ### Starting openCRX Server ###
-Launch the shortcut _Start openCRX Server 5.3.0 (8080)_.
+Launch the shortcut _Start openCRX Server 5.3.2 (8080)_.
 
 If you did not create the shortcuts (or if the installer could not create them) you can start 
 openCRX Server with the command:
@@ -150,7 +150,7 @@ If you want to load the login page in a specific language,
 read [here](http://www.opencrx.org/faq.htm#login) on how to do it.
 
 ### Stopping openCRX Server ###
-Launch the shortcut _Stop openCRX Server 5.3.0 (8080)_.
+Launch the shortcut _Stop openCRX Server 5.3.2 (8080)_.
 
 ## Next Steps ##
 Now that you have successfully installed openCRX you might want to have a look at some of 
