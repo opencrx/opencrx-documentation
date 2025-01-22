@@ -33,8 +33,8 @@ opencrx-sample-remote-client/
 
 * _SampleRemoteClient.java_: copy the source from [here](https://github.com/opencrx/opencrx/tree/master/core/src/test/java/org/opencrx/kernel/client/). Adapt
   the values for the variables _userName_, _password_ and _connectionUrl_ to your environment. The default values are ok for standard installations.
-* _opencrx\_client.jar_: copy from _/opencrx/jre-11/core/lib/_
-* _openmdx\_client.jar_: copy from _/openmdx/jre-1.8/client/lib_
+* _opencrx\_client.jar_: copy from _/opencrx/core/build/lib/_
+* _openmdx\_base.jar_: copy from _/openmdx/build/core/lib_
 * _javaee-api-8.0-4.jar_: copy from _TOMEE\_HOME/lib_
 
 ## Compile ##
