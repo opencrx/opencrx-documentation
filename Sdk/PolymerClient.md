@@ -30,7 +30,7 @@ cd ../../..
 ant assemble
 ```
 
-This generates the _opencrx-sample-mycontact.war_ in the directory _../jre-1.8/sample/deployment-unit/_.
+This generates the _opencrx-sample-mycontact.war_ in the directory _../sample/build/deployment-unit/_.
 
 ## Run ##
 Next deploy _opencrx-sample-mycontact.war_. Copy the file to _./opencrxServer/apache-tomee-plus-7.0.5/webapps/_ and restart Tomcat. Then open a browser and enter the URL _http://localhost:8080/opencrx-sample-mycontact/index.html_.

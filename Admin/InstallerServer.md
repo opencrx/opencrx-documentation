@@ -20,12 +20,12 @@ and once they are met you should have openCRX up and running in less than 5 minu
 
 ## Prerequisites ##
 
-### JDK 11 ###
-Install [OpenJDK 11](https://openjdk.java.net/projects/jdk/11/).
+### JDK 21 ###
+Install [OpenJDK 21](https://openjdk.java.net/projects/jdk/21/).
 
 __IMPORTANT:__
 
-* With openCRX 5.x you really do need Java 11. Earlier versions do not work.
+* With openCRX 6.x you really do need Java 21. Earlier versions do not work.
 * It is not sufficient to have a Java Runtime Environment (JRE) only. The full-blown JDK 
   is required to run openCRX.
 * On Windows, it is a good idea to avoid paths containing blanks like the default installation 
@@ -54,7 +54,7 @@ suitable DBMS and migrating from HSQLDB to another DBMS is available [here](http
 
 
 ```
-java -jar opencrxServer-5.3.2-installer.jre-11.jar
+java -jar opencrxServer-6.0.0-installer.jre-21.jar
 ```
 
 
@@ -66,8 +66,8 @@ java -jar opencrxServer-5.3.2-installer.jre-11.jar
 
 ![img](files/InstallerServer/pic020.png)
 
-* Select the home directory of your JDK 11 installation (automatically selected if the environment 
-  variable _JAVA\_HOME_ is set) - for example /usr/lib/jvm/java-11-openjdk-amd64 - and then click 
+* Select the home directory of your JDK 21 installation (automatically selected if the environment 
+  variable _JAVA\_HOME_ is set) - for example /usr/lib/jvm/java-21-openjdk-amd64 - and then click 
   _Next_ to continue:
   
 ![img](files/InstallerServer/pic030.png)
@@ -116,7 +116,7 @@ The installation process created various shortcuts in your Windows Start Menu
 __NOTE:__ Your version numbers might be different depending on the Tomcat version included in the installer.
 
 ### Starting openCRX Server ###
-Launch the shortcut _Start openCRX Server 5.3.2 (8080)_.
+Launch the shortcut _Start openCRX Server 6.0.0 (8080)_.
 
 If you did not create the shortcuts (or if the installer could not create them) you can start 
 openCRX Server with the command:
@@ -124,14 +124,14 @@ openCRX Server with the command:
 Linux:
 
 ```
-cd ./opencrxServer/apache-tomee-plus-8.0.15/bin
+cd ./opencrxServer/apache-tomee-plus-10.0.0/bin
 ./opencrx.sh run
 ```
 
 Windows:
 
 ```
-cd .\opencrxServer\apache-tomee-plus-8.0.15\bin
+cd .\opencrxServer\apache-tomee-plus-10.0.0\bin
 opencrx.bat run
 ```
 
@@ -150,7 +150,7 @@ If you want to load the login page in a specific language,
 read [here](http://www.opencrx.org/faq.htm#login) on how to do it.
 
 ### Stopping openCRX Server ###
-Launch the shortcut _Stop openCRX Server 5.3.2 (8080)_.
+Launch the shortcut _Stop openCRX Server 6.0.0 (8080)_.
 
 ## Next Steps ##
 Now that you have successfully installed openCRX you might want to have a look at some of 

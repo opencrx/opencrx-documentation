@@ -17,7 +17,7 @@ __IMPORTANT:__ this document is work in progress. It only describes a subset of
 the _openCRX_ model.
 
 ## Get the model ##
-The complete _openCRX_ class diagrams are published [here](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/).
+The complete _openCRX_ class diagrams are published [here](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/).
 
 The _openCRX_ model is created using _Eclipse Papyrus_ (for more information see [here](http://www.eclipse.org/papyrus/). 
 If you have installed the _openCRX SDK_ you will find the corresponding model files in the directories 
@@ -90,7 +90,7 @@ etc.  An account also has an arbitrary number addresses where each address is
 specified by its type (postal, e-mail, phone, ...) and usage (business, home, other, 
 delivery, ...).
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/account1/010_Main.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/account1/010_Main.png)
 
 The main classes of _account1_ are
 
@@ -102,7 +102,7 @@ The main classes of _account1_ are
   In these cases it is sometimes not possible to decide whether an address record 
   is a person, a legal entity or a group.   
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/account1/030_Addresses.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/account1/030_Addresses.png)
 
 An account has an arbitrary number of addresses. As explained in the 
 _address1_ model, an address has a usage and a default flag. This allows 
@@ -117,7 +117,7 @@ First of all, this allows to keep track of the address changes, but more importa
 information is not destroyed. E.g. existing sales orders still show the address where 
 the items where actually delivered (and not the new).
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/account1/060_Membership.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/account1/060_Membership.png)
 
 _Member_s allow to create a relationship between two accounts. The relationship 
 is asymmetric in the sense that one account is the owner of the relationship and 
@@ -135,7 +135,7 @@ view. _AccountMembership_s are the set of all direct and indirect memberships
 between two accounts. A _distance < 0_ means _account is referenced by_ 
 and a _distance > 0_ means _account references_.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/account1/070_Organization.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/account1/070_Organization.png)
 
 The classes _Organization_, _OrganizationalUnit_ and _OrganizationalUnitRelationship_
 allow to capture the organizational structure of an account. The organizational 
@@ -166,7 +166,7 @@ supports the following activity types:
 * _SalesVisit_: A sales visit. Is sub-class of _Meeting_.
 * _Task_: A task.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/activity1/020_ActivityDetails.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/activity1/020_ActivityDetails.png)
 
 An activity is reported by an account / contact. It has a unique activity number, an
 actual start and end, a scheduled start and end, a priority and a due by date. Each 
@@ -182,7 +182,7 @@ by users or by workflows. Moreover, an activity has the following properties:
   categories and milestones. The shared association _ActivityGroupContainsActivity_
   allows the reverse lookup: it lists all activities assigned to an activity group.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/activity1/999_ActivityGroup.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/activity1/999_ActivityGroup.png)
 
 * __Product references:__ If the activity management is used for customer support,
   customers typically report issues related to products. _ProductReference_s allow
@@ -195,14 +195,14 @@ by users or by workflows. Moreover, an activity has the following properties:
   relative to the companies working calendar. The work records reported by each resource 
   represent the actual work performed.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/activity1/010_Activity.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/activity1/010_Activity.png)
 
 Each activity has an activity type. The type contains meta-information about an
 activity which all activities of the same type share. Most important, the type
 defines the underlying workflow, i.e. the process which controls the execution and
 progress of the activity. 
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/activity1/999_ActivityType.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/activity1/999_ActivityType.png)
 
 An activity's process is represented by a state diagram composed of states and 
 transitions. By the means of actions a transition defines what has to be done
@@ -210,7 +210,7 @@ during the transition. The model defines some predefined actions and the generic
 action _WfAction_ (workflow action) which allows to execute a workflow, i.e. 
 any kind of programmed code.  
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/activity1/999_ActivityProcess.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/activity1/999_ActivityProcess.png)
 
 An activity is always in a current state. A transition is initiated by the operation 
 _doFollowUp()_. It can be invoked by the user using the standard GUI 
@@ -218,7 +218,7 @@ or by programs, workflows or triggers. If a transition is executed, the
 corresponding progress is reported as a _FollowUp_ object and the activity 
 changes to the new state.  
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/activity1/999_ActivityFollowUp.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/activity1/999_ActivityFollowUp.png)
 
 Activities are created by _ActivityCreator_s. Activity creators allow to define
 
@@ -230,14 +230,14 @@ When invoking the operation _newActivity()_ an activity is created with a new ac
 number. It is assigned to the configured activity groups and resources. 
 Moreover, the workflow is initialized and the activity is set to its initial state.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/activity1/999_ActivityCreator.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/activity1/999_ActivityCreator.png)
 
 The actual work is performed by resources. In most cases a resource is a person. However, 
 a _Resource_ is an abstract worker an can also be a _part time person_, a 
 _group of persons_, a _machine_ or a combination of it. A resource has a working 
 calendar which allows to specify the availability of a resource.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/activity1/999_Resource.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/activity1/999_Resource.png)
 
 
 ### Package _org.opencrx.kernel.address1_ ###
@@ -257,7 +257,7 @@ The model contains abstract classes capturing the different types of addresses:
 The abstract classes are used in other models to define concrete address types such
 as _AccountAddress_ or _ContractAddress_.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/address1/010_Main.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/address1/010_Main.png)
 
 
 ### Package _org.opencrx.kernel.admin1_ ###
@@ -269,7 +269,7 @@ The operation _createAdministrator()_ allows to create a new segment including
 its segment administrator. The method _importLoginPrincipal()_ allows to import
 login principals and subjects from an external file.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/admin1/010_Main.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/admin1/010_Main.png)
 
 
 ### Package _org.opencrx.kernel.base_ ###
@@ -285,7 +285,7 @@ A property set contains zero or more properties. Property sets are used in many
 cases. E.g. a _CrxObject_ is a property set. This allows to attach any number of 
 property sets and properties to _CrxObject_s.  
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/base/999_Properties.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/base/999_Properties.png)
 
 A _SecureObject_ allows to control read, update and delete access to objects.
 An object has an owner and zero or more owning groups. The owner and all users
@@ -306,7 +306,7 @@ The level determines the user's memberships:
 * __deep:__ The owning user and all users which are member of the assigned
   groups, their super-groups and their subgroups recursively are granted access.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/base/999_SecureObject.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/base/999_SecureObject.png)
 
 Classes inheriting from _Auditee_ are subject to audit, i.e. all object
 modifications are logged in the form of audit entries. _AuditEntry_s are transient 
@@ -315,7 +315,7 @@ The attribute _auditee_ contains the _XRI_ of the modified object. _modifiedFeat
 contains the set of features which were modified. _beforeImage_ lists the attributes
 and their corresponding values before update. 
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/base/999_Audit.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/base/999_Audit.png)
 
 Classes inheriting from _Indexed_ are subject to indexing. How indexing is done
 is implementation-specific. The object's index entry can be updated by invoking
@@ -323,7 +323,7 @@ the operation _updateIndexEntry()_. An object has zero or more index entries
 representing the object's index at different times. The class _ObjectFinder_ 
 defined in model _home1_ allows to retrieve objects based on their index entries.  
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/base/999_Indexed.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/base/999_Indexed.png)
 
 
 ### Package _org.opencrx.kernel.building1_ ###
@@ -331,13 +331,13 @@ The _building1_ package allows to capture buildings, building units, facilities
 and inventory items. Buildings are composed of building units which itself may be
 grouped hierarchically using the relationship _BuildingUnitHasParent_. 
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/building1/010_Main.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/building1/010_Main.png)
 
 If requied, buildings can be grouped to _BuildingComplex_s. _Building_s, _BuildingUnit_s 
 and _BuildingComplex_s all inherit from the abstract type _AbstractBuildingUnit_ and
 as such they can contain facilities. 
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/building1/999_BuildingUnit.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/building1/999_BuildingUnit.png)
 
 Besides of that, the model supports _InventoryItem_s. Inventory items can be 
 linked to each other or they can be linked to facilities (both extend _LinkableItem_). 
@@ -346,7 +346,7 @@ between items. E.g. a building has three rooms R1, R2 and R3 (represented as bui
 R1 has the facility _meeting area_ having itself a table, four chairs and a flip-chart as 
 inventory items.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/building1/999_InventoryItem.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/building1/999_InventoryItem.png)
 
 If the building unit plays more the role of a warehouse and the inventory items are 
 only stored temporarily in the building it is not recommended to capture the items 
@@ -366,7 +366,7 @@ adapters accessing _openCRX_ via the _API_ or _REST_. Typically they are used to
 stringified values to code values and vice versa. You can find _XML_ samples in the folder 
 _./opencrx4/core/src/data/org.opencrx/code/Root/_. 
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/code1/010_Main.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/code1/010_Main.png)
 
 
 ### Package _org.opencrx.kernel.contract1_ ###
@@ -393,7 +393,7 @@ currently is restricted to contracts used in the sales process. These are:
 __NOTE:__ More contract types such as service or support contracts will probably be
 added in future versions of _openCRX_.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/contract1/010_Main.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/contract1/010_Main.png)
 
 All sales contract types inherit from the abstract class  _AbstractContract_. A
 sales contract has a sales rep, a customer, a supplier and broker. Competitors and
@@ -409,7 +409,7 @@ price € 2.- unless the _pricingDate_ is between _01-08-2010_ and _31-08-2010_.
 The model allows to define any kind of user-specific pricing rules. The algorithms
 are implemented in _Java_. 
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/contract1/070_Contract.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/contract1/070_Contract.png)
 
 The calculation rule defines how the totals are calculated. The 
 _getPositionAmountsScript_ returns the rounded amounts at position-level. The
@@ -421,7 +421,7 @@ _AbstractContract.totalBaseAmount_, _AbstractContract.totalDiscountAmount_, etc.
 The model allows to define any kind of calculation rule. The algorithms are implemented
 in _Java_.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/contract1/999_CalculationRule.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/contract1/999_CalculationRule.png)
 
 A sales contract has zero or more contract positions. Important attributes of a
 contract position are:
@@ -456,7 +456,7 @@ calculation is _quantity_ * _Uom (quantity)_.quantity # 5 * 10'000 # 50'000. Thi
 feature is useful in cases where customer- or market-specific uoms must be used 
 (e.g. 1 barrel # 158.9873 litres, 1 ha # 10'000 m2, 1 ton # 1000 kg). 
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/contract1/090_SalesContractPosition.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/contract1/090_SalesContractPosition.png)
 
 Both _AbstractContract_ and _AbstractContractPositon_ are _DepotReferenceHolder_s.
 This allows to attach depots (see _depot1_ for more information about depots) to 
@@ -502,7 +502,7 @@ ways. A _Depot_ allows to store any type of items. Depots can be bank depots, wa
 application servers, libraries, etc. Samples for items are securities, electronic 
 devices, deployed software components, books in a library.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/depot1/040_Depot.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/depot1/040_Depot.png)
 
 A depot is structured by depot positions. Depot positions are the target of a
 booking. As a consequence one always has to specify the depot position when adding 
@@ -531,13 +531,13 @@ marks the time when the item is effective for the balance calculation. Bookings 
 only accepted if the booking date and the value date are within an existing and 
 active booking period.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/depot1/010_Booking.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/depot1/010_Booking.png)
 
 A depot is held by the _DepotHolder_. In most cases a depot holder is a person. 
 In this case a _DepotContract_ is used to manage to relationship to the accounts. 
 A depot holder can also be a _Warehouse_ or a _Site_.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/depot1/060_DepotHolder.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/depot1/060_DepotHolder.png)
 
 Another option to structure depots are _DepotGroup_s. The depot group structure 
 is the abstraction of a chart of accounts. 
@@ -549,7 +549,7 @@ Past booking periods typically remain open for a few days or weeks and are close
 all bookings are complete and controlling is done. As soon as a booking period is 
 closed, no more bookings are accepted in the corresponding time periods.
 
-![](http://www.opencrx.org/opencrx/5.3/uml/opencrx-core/depot1/050_DepotEntity.png)
+![](http://www.opencrx.org/opencrx/6.0/uml/opencrx-core/depot1/050_DepotEntity.png)
  
 Below you find some typical use-cases where _depot1_ can be used. 
 

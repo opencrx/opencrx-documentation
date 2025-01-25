@@ -33,8 +33,8 @@ After successfully building the project the directory structure looks as shown b
 
 ![img](files/CustomProject/pic150.png)
 
-* _jre-11/sample/deployment-units_: custom-specific deployment units (e.g. _EAR_, _WAR_)
-* _jre-11/sample/lib_: custom-specific _JARs_
+* _sample/build/deployment-units_: custom-specific deployment units (e.g. _EAR_, _WAR_)
+* _sample/build/lib_: custom-specific _JARs_
 * _sample/etc/deployment-unit_: custom web application.
 * _sample/build.properties_: allows to customize project-specific properties
 * _sample/build.gradle.kts_: custom-specific Gradle build file
@@ -54,7 +54,7 @@ Then import the project into a new or existing _Eclipse_ workspace.
 
 ## Store ##
 The _Store_ application shows how to build a stand-alone web application which uses _openCRX Server_ as
-backend. After running _gradle assemble_ you will find in _jre-11/sample/deployment-units_ the file _opencrx-store-CRX.war_.
+backend. After running _gradle assemble_ you will find in _sample/build/deployment-units_ the file _opencrx-store-CRX.war_.
 Deploy this _WAR_ to any _Java EE Web Profile_ compliant application server. E.g. deploy it to the _webapps_ directory of
 your _TomEE_ instance created by the _openCRX Server Installer_. In order to be able to connect to the
 _openCRX Server_ instance, check the following entries in _./sample/src/war/opencrx-store-CRX.war/WEB-INF/web.xml_:
